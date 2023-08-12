@@ -38,6 +38,7 @@ $logoHeight: 6vh;
     padding: 0 $paddingLeftRight 0 $paddingLeftRight;
     justify-content: space-between;
     box-sizing: border-box;
+    margin-top: 1vh;
 }
 
 .navbar-container {
@@ -48,7 +49,6 @@ $logoHeight: 6vh;
 .navbar-logo-container {
     // width: calc($heightMax / 2);
     height: $logoHeight;
-    margin-top: 1vh;
 }
 
 #logo-img {
