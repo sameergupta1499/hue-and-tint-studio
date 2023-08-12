@@ -26,20 +26,18 @@ export default {
 <style lang="scss" scoped>
 $paddingLeftRight: 4vh;
 $heightMax: 8vh;
-$logoHeight: 5vh;
+$logoHeight: 6vh;
 
 .navbar {
     position: fixed;
     z-index: 100;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0);
     min-height: $heightMax;
     margin: 0;
     padding: 0 $paddingLeftRight 0 $paddingLeftRight;
     justify-content: space-between;
     box-sizing: border-box;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 .navbar-container {
@@ -50,6 +48,7 @@ $logoHeight: 5vh;
 .navbar-logo-container {
     // width: calc($heightMax / 2);
     height: $logoHeight;
+    margin-top: 1vh;
 }
 
 #logo-img {
