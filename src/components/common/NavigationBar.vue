@@ -29,10 +29,11 @@ $heightMax: 8vh;
 $logoHeight: 5vh;
 
 .navbar {
-    position: sticky;
+    position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0);
     min-height: $heightMax;
     margin: 0;
     padding: 0 $paddingLeftRight 0 $paddingLeftRight;

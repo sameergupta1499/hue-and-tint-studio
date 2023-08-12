@@ -6,6 +6,7 @@
 // main.js
 import '@/styles/globalStyles.scss';
 import '@/styles/customStyles.scss';
+import '@/styles/animations.scss';
 
 // Components
 import App from './App.vue'

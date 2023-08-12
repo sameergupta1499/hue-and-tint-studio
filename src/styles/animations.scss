@@ -1,0 +1,13 @@
+.slide-up {
+    position: relative;
+    top: 200px;
+    animation: slideUp 1s ease-in-out forwards;
+    --delay: 5s; /* Delay in seconds */
+    animation-delay: var(--delay,1s); 
+  }
+
+  @keyframes slideUp {
+    to {
+      top: 0;
+    }
+  }
