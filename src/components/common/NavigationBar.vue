@@ -2,7 +2,7 @@
     <navbar class="flexCenter vpW navbar">
         <div class="navbar-logo-container">
             <a href="" class="logo-link">
-                <img src="@/assets/logo.png" id="logo-img" alt="Logo" />
+                <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png?updatedAt=1691862962368" id="logo-img" alt="Logo" />
             </a>
         </div>
 

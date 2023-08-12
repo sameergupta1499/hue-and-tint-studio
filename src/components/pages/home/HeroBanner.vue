@@ -58,7 +58,7 @@ export default {
 
 .banner-container {
     position: relative;
-    background-image: url("@/assets/hero_bg.jpg");
+    background-image: url("https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/homepage/hero_bg.jpg");
     background-size: cover;
     /* Scale to cover entire container */
     background-position: center bottom;
