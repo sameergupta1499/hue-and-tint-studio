@@ -27,7 +27,7 @@ jobs:
 
       - name: Deploy to server
         run: |
-          rsync -avz --delete dist/ ec2-user@ec2-54-210-133-52.compute-1.amazonaws.com:/home/ec2-user/hue-tint-studio
+          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" dist/ ec2-user@ec2-54-210-133-52.compute-1.amazonaws.com:/home/ec2-user/hue-tint-studio
         env:
           RS_USER: ec2-user
           RS_SSH_PRIVATE_KEY: ${{ secrets.RS_SSH_PRIVATE_KEY }}
