@@ -52,7 +52,6 @@ export default {
 
 .hero-container {
     position: relative;
-    font-weight: 500;
 
 }
 
@@ -69,6 +68,7 @@ export default {
     color: white;
 
     h1 {
+        // @extend .tilt-shaking;
         @extend .slide-up;
         /* Extend the .slide-up class */
     }
@@ -89,9 +89,10 @@ export default {
 
 .banner {
     // font-size: 3rem;
-    width: 50%;
-    height: 40%;
+    flex: none;
     text-transform: capitalize;
+    // flex: 1;
+
 }
 
 .banner-hidden-container {

@@ -5,9 +5,20 @@
     --delay: 5s; /* Delay in seconds */
     animation-delay: var(--delay,1s); 
   }
-
+  
   @keyframes slideUp {
     to {
       top: 0;
     }
   }
+
+.tilt-shaking {
+    animation: horizontal-shaking 2s linear infinite;
+}
+@keyframes horizontal-shaking {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(5px); }
+  50% { transform: translateX(0px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0px); }
+}

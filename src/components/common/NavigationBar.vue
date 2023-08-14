@@ -2,7 +2,7 @@
     <navbar class="flexCenter vpW navbar">
         <div class="navbar-logo-container">
             <a href="" class="logo-link">
-                <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png?updatedAt=1691862962368" id="logo-img" alt="Logo" />
+                <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png?updatedAt=1691862962368" id="logo-img" alt="Logo"/>
             </a>
         </div>
 
@@ -35,14 +35,9 @@ $logoHeight: 6vh;
     left: 0;
     min-height: $heightMax;
     margin: 0;
-    padding: 0 $paddingLeftRight 0 $paddingLeftRight;
+    padding: 1vh $paddingLeftRight 0 $paddingLeftRight;
     justify-content: space-between;
     box-sizing: border-box;
-    margin-top: 1vh;
-}
-
-.navbar-container {
-    display: flex;
 }
 
 //Logo in navbar
