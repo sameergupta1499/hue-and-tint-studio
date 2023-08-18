@@ -9,28 +9,55 @@
 
         <div class="navbar-navbar">
             <ul class="navbar-list">
-                <li class="navbar-item"><router-link to="/">
-                        <h6>HOME</h6>
-                    </router-link></li>
-                <li class="navbar-item"><router-link to="/">
-                        <h6>WORK</h6>
-                    </router-link></li>
-                <li class="navbar-item"><router-link to="/">
-                        <h6>ABOUT</h6>
-                    </router-link></li>
-                <li class="navbar-item"><router-link to="/">
-                        <h6>CONTACT</h6>
-                    </router-link></li>
+                <li class="navbar-item" v-for="(item, index) in navItems" :key="index">
+                    <router-link :to="item.route">
+                        <h6>{{ item.label }}</h6>
+                    </router-link>
+                </li>
             </ul>
         </div>
+        <div class="navbar-menu-container">
+            <v-menu>
+                <template v-slot:activator="{ props }">
+                        <div class="navbar-hamburger-icon" v-bind="props">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </div>
+                </template>
+
+                <ul class="navbar-list collapsed">
+                    <li class="navbar-item" v-for="(item, index) in navItems" :key="index">
+                        <router-link :to="item.route" @click="menuOpen = false">
+                            <h6>{{ item.label }}</h6>
+                        </router-link>
+                    </li>
+                </ul>
+            </v-menu>
+        </div>
+
+
     </navbar>
 </template>
   
+
 <script>
+import { ref } from 'vue';
+
 export default {
     setup() {
-    }
-}
+        const navItems = ref([
+            { label: 'HOME', route: '/' },
+            { label: 'WORK', route: '/' },
+            { label: 'ABOUT', route: '/' },
+            { label: 'CONTACT', route: '/' },
+        ]);
+        return {
+            navItems,
+        };
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -48,6 +75,20 @@ $logoHeight: 6vh;
     padding: $navbar-padding-l $x-gutter-l 0 $x-gutter-l;
     justify-content: space-between;
     box-sizing: border-box;
+    line-height: 1.2rem;
+}
+
+.navbar-menu-container {
+    display: none;
+    color: white;
+    position: relative;
+}
+
+
+.navbar-hamburger-icon {
+    height: $hamburger-icon-height;
+    width: $hamburger-icon-height;
+
 }
 
 //Logo in navbar
@@ -71,10 +112,30 @@ $logoHeight: 6vh;
         height: $logoHeight-s;
 
     }
-    .navbar{
+
+    .navbar {
         padding: $navbar-padding-s $x-gutter-s 0 $x-gutter-s;
         line-height: 1.2rem;
     }
+
+    .navbar-navbar {
+        display: none;
+    }
+
+    .navbar-menu-container {
+        display: block;
+    }
+    .navbar-list.collapsed{
+        flex-direction: column;
+        align-items:flex-start;
+        background-color: rgba(0, 0, 0, 0.4); 
+        width:20rem;
+        li{
+            padding:2rem 1rem;
+            line-height: 1.2rem;
+        }
+    }
+
 }
 
 // Navigation in navbar
@@ -90,4 +151,5 @@ $logoHeight: 6vh;
         }
 
     }
-}</style>
+}
+</style>
