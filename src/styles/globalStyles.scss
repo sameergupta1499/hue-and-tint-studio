@@ -3,7 +3,7 @@
   padding: 0;
   border: 0;
   box-sizing: border-box; /* Keeps padding and border within element's dimensions */
-  font-size: .9259259259vw;   /* For 1200 screens */
+  font-size: 1vw;   /* For 1200 screens */
   overflow-x: hidden;
   font-family: 'Josefin Sans', sans-serif;
 }
@@ -37,8 +37,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Heading Margins */
-h1 { font-size: 7rem; }
-h2 { font-size: 5rem; }
+h1 { font-size: 6.5rem; }
+h2 { font-size: 4.5rem; }
 h3 { font-size: 2.5rem; }
 h4 { font-size: 1.5rem; }
 h5 { font-size: 1.25rem; }
@@ -75,3 +75,19 @@ background: transparent;  /* Optional: just make scrollbar invisible */
 ::-webkit-scrollbar-thumb {
 background: #FF0000;
 }
+
+@media (max-width: 768px) { /* You can adjust the breakpoint to your preferred mobile width */
+  * {
+    font-size: 1vh;   
+  }
+  /* Heading Margins */
+h1 { font-size: 5.5rem; }
+h2 { font-size: 4.5rem; }
+h3 { font-size: 2.5rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+  
+}
+
+// $x-gutter-s:5vw;

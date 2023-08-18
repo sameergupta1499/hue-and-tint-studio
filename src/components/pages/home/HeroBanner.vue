@@ -49,6 +49,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/utils/js-masker/masker.scss";
 @import "@/styles/animations.scss";
+@import "@/styles/variables.scss";
 
 .hero-container {
     position: relative;
@@ -91,10 +92,16 @@ export default {
     // font-size: 3rem;
     flex: none;
     text-transform: capitalize;
+    margin: calc(20vh) 0;
+    max-height: calc(100vh - 40vh)
     // flex: 1;
-
 }
-
+@media (max-width: 768px) { /* You can adjust the breakpoint to your preferred mobile width */
+    .banner {
+        margin: 0 calc($x-gutter-s);
+        max-width: calc(100vw - calc(2*$x-gutter-s))
+    }
+}
 .banner-hidden-container {
     position: absolute;
     top: 0px;
