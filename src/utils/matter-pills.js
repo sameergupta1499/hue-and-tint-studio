@@ -138,21 +138,23 @@ const createBoxElements = (boxList) => {
   const matterContainer = document.getElementById('matter-container');
   const colors = ['#f8c1ca', '#f5e495', '#f0e2d1', '#d2e5cb'];
 
-  for (const item of boxList) {
+  for (let i = 0; i < boxList.length; i++) {
     const boxDiv = document.createElement('div');
     boxDiv.className = 'matter-objects';
     const spn = document.createElement('span');
     spn.className = 'matter-object-title';
-    spn.textContent = item;
+    spn.textContent = boxList[i];
     boxDiv.appendChild(spn);
 
-    // Set a random background color from the colors array
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    boxDiv.style.backgroundColor = randomColor;
+    // Set a background color from the colors array, cycling through them
+    const colorIndex = i % colors.length;
+    const color = colors[colorIndex];
+    boxDiv.style.backgroundColor = color;
 
     matterContainer.appendChild(boxDiv);
   }
 };
+
 
 
 export { createBoxElements,init, cleanupMatterSetup };
