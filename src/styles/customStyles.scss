@@ -42,3 +42,32 @@
 .orange-hover:hover{
     color:$orange-color;
 }
+
+// Matter-styling
+.matter-objects {
+    position: absolute;
+    background: black ;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height:auto;
+    padding: 1.5rem 2rem;
+    overflow: hidden;
+    border-radius: 7rem;
+    white-space: nowrap;
+    box-sizing: border-box;
+    z-index:6;
+    // transition: top .1s ease, left .1s ease; 
+  }
+  
+  .matter-object-title {
+    color: black;
+    overflow: hidden;
+    font-size: 1.3rem;
+    white-space: nowrap;
+    box-sizing: border-box;
+    font-weight: 600;
+    z-index:7;
+  }

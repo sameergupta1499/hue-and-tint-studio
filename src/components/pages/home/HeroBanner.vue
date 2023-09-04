@@ -1,9 +1,10 @@
 <template>
     <div class="vpContainer hero-container" @mousemove="updateCursorPoints" @mouseenter="updateCursorSize(size = 'small')"
         @mouseleave="updateCursorSize(size = 'none')">
+        <MatterPills />
         <div class="banner-container flexCenter container">
-            <div class="flexCenterColumn banner" @mouseenter="updateCursorSize(size = 'large')"
-                @mouseleave="updateCursorSize(size = 'small')">
+            <!-- <div class="flexCenterColumn banner"> -->
+            <div class="flexCenterColumn banner" @mouseenter="updateCursorSize(size = 'large')" @mouseleave="updateCursorSize(size = 'small')">
                 <div>
                     <h1 class="animated-text" style="--delay: 0s;">Where Creativity</h1>
                 </div>
@@ -16,8 +17,7 @@
             </div>
         </div>
         <div class="banner-hidden-container flexCenter container js-masker" ref="masker">
-            <div class="flexCenterColumn banner" @mouseenter="updateCursorSize(size = 'large')"
-                @mouseleave="updateCursorSize(size = 'small')">
+            <div class="flexCenterColumn banner">
                 <div>
                     <h1>The Studio</h1>
                 </div>
@@ -34,15 +34,20 @@
   
 <script>
 import { useMaskerFunctions } from '@/utils/js-masker/masker';
+import MatterPills from '@/components/common/MatterPills.vue';
 export default {
     setup() {
         const { masker, updateCursorPoints, updateCursorSize } = useMaskerFunctions();
+            // Function to set the width of the hidden container
         return {
             updateCursorPoints,
             updateCursorSize,
             masker, // Export the ref so it's accessible in the template
         };
     },
+    components: {
+  MatterPills,
+},
 };
 </script>
 
@@ -53,20 +58,20 @@ export default {
 
 .hero-container {
     position: relative;
+    background:  #f3eee8;
 
 }
 
 .banner-container {
     position: relative;
-    background-image: url("https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/homepage/hero_bg.jpg");
-    background-size: cover;
+    // background-image: url("https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/homepage/hero_bg.jpg");
+    // background-size: cover;
     /* Scale to cover entire container */
-    background-position: center bottom;
+    // background-position: center bottom;
     /* Position at the top center */
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
     /* Prevent repeating the background */
-    mix-blend-mode: darken;
-    color: white;
+    // mix-blend-mode: darken;
 
     h1 {
         // @extend .tilt-shaking;
@@ -93,13 +98,15 @@ export default {
     flex: none;
     text-transform: capitalize;
     margin: calc(20vh) 0;
-    max-height: calc(100vh - 40vh)
+    max-height: calc(100vh - 40vh);
+    // width: 47rem; //change this for the width manipulation
     // flex: 1;
 }
 @media (max-width: 768px) { /* You can adjust the breakpoint to your preferred mobile width */
     .banner {
         margin: 0 calc($x-gutter-s);
-        max-width: calc(100vw - calc(2*$x-gutter-s))
+        max-width: calc(100vw - calc(2*$x-gutter-s));
+        // width: 33rem;
     }
 }
 .banner-hidden-container {
@@ -107,7 +114,8 @@ export default {
     top: 0px;
     z-index: 9;
     left: 0px;
-    background-color: #CF5C09;
-    color: white // width: 33%
+    background-color: #F5E496;
+    color: white; // width: 33%
+    pointer-events: none;
 }</style>
   

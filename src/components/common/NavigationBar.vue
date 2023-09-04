@@ -3,7 +3,7 @@
         <div class="navbar-logo-container">
             <a href="" class="logo-link ">
                 <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png?updatedAt=1691862962368"
-                    id="logo-img" class= "tilt-n-move-shaking orange-hover" alt="Logo" />
+                    id="logo-img" class= " orange-hover" alt="Logo" />
             </a>
         </div>
 
@@ -11,7 +11,7 @@
             <ul class="navbar-list">
                 <li class="navbar-item" v-for="(item, index) in navItems" :key="index">
                     <router-link :to="item.route">
-                        <h6 class="tilt-n-move-shaking orange-hover">{{ item.label }}</h6>
+                        <h6 class=" orange-hover">{{ item.label }}</h6>
                     </router-link>
                 </li>
             </ul>
@@ -20,7 +20,7 @@
         <div class="navbar-menu-container">
             <v-menu>
                 <template v-slot:activator="{ props }">
-                        <div class="navbar-hamburger-icon tilt-n-move-shaking orange-hover" v-bind="props">
+                        <div class="navbar-hamburger-icon  orange-hover" v-bind="props">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4 6h16M4 12h16M4 18h16" />
@@ -31,7 +31,7 @@
                 <ul class="navbar-list collapsed">
                     <li class="navbar-item" v-for="(item, index) in navItems" :key="index">
                         <router-link :to="item.route" @click="menuOpen = false">
-                            <h6 class="tilt-n-move-shaking orange-hover">{{ item.label }}</h6>
+                            <h6 class=" orange-hover">{{ item.label }}</h6>
                         </router-link>
                     </li>
                 </ul>
@@ -78,6 +78,8 @@ $logoHeight: 6vh;
     justify-content: space-between;
     box-sizing: border-box;
     line-height: 1.2rem;
+    background:  #000000;
+
 }
 .navbar-item,.navbar-logo-container{
     overflow: visible;
@@ -151,7 +153,11 @@ $logoHeight: 6vh;
         margin-left: 2vw;
 
         a {
-            color: white;
+            h6{
+                font-weight: 300;
+                color: white;
+            }
+
         }
 
     }
