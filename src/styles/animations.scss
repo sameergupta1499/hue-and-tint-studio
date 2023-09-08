@@ -6,7 +6,15 @@
     --delay: 5s; /* Delay in seconds */
     animation-delay: var(--delay,1s); 
   }
-  
+
+  .slide-up-navbar {
+    overflow: hidden;
+    transform: translateY(-100%);
+  }
+
+  .transform-default{
+    transition: transform 0.1s ease;
+  }
   @keyframes slideUp {
     to {
       top: 0;

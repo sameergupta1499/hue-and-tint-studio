@@ -1,5 +1,5 @@
 <template>
-    <navbar class="flexCenter vpW navbar">
+    <navbar class="flexCenter vpW navbar transform-default" :class="{ 'slide-up-navbar': !navState }">
         <div class="navbar-logo-container">
             <a href="" class="logo-link ">
                 <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png?updatedAt=1691862962368"
@@ -44,18 +44,30 @@
   
 
 <script>
-import { ref } from 'vue';
-
+import { watch, ref } from 'vue';
+import { useScrollTracker} from '@/utils/useScrollTracker.js';
 export default {
     setup() {
+        const { scrollY, viewportWidth, viewportHeight, scrollMovement } = useScrollTracker();
         const navItems = ref([
             { label: 'HOME', route: '/' },
             { label: 'WORK', route: '/' },
             { label: 'ABOUT', route: '/' },
             { label: 'CONTACT', route: '/' },
         ]);
+        const navState = ref("NONE")
+        watch(scrollY, (newValue) => {
+            let threshold = viewportHeight.value/2 ;
+            if (scrollY.value > threshold){
+                navState.value = scrollMovement.value ;
+            }
+        });
+
+
+
         return {
             navItems,
+            navState
         };
     },
 };
@@ -70,7 +82,7 @@ $logoHeight: 6vh;
 .navbar {
     position: fixed;
     z-index: 100;
-    top: 0;
+    top:0;
     left: 0;
     min-height: $navbar-height-l;
     margin: 0;
@@ -79,7 +91,6 @@ $logoHeight: 6vh;
     box-sizing: border-box;
     line-height: 1.2rem;
     background:  #000000;
-
 }
 .navbar-item,.navbar-logo-container{
     overflow: visible;
