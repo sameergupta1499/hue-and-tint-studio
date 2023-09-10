@@ -11,6 +11,8 @@ class GScroll
 		this.update = onUpdate;
         this.scrollMovement = scrollMovement;
 		this.touchScrollMovement = scrollMovement * 50;
+		this.deltaLimit = 80
+		this.deltaDefault = 33.3333
 	}
 
 	init ()
@@ -30,6 +32,8 @@ class GScroll
 		window.addEventListener('scroll', this.ref = (e) =>{
 			this.deltaY = e.deltaY;
 			window.clearTimeout( this.isWheeling );
+
+
             this.isWheeling = setTimeout( (e) => {
                 this.deltaY = 0;
             }, 66);
@@ -38,8 +42,11 @@ class GScroll
 	wheel()
 	{
 		window.addEventListener('wheel', this.ref = (e) => {
-			this.deltaY = e.deltaY;
-			window.clearTimeout( this.isWheeling );
+			const delta = e.deltaY;
+			const limitedDelta = delta < -this.deltaLimit ? -this.deltaDefault : delta > this.deltaLimit ? this.deltaDefault : delta; // Assign -50 for delta less than -120, 50 for delta greater than 120, and keep the original value otherwise
+			this.deltaY = limitedDelta;
+			window.clearTimeout( this.isWheeling);
+			console.log(this.isWheeling,this.deltaY )
             this.isWheeling = setTimeout( (e) => {
                 this.deltaY = 0;
             }, 66);
@@ -87,7 +94,7 @@ class GScroll
 		}else if(this.scrollTop + this.deltaY < 0){
 			this.scrollTop = 0;
 		}else if(this.deltaY !== 0){
-			this.scrollTop += (this.deltaY*this.scrollMovement);
+			this.scrollTop += (this.deltaY);
 		}
 
 		const diff = -this.scrollTop - this.current;
