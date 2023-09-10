@@ -4,12 +4,15 @@
   border: 0;
   box-sizing: border-box; /* Keeps padding and border within element's dimensions */
   font-size: 1vw;   /* For 1200 screens */
-  overflow-x: hidden;
+  overflow: hidden;
   color: #333;
   font-family: 'Josefin Sans', sans-serif;
-
+  
 }
-
+html{
+  scroll-behavior: smooth;
+  transition: scroll-behavior 1s ease-out;
+}
 /* Normalize - Consistently styles elements across browsers */
 /* Example using a link to normalize.css */
 /* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> */
@@ -20,7 +23,6 @@ body {
   line-height: 1;
   // letter-spacing: ;
   color: #333;
-  
 }
 
 a {

@@ -7,7 +7,7 @@
 import '@/styles/globalStyles.scss';
 import '@/styles/customStyles.scss';
 import '@/styles/animations.scss';
-
+// import '@/utils/butter';
 // Components
 import App from './App.vue'
 

@@ -1,40 +1,32 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
-export function useIntersectionObserver(elementToTrack, intersectionCallback) {
+export function useElementLocation(elementToTrack) {
   const pointA = ref({ x: 0, y: 0 });
   const pointB = ref({ x: 0, y: 0 });
   const pointC = ref({ x: 0, y: 0 });
   const pointD = ref({ x: 0, y: 0 });
-
   const width = ref(0);
   const height = ref(0);
 
-  onMounted(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0]; // Assuming there's only one element to track
-      if (entry.isIntersecting) {
-        const rect = entry.target.getBoundingClientRect();
-
-        pointA.value = { x: rect.left + window.scrollX, y: rect.top + window.scrollY };
-        pointB.value = { x: rect.right + window.scrollX, y: rect.top + window.scrollY };
-        pointC.value = { x: rect.right + window.scrollX, y: rect.bottom + window.scrollY };
-        pointD.value = { x: rect.left + window.scrollX, y: rect.bottom + window.scrollY };
-
-        width.value = rect.width;
-        height.value = rect.height;
-      }
-    });
-
+  const updateElementPosition = () => {
     if (elementToTrack.value) {
-      observer.observe(elementToTrack.value);
+      const rect = elementToTrack.value.getBoundingClientRect();
+      pointA.value = { x: rect.left + window.scrollX, y: rect.top + window.scrollY };
+      pointB.value = { x: rect.right + window.scrollX, y: rect.top + window.scrollY };
+      pointC.value = { x: rect.right + window.scrollX, y: rect.bottom + window.scrollY };
+      pointD.value = { x: rect.left + window.scrollX, y: rect.bottom + window.scrollY };
+      width.value = rect.width;
+      height.value = rect.height;
     }
+  };
+
+  onMounted(() => {
+    updateElementPosition();
+    window.addEventListener('resize', updateElementPosition);
   });
 
   onBeforeUnmount(() => {
-    const observer = new IntersectionObserver(() => {});
-    if (elementToTrack.value) {
-      observer.unobserve(elementToTrack.value);
-    }
+    window.removeEventListener('resize', updateElementPosition);
   });
 
   return {
@@ -45,6 +37,20 @@ export function useIntersectionObserver(elementToTrack, intersectionCallback) {
     width,
     height,
   };
+}
+
+
+export function setAnimationProgress(elementRef,scrollPosition, elemStartPos, elemEndPos) {
+  let animationProgress = 0;
+  if (scrollPosition >= elemStartPos && scrollPosition < elemEndPos) {
+    animationProgress = (scrollPosition - elemStartPos) / (elemEndPos - elemStartPos);
+  } else if (scrollPosition >= elemEndPos) {
+    animationProgress = .999;
+    return animationProgress;
+  }
+  const animationDelay = -animationProgress + "s";
+  elementRef.value.style.animationDelay = animationDelay;
+  return animationDelay
 }
 
 //to use 

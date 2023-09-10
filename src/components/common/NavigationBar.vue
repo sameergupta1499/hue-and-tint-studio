@@ -1,5 +1,5 @@
 <template>
-    <navbar class="flexCenter vpW navbar transform-default" :class="{ 'slide-up-navbar': !navState }">
+    <navbar class="flexCenter vpW navbar transform-default">
         <div class="navbar-logo-container">
             <a href="" class="logo-link ">
                 <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png?updatedAt=1691862962368"
@@ -48,7 +48,7 @@ import { watch, ref } from 'vue';
 import { useScrollTracker} from '@/utils/useScrollTracker.js';
 export default {
     setup() {
-        const { scrollY, viewportWidth, viewportHeight, scrollMovement } = useScrollTracker();
+        // const { scrollY, viewportWidth, viewportHeight, scrollMovement } = useScrollTracker();
         const navItems = ref([
             { label: 'HOME', route: '/' },
             { label: 'WORK', route: '/' },
@@ -56,12 +56,12 @@ export default {
             { label: 'CONTACT', route: '/' },
         ]);
         const navState = ref("NONE")
-        watch(scrollY, (newValue) => {
-            let threshold = viewportHeight.value/2 ;
-            if (scrollY.value > threshold){
-                navState.value = scrollMovement.value ;
-            }
-        });
+        // watch(scrollY, (newValue) => {
+        //     let threshold = viewportHeight.value/2 ;
+        //     if (scrollY.value > threshold){
+        //         navState.value = scrollMovement.value ;
+        //     }
+        // });
 
 
 

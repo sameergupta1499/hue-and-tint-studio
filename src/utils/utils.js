@@ -1,5 +1,5 @@
 // Define the throttle function
-function throttle(func, interval) {
+export function throttle(func, interval) {
     let lastExecutionTime = 0;
   
     return function (...args) {
@@ -10,3 +10,15 @@ function throttle(func, interval) {
       }
     };
   }
+
+  export function debounce(callback, delay) {
+    let timerId;
+  
+    return function () {
+      clearTimeout(timerId);
+      timerId = setTimeout(() => {
+        callback.apply(this, arguments);
+      }, delay);
+    };
+  }
+  

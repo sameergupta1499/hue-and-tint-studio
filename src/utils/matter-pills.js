@@ -1,5 +1,6 @@
 import Matter from 'matter-js';
 import { gsap } from 'gsap';
+import { throttle } from '@/utils/utils'
 
 const COLOR = {
   HEADER: '#868e96',
@@ -46,6 +47,7 @@ const init = (width, height) => {
   Matter.Composite.add(engine.world, elements);
 
   startAnimation();
+  addEventListener();
   return { engine, render, runner }; // Return the engine instance
 };
 
@@ -60,14 +62,33 @@ const startAnimation = () => {
     Matter.Body.setAngularVelocity(body, rand(-0.01, 0.01));
   });
 };
-// Listen for the scroll event and call startAnimation when it occurs
-window.addEventListener('scroll', function () {
-  let slamThreshold=100;
-  let st = document.documentElement.scrollTop;
-  if (st > slamThreshold) {
-    startAnimation();
-  }
-}, false);
+function addEventListener(){
+		window.addEventListener('touchstart', (e) => {
+		  startAnimation();
+		});
+	  
+		window.addEventListener('touchmove', (e) => {
+      startAnimation();
+		  });
+	  
+		// window.addEventListener('wheel', () => {
+		//   startAnimation();
+		// });
+    const debouncedStartAnimation = throttle(startAnimation, 200);
+    window.addEventListener('wheel', debouncedStartAnimation);
+}
+
+
+
+// Listen for the scroll event and call startAnimation when it occurs this if where no scroll-page smoothscroll
+// window.addEventListener('scroll', function () {
+//   "here"
+//   let slamThreshold=100;
+//   let st = document.documentElement.scrollTop;
+//   if (st > slamThreshold) {
+//     startAnimation();
+//   }
+// }, false);
 
 const rand = (min, max) => {
   return Math.random() * (max - min) + min;
