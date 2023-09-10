@@ -10,7 +10,6 @@ class GScroll
 		this.deltaY = 0;
 		this.update = onUpdate;
         this.scrollMovement = scrollMovement;
-		this.touchScrollMovement = scrollMovement * 50;
 		this.deltaLimit = 80
 		this.deltaDefault = 33.3333
 	}
@@ -66,7 +65,7 @@ class GScroll
 			if (!this.isTouching) return;
 	  
 			const deltaY = this.touchStartY - e.touches[0].clientY;
-			this.deltaY = deltaY * this.touchScrollMovement; // Apply touch-specific scrollMovement
+			this.deltaY = deltaY; // Apply touch-specific scrollMovement
 			this.touchStartY = e.touches[0].clientY;
 	  
 			window.clearTimeout(this.isWheeling);
