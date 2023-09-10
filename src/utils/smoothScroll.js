@@ -2,16 +2,16 @@ import gsap from "gsap";
 import { ref } from "vue";
 class GScroll
 {
-	constructor (elmt, speed,scrollMovement, onUpdate = () => true)
-	{	//scrollMovement decide how much screen will move wrt to the scroll.
+	constructor (elmt, speed, onUpdate = () => true)
+	{	
 		this.speed = speed/10 || 0.06;
 		this.elmt = elmt;
 		this.isWheeling = null;
 		this.deltaY = 0;
 		this.update = onUpdate;
-        this.scrollMovement = scrollMovement;
 		this.deltaLimit = 80
 		this.deltaDefault = 33.3333
+		this.deltaTouchEnhancer = 2.5;
 	}
 
 	init ()
@@ -63,11 +63,11 @@ class GScroll
 	  
 		window.addEventListener('touchmove', (e) => {
 			if (!this.isTouching) return;
-	  
+			
 			const deltaY = this.touchStartY - e.touches[0].clientY;
-			this.deltaY = deltaY; // Apply touch-specific scrollMovement
+			this.deltaY = deltaY*this.deltaTouchEnhancer;
 			this.touchStartY = e.touches[0].clientY;
-	  
+			
 			window.clearTimeout(this.isWheeling);
 			this.isWheeling = setTimeout(() => {
 			  this.deltaY = 0;
@@ -122,7 +122,7 @@ class GScroll
 }
 
 export function useSmoothScrollOnMounted() {
-    const scroll = ref(new GScroll( "#scroll-page", 1,.25 ))
+    const scroll = ref(new GScroll( "#scroll-page", 1 ))
     scroll.value.init()
     scroll.value.wheel()
 	scroll.value.touch(); // Enable touch event

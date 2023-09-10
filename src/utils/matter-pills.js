@@ -63,12 +63,19 @@ const startAnimation = () => {
   });
 };
 function addEventListener(){
+  let touchStartY = 0;
 		window.addEventListener('touchstart', (e) => {
+      touchStartY = e.touches[0].clientY;
 		  startAnimation();
 		});
 	  
 		window.addEventListener('touchmove', (e) => {
-      startAnimation();
+      let deltaY = touchStartY - e.touches[0].clientY;
+      console.log(deltaY)
+      if (deltaY > 4) {
+        startAnimation();
+      }
+      touchStartY = e.touches[0].clientY;
 		  });
 	  
       window.addEventListener('wheel',(e) => {
