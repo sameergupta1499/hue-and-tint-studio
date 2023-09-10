@@ -9,8 +9,8 @@ class GScroll
 		this.isWheeling = null;
 		this.deltaY = 0;
 		this.update = onUpdate;
-		this.deltaLimit = 80
-		this.deltaDefault = 33.3333
+		this.deltaLimit = 40
+		this.deltaDefault = 15
 		this.deltaTouchEnhancer = 2.5;
 	}
 
@@ -43,9 +43,13 @@ class GScroll
 		window.addEventListener('wheel', this.ref = (e) => {
 			const delta = e.deltaY;
 			const limitedDelta = delta < -this.deltaLimit ? -this.deltaDefault : delta > this.deltaLimit ? this.deltaDefault : delta; // Assign -50 for delta less than -120, 50 for delta greater than 120, and keep the original value otherwise
-			this.deltaY = limitedDelta;
+			this.deltaY = limitedDelta+ this.deltaY;
+			if (Math.abs(delta) < Math.abs(this.deltaY)) {
+				this.deltaY = delta;
+			}
+			console.log(delta,Math.abs(this.deltaY),Math.abs(limitedDelta))
 			window.clearTimeout( this.isWheeling);
-			console.log(this.isWheeling,this.deltaY )
+			// console.log(this.isWheeling,this.deltaY )
             this.isWheeling = setTimeout( (e) => {
                 this.deltaY = 0;
             }, 66);

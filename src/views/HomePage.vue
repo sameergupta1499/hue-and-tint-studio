@@ -7,6 +7,7 @@
       <DummyComponent />
       <PortfolioComponent />
       <DummyComponent />
+      <PortfolioComponent />
     </div>
 
 
