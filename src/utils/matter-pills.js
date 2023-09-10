@@ -56,8 +56,8 @@ const startAnimation = () => {
   elements.forEach((body) => {
     Matter.Body.setStatic(body, false);
     Matter.Body.setVelocity(body, {
-      x: rand(-2, 2),
-      y: rand(-2, -2),
+      x: rand(-4, 4),
+      y: rand(-4, -4),
     });
     Matter.Body.setAngularVelocity(body, rand(-0.01, 0.01));
   });
@@ -71,11 +71,12 @@ function addEventListener(){
       startAnimation();
 		  });
 	  
-		// window.addEventListener('wheel', () => {
-		//   startAnimation();
-		// });
-    const debouncedStartAnimation = throttle(startAnimation, 200);
-    window.addEventListener('wheel', debouncedStartAnimation);
+      window.addEventListener('wheel',(e) => {
+        if (e.deltaY > 3.5) {
+          startAnimation();
+        }
+      
+      });
 }
 
 
