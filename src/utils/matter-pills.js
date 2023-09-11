@@ -1,7 +1,7 @@
 import Matter from 'matter-js';
 import { gsap } from 'gsap';
 import { throttle } from '@/utils/utils'
-
+import { getCSSVariableValue } from '@/utils/utils';
 const COLOR = {
   HEADER: '#868e96',
   IMAGE: '#22b8cf',
@@ -165,7 +165,12 @@ function cleanupMatterSetup(engine, runner) {
 
 const createBoxElements = (boxList) => {
   const matterContainer = document.getElementById('matter-container');
-  const colors = ['#f8c1ca', '#f5e495', '#f0e2d1', '#d2e5cb'];
+  const colors = [
+    getCSSVariableValue('--pink'), 
+    getCSSVariableValue('--yellow'), 
+    getCSSVariableValue('--almond'), 
+    getCSSVariableValue('--light-green'), 
+  ];
 
   for (let i = 0; i < boxList.length; i++) {
     const boxDiv = document.createElement('div');

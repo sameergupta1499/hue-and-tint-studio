@@ -1,17 +1,15 @@
 <template>
-    <div class="project-slide position-relative">
+    <div class="project-slide position-relative" :style="{ background: topColor }">
         <div class="container-wrapper overflow-visible position-relative container">
-            <div class="background-round position-absolute" ref="backgroundCircle"></div>
-            <div class="background-square position-absolute vpW"></div>
+            <div class="background-round position-absolute" ref="backgroundCircle" :style="{ background: backgroundColor }"></div>
+            <div class="background-square position-absolute vpW" :style="{ background: backgroundColor }"></div>
             <div class="content overflow-visible container position-relative">
                 <div class="card-container">
                     <div class="cards-wrapper card-wrapper-left" ref="cardLeft">
-                        <img
-                            src="https://images.ctfassets.net/8b1jz4cf6kyy/6aosNheaRtPUBQRf4RE2fx/48291d8abbe63cccb400c9efa0660fc1/45.png?w=1024&fm=webp&q=92">
+                        <img :src="leftCardUrl">
                     </div>
                     <div class="cards-wrapper card-wrapper-right" ref="cardRight">
-                        <img
-                            src="https://images.ctfassets.net/8b1jz4cf6kyy/6aosNheaRtPUBQRf4RE2fx/48291d8abbe63cccb400c9efa0660fc1/45.png?w=1024&fm=webp&q=92">
+                        <img :src="rightCardUrl"/>
                     </div>
                 </div>
             </div>
@@ -24,6 +22,12 @@ import { watch, ref } from 'vue';
 import { setAnimationProgress, useElementLocation } from '@/utils/useElementPosition';
 import { useScrollTracker} from '@/utils/useScrollTracker.js';
 export default {
+    props: {
+    leftCardUrl: String,
+    rightCardUrl: String,
+    topColor: String,
+    backgroundColor: String,
+  },
     setup() {
         const backgroundCircle = ref(null);
         const cardLeft = ref(null);
@@ -63,7 +67,6 @@ $card-width-992: 21vw;
 
 
 .project-slide {
-    background: pink;
     padding-top: $padding-slide-padding-top;
     height: 100vh;
     overscroll-behavior: none;
@@ -75,7 +78,6 @@ $card-width-992: 21vw;
 
 .background-round {
     // background-color: rgb(255, 230, 153);
-    background: red;
     border-radius: 50%;
     height: 100vw;
     width: 100vw;
@@ -96,7 +98,6 @@ $card-width-992: 21vw;
 }
 
 .background-square {
-    background: rgb(255, 230, 153);
     top: calc(50vw + $padding-slide-padding-top);
     height: 200vw;
 }

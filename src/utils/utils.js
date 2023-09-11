@@ -21,4 +21,7 @@ export function throttle(func, interval) {
       }, delay);
     };
   }
+  export function getCSSVariableValue(variableName) {
+    return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
+  }
   
