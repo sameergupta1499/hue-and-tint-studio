@@ -1,9 +1,9 @@
 <template>
-    <navbar class="flexCenter vpW navbar transform-default">
+    <navbar class="flexCenter vpW navbar transform-default" :class="{ 'navbar-hide': isNavbarHidden }" ref="navbarRef">
         <div class="navbar-logo-container">
             <a href="" class="logo-link ">
                 <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png?updatedAt=1691862962368"
-                    id="logo-img" class= " orange-hover" alt="Logo" />
+                    id="logo-img" class="orange-hover" alt="Logo" />
             </a>
         </div>
 
@@ -20,12 +20,12 @@
         <div class="navbar-menu-container">
             <v-menu>
                 <template v-slot:activator="{ props }">
-                        <div class="navbar-hamburger-icon  orange-hover" v-bind="props">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </div>
+                    <div class="navbar-hamburger-icon  orange-hover" v-bind="props">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
                 </template>
 
                 <ul class="navbar-list collapsed">
@@ -45,10 +45,13 @@
 
 <script>
 import { watch, ref } from 'vue';
-import { useScrollTracker} from '@/utils/useScrollTracker.js';
+import { useScrollTracker } from '@/utils/useScrollTracker.js';
 export default {
     setup() {
-        // const { scrollY, viewportWidth, viewportHeight, scrollMovement } = useScrollTracker();
+        const { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
+        const navbarRef = ref(null)
+        const isNavbarHidden = ref(false);
+        let prevScrollY = 0;
         const navItems = ref([
             { label: 'HOME', route: '/' },
             { label: 'WORK', route: '/' },
@@ -56,18 +59,27 @@ export default {
             { label: 'CONTACT', route: '/' },
         ]);
         const navState = ref("NONE")
-        // watch(scrollY, (newValue) => {
-        //     let threshold = viewportHeight.value/2 ;
-        //     if (scrollY.value > threshold){
-        //         navState.value = scrollMovement.value ;
-        //     }
-        // });
+        watch(scrollY, (newValue) => {
+            const threshold = viewportHeight.value / 2;
+
+            // Check if the user is scrolling down (scrolling away from the top)
+            if (newValue > threshold && newValue > prevScrollY) {
+                isNavbarHidden.value = true; // Add the class 'navbar-hide'
+            } else {
+                isNavbarHidden.value = false; // Remove the class 'navbar-hide'
+            }
+
+            // Update the previous scroll position
+            prevScrollY = newValue;
+        });
 
 
 
         return {
             navItems,
-            navState
+            navState,
+            navbarRef,
+            isNavbarHidden
         };
     },
 };
@@ -82,7 +94,7 @@ $logoHeight: 6vh;
 .navbar {
     position: fixed;
     z-index: 100;
-    top:0;
+    top: 0;
     left: 0;
     min-height: $navbar-height-l;
     margin: 0;
@@ -90,11 +102,19 @@ $logoHeight: 6vh;
     justify-content: space-between;
     box-sizing: border-box;
     line-height: 1.2rem;
-    background:  #000000;
+    background: #000000;
+    transition: top 0.5s ease-out;
 }
-.navbar-item,.navbar-logo-container{
+
+.navbar-hide {
+    top: -$navbar-height-l;
+}
+
+.navbar-item,
+.navbar-logo-container {
     overflow: visible;
 }
+
 .navbar-menu-container {
     display: none;
     color: white;
@@ -116,16 +136,12 @@ $logoHeight: 6vh;
 
 #logo-img {
     height: 100%;
-    /* Set the image height to fill the container */
     width: auto;
-    /* Let the width adjust based on aspect ratio */
     object-fit: contain;
-    /* Preserve aspect ratio, fit inside without cropping */
 }
 
 @media (max-width: 768px) {
     .navbar-logo-container {
-        // width: calc($navbar-height-l / 2);
         height: $logoHeight-s;
 
     }
@@ -142,13 +158,15 @@ $logoHeight: 6vh;
     .navbar-menu-container {
         display: block;
     }
-    .navbar-list.collapsed{
+
+    .navbar-list.collapsed {
         flex-direction: column;
-        align-items:flex-start;
-        background-color: rgba(0, 0, 0, 0.4); 
-        width:20rem;
-        li{
-            padding:2rem 1rem;
+        align-items: flex-start;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 20rem;
+
+        li {
+            padding: 2rem 1rem;
             line-height: 1.2rem;
         }
     }
@@ -164,7 +182,7 @@ $logoHeight: 6vh;
         margin-left: 2vw;
 
         a {
-            h6{
+            h6 {
                 font-weight: 300;
                 color: white;
             }

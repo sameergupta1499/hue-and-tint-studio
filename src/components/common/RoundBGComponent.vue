@@ -33,7 +33,7 @@ export default {
         // Watch the scrollY value and perform actions based on it
         watch(scrollY, (newValue) => {
             let scrollPosition = newValue;
-            let elStartPosOffset = -30;
+            let elStartPosOffset = -20;
             let elStartPosBG = pointA.value.y + elStartPosOffset;
             let elEndPosBG = elStartPosBG + (height.value / 4);
             setAnimationProgress(backgroundCircle, scrollPosition, elStartPosBG, elEndPosBG);

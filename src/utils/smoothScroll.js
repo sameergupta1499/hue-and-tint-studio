@@ -141,7 +141,7 @@ class GScroll
         }
 		this.update();
         // console.log(this.current,window.visualViewport);
-		console.log("CURRENT: ",this.current," ,scrollTop: ", this.scrollTop," ,visualViewport.pageTop: ", window.visualViewport.pageTop," ,height: ", this.height," ,deltaY: ",this.deltaY, "this.offsetY", this.offsetY);
+		// console.log("CURRENT: ",this.current," ,scrollTop: ", this.scrollTop," ,visualViewport.pageTop: ", window.visualViewport.pageTop," ,height: ", this.height," ,deltaY: ",this.deltaY, "this.offsetY", this.offsetY);
         
     }
 	scrollTo(targetY) {
