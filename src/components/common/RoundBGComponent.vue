@@ -40,6 +40,7 @@ export default {
 
             let elStartPosCard = pointA.value.y + elStartPosOffset - (viewportHeight.value); //we want to start the animation moment circle is visible
             let elEndPosCard = pointA.value.y + viewportHeight.value;
+            // console.log( scrollPosition, elStartPosCard, elEndPosCard)
             setAnimationProgress(cardLeft, scrollPosition, elStartPosCard, elEndPosCard)
             setAnimationProgress(cardRight, scrollPosition, elStartPosCard, elEndPosCard)
         });
