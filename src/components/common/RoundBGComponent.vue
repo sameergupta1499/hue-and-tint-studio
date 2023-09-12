@@ -43,10 +43,10 @@ export default {
         let { pointA, pointB, pointC, pointD, width, height } = useElementLocation(backgroundCircle);
         // Watch the scrollY value and perform actions based on it
 
-        onMounted(() => {
-            let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
-            let { pointA, pointB, pointC, pointD, width, height } = useElementLocation(backgroundCircle);
-        });
+        // onMounted(() => {
+        //     let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
+        //     let { pointA, pointB, pointC, pointD, width, height } = useElementLocation(backgroundCircle);
+        // });
 
         watch(scrollY, (newValue) => {
             let scrollPosition = newValue;

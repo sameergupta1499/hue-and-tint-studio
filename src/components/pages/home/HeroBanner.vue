@@ -39,7 +39,7 @@ import { getCSSVariableValue } from '@/utils/utils';
 export default {
     setup() {
         const { masker, updateCursorPoints, updateCursorSize } = useMaskerFunctions();
-        const heroContainerBgColor = getCSSVariableValue("--almond");
+        const heroContainerBgColor = getCSSVariableValue("--alabaster");
         const bannerHiddenContainerBgColor = getCSSVariableValue("--yellow");
             // Function to set the width of the hidden container
         return {
@@ -118,7 +118,7 @@ export default {
     top: 0px;
     z-index: 9;
     left: 0px;
-    // background-color: #F5E496;
+    // background-color: var(--alabaster);
     color: white; // width: 33%
     pointer-events: none;
 }</style>
