@@ -2,7 +2,6 @@
   <v-main>
     <NavigationBar />
     <div id="scroll-page">
-      
       <HeroBanner />
       <DummyComponent />
       <PortfolioComponent />

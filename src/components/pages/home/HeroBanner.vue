@@ -1,6 +1,6 @@
 <template>
     <div class="vpContainer hero-container" @mousemove="updateCursorPoints" @mouseenter="updateCursorSize(size = 'small')"
-        @mouseleave="updateCursorSize(size = 'none')">
+        @mouseleave="updateCursorSize(size = 'none')" :style="{background: heroContainerBgColor}">
         <MatterPills />
         <div class="banner-container flexCenter container">
             <!-- <div class="flexCenterColumn banner"> -->
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <div class="banner-hidden-container flexCenter container js-masker" ref="masker">
+        <div class="banner-hidden-container flexCenter container js-masker" :style="{ background: bannerHiddenContainerBgColor }" ref="masker">
             <div class="flexCenterColumn banner">
                 <div>
                     <h1>The Studio</h1>
@@ -35,13 +35,18 @@
 <script>
 import { useMaskerFunctions } from '@/utils/js-masker/masker';
 import MatterPills from '@/components/common/MatterPills.vue';
+import { getCSSVariableValue } from '@/utils/utils';
 export default {
     setup() {
         const { masker, updateCursorPoints, updateCursorSize } = useMaskerFunctions();
+        const heroContainerBgColor = getCSSVariableValue("--almond");
+        const bannerHiddenContainerBgColor = getCSSVariableValue("--yellow");
             // Function to set the width of the hidden container
         return {
             updateCursorPoints,
             updateCursorSize,
+            heroContainerBgColor,
+            bannerHiddenContainerBgColor,
             masker, // Export the ref so it's accessible in the template
         };
     },
@@ -58,7 +63,6 @@ export default {
 
 .hero-container {
     position: relative;
-    background:  #f3eee8;
 
 }
 
@@ -114,7 +118,7 @@ export default {
     top: 0px;
     z-index: 9;
     left: 0px;
-    background-color: #F5E496;
+    // background-color: #F5E496;
     color: white; // width: 33%
     pointer-events: none;
 }</style>

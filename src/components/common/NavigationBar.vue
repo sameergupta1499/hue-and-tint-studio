@@ -1,5 +1,5 @@
 <template>
-    <navbar class="flexCenter vpW navbar transform-default" :class="{ 'navbar-hide': isNavbarHidden }" ref="navbarRef">
+    <div class="flexCenter vpW navbar transform-default" :class="{ 'navbar-hide': isNavbarHidden }" ref="navbarRef">
         <div class="navbar-logo-container">
             <a href="" class="logo-link ">
                 <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png?updatedAt=1691862962368"
@@ -39,7 +39,7 @@
         </div>
 
 
-    </navbar>
+    </div>
 </template>
   
 

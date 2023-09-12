@@ -1,9 +1,9 @@
 <template>
-    <div class="project-slide position-relative" :style="{ background: topColor }">
+    <div class="project-slide position-relative overflow-visible" :style="{ background: topColor }">
         <div class="container-wrapper overflow-visible position-relative container">
-            <div class="background-round position-absolute" ref="backgroundCircle" :style="{ background: backgroundColor }"></div>
+            <div class="background-round position-absolute " ref="backgroundCircle" :style="{ background: backgroundColor }" ></div>
             <div class="background-square position-absolute vpW" :style="{ background: backgroundColor }"></div>
-            <div class="content overflow-visible container position-relative">
+            <div class="content overflow-visible position-relative ">
                 <div class="card-container">
                     <div class="cards-wrapper card-wrapper-left" ref="cardLeft">
                         <img :src="leftCardUrl">
@@ -12,13 +12,18 @@
                         <img :src="rightCardUrl"/>
                     </div>
                 </div>
+                <div class="card-content flexCenterColumn position-relative ">
+                    <h4 class="card-count card-content-line">1/5</h4>
+                    <h1 class="card-title card-content-line">{{ title }}</h1>
+                    <h6 class="card-description card-content-line">{{ description }}</h6>
+                </div>
             </div>
         </div>
     </div>
 </template>
   
 <script>
-import { watch, ref } from 'vue';
+import { watch, ref, onMounted } from 'vue';
 import { setAnimationProgress, useElementLocation } from '@/utils/useElementPosition';
 import { useScrollTracker} from '@/utils/useScrollTracker.js';
 export default {
@@ -27,14 +32,22 @@ export default {
     rightCardUrl: String,
     topColor: String,
     backgroundColor: String,
+    title: String,
+    description: String,
   },
     setup() {
         const backgroundCircle = ref(null);
         const cardLeft = ref(null);
         const cardRight = ref(null);
-        const { scrollY, viewportWidth, viewportHeight, scrollMovement } = useScrollTracker();
-        const { pointA, pointB, pointC, pointD, width, height } = useElementLocation(backgroundCircle);
+        let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
+        let { pointA, pointB, pointC, pointD, width, height } = useElementLocation(backgroundCircle);
         // Watch the scrollY value and perform actions based on it
+
+        onMounted(() => {
+            let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
+            let { pointA, pointB, pointC, pointD, width, height } = useElementLocation(backgroundCircle);
+        });
+
         watch(scrollY, (newValue) => {
             let scrollPosition = newValue;
             let elStartPosOffset = -20;
@@ -44,7 +57,7 @@ export default {
 
             let elStartPosCard = pointA.value.y + elStartPosOffset - (viewportHeight.value); //we want to start the animation moment circle is visible
             let elEndPosCard = pointA.value.y + viewportHeight.value;
-            // console.log( scrollPosition, elStartPosCard, elEndPosCard)
+            // console.log( scrollPosition, elStartPosCard, elEndPosCard,pointA.value.y)
             setAnimationProgress(cardLeft, scrollPosition, elStartPosCard, elEndPosCard)
             setAnimationProgress(cardRight, scrollPosition, elStartPosCard, elEndPosCard)
         });
@@ -60,7 +73,7 @@ export default {
 </script>
  
 <style lang="scss" scoped>
-$padding-slide-padding-top: 10vh;
+$padding-slide-padding-top: 5vh;
 $card-width: 45vw;
 $card-width-812: 33vw;
 $card-width-992: 21vw;
@@ -68,14 +81,20 @@ $card-width-992: 21vw;
 
 .project-slide {
     padding-top: $padding-slide-padding-top;
-    height: 100vh;
+    // height: auto;
     overscroll-behavior: none;
+    // height:100vh;
 }
 
 .container-wrapper {
     padding-top: $padding-slide-padding-top;
 }
-
+// .content{
+//     height: calc(200vw - 100vh);
+//     min-height: 50vw;
+//     max-height: 200vw;
+//     // background:grey;
+// }
 .background-round {
     // background-color: rgb(255, 230, 153);
     border-radius: 50%;
@@ -98,12 +117,28 @@ $card-width-992: 21vw;
 }
 
 .background-square {
-    top: calc(50vw + $padding-slide-padding-top);
+    top: calc(calc(50vw + #{$padding-slide-padding-top}) - 2px);
+
     height: 200vw;
+    // background:grey !important;
+}
+// @media (min-aspect-ratio: 1/1) {
+//   .background-square {
+//     height: 0;
+//   }
+// }
+img {
+    width: 100%;
+    /* Set image width to 100% of the card */
+    height: 100%;
+    /* Ensure the image covers the entire card */
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .card-container {
     padding-top: 7vw;
+    
     display: flex;
 }
 
@@ -161,7 +196,7 @@ $card-width-992: 21vw;
     }
 }
 
-@media (min-width: 812px) {
+@media (min-width: 768px) {
     .cards-wrapper {
         width: calc($card-width - 12vw);
         // left:4%;
@@ -188,13 +223,11 @@ $card-width-992: 21vw;
     }
 }
 
-img {
-    width: 100%;
-    /* Set image width to 100% of the card */
-    height: 100%;
-    /* Ensure the image covers the entire card */
-    object-fit: cover;
-    border-radius: 20px;
+.card-content {
+    padding-top: 20rem;
+    padding-bottom: 5rem;
 }
-
-.card {}</style>
+.card-content-line{
+    padding-bottom:1.5rem;
+}
+</style>

@@ -1,6 +1,10 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { useScrollTracker} from '@/utils/useScrollTracker.js';
 
+
+//x: rect.left + window.scrollX,   X POINTS ARE NOT CORRECT FOR SURE.
 export function useElementLocation(elementToTrack) {
+  const { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
   const pointA = ref({ x: 0, y: 0 });
   const pointB = ref({ x: 0, y: 0 });
   const pointC = ref({ x: 0, y: 0 });
@@ -12,12 +16,14 @@ export function useElementLocation(elementToTrack) {
     if (elementToTrack.value) {
       const rect = elementToTrack.value.getBoundingClientRect();
       pointA.value = { x: rect.left + window.scrollX, y: rect.top + window.scrollY };
-      pointB.value = { x: rect.right + window.scrollX, y: rect.top + window.scrollY };
-      pointC.value = { x: rect.right + window.scrollX, y: rect.bottom + window.scrollY };
-      pointD.value = { x: rect.left + window.scrollX, y: rect.bottom + window.scrollY };
+      pointB.value = { x: rect.right + window.scrollX, y: rect.top + scrollY.value };
+      pointC.value = { x: rect.right + window.scrollX, y: rect.bottom + scrollY.value };
+      pointD.value = { x: rect.left + window.scrollX, y: rect.bottom + scrollY.value };
       width.value = rect.width;
       height.value = rect.height;
+      // console.log(" pointA.value ",pointA.value.y," rect.top ",rect.top," scrollY ",scrollY.value);
     }
+    
   };
 
   onMounted(() => {

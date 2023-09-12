@@ -1,7 +1,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import gsap from 'gsap';
 
-const scrollY = ref(0);
+const scrollY = ref(window.scrollY);
 const viewportWidth = ref(window.innerWidth);
 const viewportHeight = ref(window.innerHeight);
 
@@ -19,6 +19,8 @@ export function useScrollTracker() {
 
   onMounted(() => {
     // Initialize GSAP ticker
+    console.log("scroll Position From useScrollTracker Handle-",-window.scrollY);
+
     gsap.ticker.add(() => {
       handleScroll();
       handleResize();

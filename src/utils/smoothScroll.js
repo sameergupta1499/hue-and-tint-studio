@@ -20,15 +20,20 @@ class GScroll
 	{
 		// console.log("BEFFFFFFFFFFFOOOOOOOOOOREEE", "scrollTop", this.scrollTop, "deltaY", this.deltaY, "current", this.current, "window.scrollY", 
 		// window.scrollY, "this.height", this.height,"window.visualViewport.pageTop",window.visualViewport.pageTop,window.visualViewport)
+		// console.log("Before tick window.visualViewport.pageTop",window.visualViewport.pageTop)
 		this.current = this.scrollTop = window.scrollY;
-
 		this.height = document.querySelector(this.elmt).scrollHeight - window.innerHeight;
 		this.deplacement = gsap.quickSetter(this.elmt, "y", "px");
 		// console.log("HERHERERERERE", "scrollTop", this.scrollTop, "deltaY", this.deltaY, "current", this.current, "window.scrollY", window.scrollY, "this.height", this.height,window.visualViewport.pageTop);
+		window.addEventListener('resize', () => {
+			this.resizeHandler();
+		  });
 		this.addTicker = () => {
 	      this.playTicker();
 	    }
 	    gsap.ticker.add(this.addTicker);
+		// console.log("After tick window.visualViewport.pageTop",window.visualViewport.pageTop)
+
 	}
 
 	// scroll() {
@@ -93,17 +98,21 @@ class GScroll
 		});
 	  }
 
-	resize()
+	resizeHandler()
 	{
-		this.height = document.querySelector(this.elmt).clientHeight-window.innerHeight;
+		this.height = document.querySelector(this.elmt).scrollHeight-window.innerHeight;
+		this.height -= this.offsetY;
+		console.log("called Smooth REsize Handler",this.height)
 	}
 	setInitialPosition(){
 		this.offsetY = window.visualViewport.pageTop;
 		this.current = this.offsetY;
 		window.scrollY = this.offsetY;
 		this.scrollTop = -this.offsetY;
+		this.height = document.querySelector(this.elmt).scrollHeight - window.innerHeight;
 		this.height -= this.offsetY;
 		this.deplacement(this.current);
+		// console.log("SetInititalPOISITION window.visualViewport.pageTop",window.visualViewport.pageTop)
 	}
 
 	playTicker(){
@@ -156,6 +165,7 @@ class GScroll
 		window.removeEventListener('touchstart', this.touchStartHandler);
 		window.removeEventListener('touchmove', this.touchMoveHandler);
 		window.removeEventListener('touchend', this.touchEndHandler);
+		window.removeEventListener('resize', this.resizeHandler);
 		gsap.ticker.remove(this.addTicker);
 	}
 }
@@ -166,6 +176,6 @@ export function useSmoothScrollOnMounted() {
     scroll.value.wheel()
 	scroll.value.touch(); // Enable touch event
 	// scroll.value.scroll(); // Enable touch event
-
+	
     return scroll
 }
