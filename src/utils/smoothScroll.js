@@ -1,181 +1,86 @@
-import gsap from "gsap";
-import { ref } from "vue";
-class GScroll
-{
-	constructor (elmt, speed, onUpdate = () => true)
-	{	
-		this.speed = speed/10 || 0.06;
-		this.elmt = elmt;
-		this.isWheeling = null;
-		this.deltaY = 0;
-		this.update = onUpdate;
-		this.deltaLimit = 40
-		this.deltaDefault = 15
-		this.deltaTouchEnhancer = 2.5;
-		this.flag=false;
-		this.offsetY = 0;
-	}
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+import Scrollbar from 'smooth-scrollbar';
 
-	init ()
-	{
-		// console.log("BEFFFFFFFFFFFOOOOOOOOOOREEE", "scrollTop", this.scrollTop, "deltaY", this.deltaY, "current", this.current, "window.scrollY", 
-		// window.scrollY, "this.height", this.height,"window.visualViewport.pageTop",window.visualViewport.pageTop,window.visualViewport)
-		// console.log("Before tick window.visualViewport.pageTop",window.visualViewport.pageTop)
-		this.current = this.scrollTop = window.scrollY;
-		this.height = document.querySelector(this.elmt).scrollHeight - window.innerHeight;
-		this.deplacement = gsap.quickSetter(this.elmt, "y", "px");
-		// console.log("HERHERERERERE", "scrollTop", this.scrollTop, "deltaY", this.deltaY, "current", this.current, "window.scrollY", window.scrollY, "this.height", this.height,window.visualViewport.pageTop);
-		window.addEventListener('resize', () => {
-			this.resizeHandler();
-		  });
-		this.addTicker = () => {
-	      this.playTicker();
-	    }
-	    gsap.ticker.add(this.addTicker);
-		// console.log("After tick window.visualViewport.pageTop",window.visualViewport.pageTop)
+// import gsap from 'gsap';
 
-	}
+// const scrollY = ref(window.scrollY);
+// const viewportWidth = ref(window.innerWidth);
+// const viewportHeight = ref(window.innerHeight);
 
-	// scroll() {
-	// 	window.addEventListener('scroll', this.ref = (e) =>{
-	// 		this.deltaY = e.deltaY;
-	// 		window.clearTimeout( this.isWheeling );
+export function init(elem) {
 
-
-    //         this.isWheeling = setTimeout( (e) => {
-    //             this.deltaY = 0;
-    //         }, 66);
-	// 	});
-	//   }
-
-	scroll() {
-		window.addEventListener('scroll', this.ref = (e) =>{
-			// console.log("scrolled")
-		});
-	  }
-	wheel()
-	{
-		window.addEventListener('wheel', this.ref = (e) => {
-			const delta = e.deltaY;
-			const limitedDelta = delta < -this.deltaLimit ? -this.deltaDefault : delta > this.deltaLimit ? this.deltaDefault : delta; // Assign -50 for delta less than -120, 50 for delta greater than 120, and keep the original value otherwise
-			this.deltaY = limitedDelta+ this.deltaY;
-			if (Math.abs(delta) < Math.abs(this.deltaY)) {
-				this.deltaY = delta;
-			}
-			// console.log(delta,Math.abs(this.deltaY),Math.abs(limitedDelta))
-			window.clearTimeout( this.isWheeling);
-			// console.log(this.isWheeling,this.deltaY )
-            this.isWheeling = setTimeout( (e) => {
-                this.deltaY = 0;
-            }, 66);
-
-        });
-	}
-	touch() {
-		this.touchStartY = 0;
-		this.isTouching = false;
-	  
-		window.addEventListener('touchstart', (e) => {
-		  this.touchStartY = e.touches[0].clientY;
-		  this.isTouching = true;
-		});
-	  
-		window.addEventListener('touchmove', (e) => {
-			if (!this.isTouching) return;
-			
-			const deltaY = this.touchStartY - e.touches[0].clientY;
-			this.deltaY = deltaY*this.deltaTouchEnhancer;
-			this.touchStartY = e.touches[0].clientY;
-			
-			window.clearTimeout(this.isWheeling);
-			this.isWheeling = setTimeout(() => {
-			  this.deltaY = 0;
-			}, 66);
-		  });
-	  
-		window.addEventListener('touchend', () => {
-		  this.isTouching = false;
-		});
-	  }
-
-	resizeHandler()
-	{
-		this.height = document.querySelector(this.elmt).scrollHeight-window.innerHeight;
-		this.height -= this.offsetY;
-		console.log("called Smooth REsize Handler",this.height)
-	}
-	setInitialPosition(){
-		this.offsetY = window.visualViewport.pageTop;
-		this.current = this.offsetY;
-		window.scrollY = this.offsetY;
-		this.scrollTop = -this.offsetY;
-		this.height = document.querySelector(this.elmt).scrollHeight - window.innerHeight;
-		this.height -= this.offsetY;
-		this.deplacement(this.current);
-		// console.log("SetInititalPOISITION window.visualViewport.pageTop",window.visualViewport.pageTop)
-	}
-
-	playTicker(){
-		if (this.flag==false){
-			if (window.visualViewport.pageTop > 0) {
-				// console.log("HEHRHEHREHREHRHERE",window.visualViewport.pageTop);
-				this.setInitialPosition();
-			}
-			this.flag=true;
-		}
-		
-		const dt = 1.0 - Math.pow(1.0 - this.speed, gsap.ticker.deltaRatio());
-
-		if(this.scrollTop + this.deltaY > this.height){     //scrolltop+delta contains the destination pos. And we are checking if the sum is greater than height.
-			this.scrollTop = this.height;
-		}else if(this.scrollTop + this.deltaY < 0 && this.offsetY==0){
-			// console.log("############################## IN FIRST CONDITION")
-			this.scrollTop = 0;
-		}else if(this.scrollTop + this.deltaY < -(this.offsetY) && this.offsetY != 0){
-			this.scrollTop = -this.offsetY;
-			// console.log("############################## IN second CONDITION",this.scrollTop + this.deltaY)
-			// this.scrollTop = 0;
-		}else if(this.deltaY !== 0){
-			this.scrollTop += (this.deltaY);
-			// console.log("############################## IN third CONDITION")
-		}
-
-		const diff = -this.scrollTop - this.current;
-        if(Math.round(100*diff)/100 != 0){
-        	this.current += diff * dt;
-        	this.deplacement(this.current);   //translating the elem in this case body.
-			window.scrollY=this.current-this.offsetY;
-			// window.visualViewport.pageTop =0
-			// this.scrollTo(this.current); 	// changing the window.Y scroll position
-        }
-		this.update();
-        // console.log(this.current,window.visualViewport);
-		// console.log("CURRENT: ",this.current," ,scrollTop: ", this.scrollTop," ,visualViewport.pageTop: ", window.visualViewport.pageTop," ,height: ", this.height," ,deltaY: ",this.deltaY, "this.offsetY", this.offsetY);
-        
-    }
-	scrollTo(targetY) {
-		window.scrollY=targetY     //updating the scrollY
-	  }
-
-	destroy()
-	{
-		gsap.killTweensOf(this.elmt);
-		window.removeEventListener('wheel', this.ref);
-		// window.removeEventListener('scroll', this.ref);
-		window.removeEventListener('touchstart', this.touchStartHandler);
-		window.removeEventListener('touchmove', this.touchMoveHandler);
-		window.removeEventListener('touchend', this.touchEndHandler);
-		window.removeEventListener('resize', this.resizeHandler);
-		gsap.ticker.remove(this.addTicker);
-	}
+  onMounted(() => {
+    let scrollbar = Scrollbar.init(document.getElementById(elem));
+    scrollbar.addListener((s) => {
+      // console.log(s.offset.y); // returns “scrollTop” equivalent
+    });
+  });
+  return {
+    // scrollY,
+    // viewportWidth,
+    // viewportHeight,
+  };
 }
 
-export function useSmoothScrollOnMounted() {
-    const scroll = ref(new GScroll( "#scroll-page", 1 ))
-    scroll.value.init()
-    scroll.value.wheel()
-	scroll.value.touch(); // Enable touch event
-	// scroll.value.scroll(); // Enable touch event
-	
-    return scroll
-}
+
+//when no gsap was there
+// import { ref, onMounted, onBeforeUnmount } from 'vue';
+// const scrollY = ref(0);
+// const viewportWidth = ref(window.innerWidth);
+// const viewportHeight = ref(window.innerHeight);
+
+// export function useScrollTracker() {
+
+
+//   let handleScroll = () => {
+//     scrollY.value = window.scrollY;
+//   };
+
+//   let handleResize = () => {
+//     viewportWidth.value = window.innerWidth;
+//     viewportHeight.value = window.innerHeight;
+//   };
+
+//   onMounted(() => {
+//     window.addEventListener('scroll', handleScroll);
+//     window.addEventListener('resize', handleResize);
+//   });
+
+//   onBeforeUnmount(() => {
+//     window.removeEventListener('scroll', handleScroll);
+//     window.removeEventListener('resize', handleResize);
+//   });
+
+//   return {
+//     scrollY,
+//     viewportWidth,
+//     viewportHeight,
+//   };
+// }
+
+
+// export function mapRange(value, fromStart, fromEnd, toStart, toEnd) {
+//   return (value - fromStart) * (toEnd - toStart) / (fromEnd - fromStart) + toStart;
+// }
+// // const mappedValue = mapRange(scrollPosition, elementStartPosition, elementEndPosition, rangeStart, rangeEnd); to use
+// //to use
+// {/* <template>
+//   <div>
+//     <p>Scroll Position: {{ scrollY }} pixels</p>
+//   </div>
+// </template>
+
+// <script>
+// import { useScrollTracker } from './useScrollTracker.js'; // Import the composition function
+
+// export default {
+//   setup() {
+//     const { scrollY } = useScrollTracker(); // Use the composition function to set up the scroll tracker
+
+//     return {
+//       scrollY,
+//     };
+//   },
+// };
+// </script> */}
+

@@ -8,7 +8,7 @@ export function useMaskerFunctions() {
 
   const updateCursorPoints = (event) => {
     const newX = event.clientX + 'px';
-    const newY = event.clientY - window.scrollY + 'px';  //subtracting window.scrollY since we have the Gscroll Enable
+    const newY = event.clientY + 'px';  //subtracting window.scrollY since we have the Gscroll Enable
 
     // Use the ref to access the masker element and set its style properties
     masker.value.style.setProperty('--mask-position-x', newX);
