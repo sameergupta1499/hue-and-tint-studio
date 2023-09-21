@@ -21,13 +21,13 @@
             :style="{ background: bannerHiddenContainerBgColor }" ref="masker">
             <div class="flexCenterColumn banner">
                 <div>
-                    <h1 class="">WITH</h1>
+                    <h1 class="animated-text">WITH</h1>
                 </div>
                 <div>
-                    <h1 class="">BETTER</h1>
+                    <h1 class="animated-text">BETTER</h1>
                 </div>
                 <div>
-                    <h1 class="">DESIGNS</h1>
+                    <h1 class="animated-text">DESIGNS</h1>
                 </div>
             </div>
         </div>
@@ -38,11 +38,15 @@
 import { useMaskerFunctions } from '@/utils/js-masker/masker';
 import MatterPills from '@/components/common/MatterPills.vue';
 import { getCSSVariableValue } from '@/utils/utils';
+import { useScrollTracker} from '@/utils/useScrollTracker.js';
 export default {
     setup() {
-        const { masker, updateCursorPoints, updateCursorSize } = useMaskerFunctions();
+        let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
+        console.log(scrollY)
+        const { masker, updateCursorPoints, updateCursorSize } = useMaskerFunctions(scrollY);
         const heroContainerBgColor = getCSSVariableValue("--alabaster");
         const bannerHiddenContainerBgColor = getCSSVariableValue("--yellow");
+
         // Function to set the width of the hidden container
         return {
             updateCursorPoints,
@@ -86,6 +90,9 @@ export default {
     }
 }
 
+.animated-text{
+    text-transform: capitalize;
+}
 .banner-container::before {
     content: "";
     position: absolute;

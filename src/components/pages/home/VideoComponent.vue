@@ -49,7 +49,7 @@ export default {
     width: 100%;
     height: calc(100vw / 1.91);
     /* Set the height based on the aspect ratio */
-    background: var(--alabaster);
+    background: var(--light-green);
     box-sizing: border-box;
 }
 
