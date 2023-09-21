@@ -3,8 +3,9 @@
       <NavigationBar />
       <div id="scroll-wrapper">
         <HeroBanner />
-        <DummyComponent />
+        <VideoComponent />
         <PortfolioComponent />
+
     </div>
 
   </v-main>
@@ -15,6 +16,7 @@ import HeroBanner from '@/components/pages/home/HeroBanner.vue';
 import DummyComponent from '@/components/common/DummyComponent.vue';
 import NavigationBar from '@/components/common/NavigationBar.vue';
 import PortfolioComponent from '@/components/pages/home/PortfolioComponent.vue';
+import VideoComponent from '@/components/pages/home/VideoComponent.vue';
 import { init } from '@/utils/smoothScroll.js';
 export default {
   setup() {
@@ -27,7 +29,8 @@ export default {
     HeroBanner,
     DummyComponent,
     NavigationBar,
-    PortfolioComponent
+    PortfolioComponent,
+    VideoComponent
 },
 };
 </script>

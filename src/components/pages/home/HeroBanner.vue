@@ -1,31 +1,33 @@
 <template>
     <div class="vpContainer hero-container" @mousemove="updateCursorPoints" @mouseenter="updateCursorSize(size = 'small')"
-        @mouseleave="updateCursorSize(size = 'none')" :style="{background: heroContainerBgColor}">
+        @mouseleave="updateCursorSize(size = 'none')" :style="{ background: heroContainerBgColor }">
         <MatterPills />
         <div class="banner-container flexCenter container">
             <!-- <div class="flexCenterColumn banner"> -->
-            <div class="flexCenterColumn banner" @mouseenter="updateCursorSize(size = 'large')" @mouseleave="updateCursorSize(size = 'small')">
+            <div class="flexCenterColumn banner" @mouseenter="updateCursorSize(size = 'large')"
+                @mouseleave="updateCursorSize(size = 'small')">
                 <div>
-                    <h1 class="animated-text" style="--delay: 0s;">Where Creativity</h1>
+                    <h1 class="animated-text " style="--delay: 0s;">PRESENT      YOUR</h1>       
+                </div> 
+                <div>
+                    <h1 class="animated-text " style="--delay: .3s;">BRAND      WITH</h1>
                 </div>
                 <div>
-                    <h1 class="animated-text" style="--delay: .3s;">never takes</h1>
-                </div>
-                <div>
-                    <h1 class="animated-text" style="--delay: .6s;">a break</h1>
+                    <h1 class="animated-text " style="--delay: .6s;">CONFIDENCE</h1>
                 </div>
             </div>
         </div>
-        <div class="banner-hidden-container flexCenter container js-masker" :style="{ background: bannerHiddenContainerBgColor }" ref="masker">
+        <div class="banner-hidden-container flexCenter container js-masker"
+            :style="{ background: bannerHiddenContainerBgColor }" ref="masker">
             <div class="flexCenterColumn banner">
                 <div>
-                    <h1>The Studio</h1>
+                    <h1 class="">WITH</h1>
                 </div>
                 <div>
-                    <h1>that Never</h1>
+                    <h1 class="">BETTER</h1>
                 </div>
                 <div>
-                    <h1>Rests</h1>
+                    <h1 class="">DESIGNS</h1>
                 </div>
             </div>
         </div>
@@ -41,7 +43,7 @@ export default {
         const { masker, updateCursorPoints, updateCursorSize } = useMaskerFunctions();
         const heroContainerBgColor = getCSSVariableValue("--alabaster");
         const bannerHiddenContainerBgColor = getCSSVariableValue("--yellow");
-            // Function to set the width of the hidden container
+        // Function to set the width of the hidden container
         return {
             updateCursorPoints,
             updateCursorSize,
@@ -51,8 +53,8 @@ export default {
         };
     },
     components: {
-  MatterPills,
-},
+        MatterPills,
+    },
 };
 </script>
 
@@ -102,17 +104,21 @@ export default {
     flex: none;
     text-transform: capitalize;
     margin: calc(20vh) 0;
-    max-height: calc(100vh - 40vh);
+    /* Use your font-family name */
     // width: 47rem; //change this for the width manipulation
     // flex: 1;
 }
-@media (max-width: 768px) { /* You can adjust the breakpoint to your preferred mobile width */
+
+@media (max-width: 768px) {
+
+    /* You can adjust the breakpoint to your preferred mobile width */
     .banner {
         margin: 0 calc($x-gutter-s);
         max-width: calc(100vw - calc(2*$x-gutter-s));
         // width: 33rem;
     }
 }
+
 .banner-hidden-container {
     position: absolute;
     top: 0px;

@@ -95,4 +95,13 @@ h6 { font-size: 1rem; }
   
 }
 
-// $x-gutter-s:5vw;
+// FONTS IMPORT 
+@font-face {
+  font-family: 'Brand';
+  src: url('/fonts/Brand.woff2') format('woff2'),
+       url('/fonts/Brand.woff') format('woff'),
+       url('/fonts/Brand.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
