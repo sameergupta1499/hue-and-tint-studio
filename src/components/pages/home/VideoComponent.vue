@@ -27,8 +27,7 @@ export default {
             let elStartPosOffset = -viewportHeight.value;    
             let elStartPosBG = pointA.value.y + elStartPosOffset;
             let elEndPosBG = elStartPosBG + (viewportHeight.value/2);
-            console.log(scrollPosition, pointA.value.y, width.value, height.value );
-            console.log(setAnimationProgress(videoWrapper, scrollPosition, elStartPosBG, elEndPosBG));
+            setAnimationProgress(videoWrapper, scrollPosition, elStartPosBG, elEndPosBG);
         });
         return {
             videoWrapper
@@ -61,14 +60,20 @@ export default {
     animation-play-state: paused;
     animation-iteration-count: 1;
 }
+
 @keyframes height-animation {
+    100% {
+        height: 90%;
+        /* Final border radius */
+    }
+}
+@keyframes height-animation-mobile {
     0% {
-        height: 50%;
+        height: 70%;
     }
 
     100% {
         height: 90%;
-        /* Final border radius */
     }
 }
 
@@ -77,4 +82,12 @@ export default {
     height: 100%;
     object-fit: cover;
     /* Maintain aspect ratio and cover container */
-}</style>
+}
+@media (max-width: 768px) { // Adjust the breakpoint as needed for desktop
+    .video-wrapper {
+        border-radius: 3rem;
+        height: 70%;
+        // animation: height-animation-mobile 1s linear; // Use the desktop-specific keyframe
+    }
+}
+</style>

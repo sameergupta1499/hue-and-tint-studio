@@ -169,7 +169,7 @@ img {
         transform: translate3d(0px, -55%, 0px) rotate(-10deg);
     }
     100% {
-        transform: translate3d(0px, -180%, 0px) rotate(-18deg);
+        transform: translate3d(0px, -120%, 0px) rotate(-13deg);
     }
 }
 
@@ -192,13 +192,13 @@ img {
         transform: translate3d(0px, -35%, 0px) rotate(3deg);
     }
     100% {
-        transform: translate3d(0px, -180%, 0px) rotate(16deg);
+        transform: translate3d(0px, -70%, 0px) rotate(8deg);
     }
 }
 
 @media (min-width: 768px) {
     .cards-wrapper {
-        width: calc($card-width - 12vw);
+        width: $card-width-812;
         // left:4%;
     }
 
@@ -212,7 +212,7 @@ img {
 
 @media (min-width: 992px) {
     .cards-wrapper {
-        width: calc($card-width - 24vw);
+        width: $card-width-992;
     }
 
     .card-wrapper-left {

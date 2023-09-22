@@ -1,15 +1,23 @@
 <template>
     <div class="flexCenter vpW navbar transform-default" :class="{ 'navbar-hide': isNavbarHidden }" ref="navbarRef">
+        <div class="navbar-navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item margin-left" v-for="(item, index) in leftNavItems" :key="index">
+                    <router-link :to="item.route">
+                        <h6 class=" orange-hover">{{ item.label }}</h6>
+                    </router-link>
+                </li>
+            </ul>
+        </div>
         <div class="navbar-logo-container">
             <a href="" class="logo-link ">
                 <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png?updatedAt=1691862962368"
                     id="logo-img" class="orange-hover" alt="Logo" />
             </a>
         </div>
-
         <div class="navbar-navbar">
             <ul class="navbar-list">
-                <li class="navbar-item" v-for="(item, index) in navItems" :key="index">
+                <li class="navbar-item margin-right" v-for="(item, index) in rightNavItems" :key="index">
                     <router-link :to="item.route">
                         <h6 class=" orange-hover">{{ item.label }}</h6>
                     </router-link>
@@ -44,7 +52,7 @@
   
 
 <script>
-import { watch, ref } from 'vue';
+import { watch, ref, computed } from 'vue';
 import { useScrollTracker } from '@/utils/useScrollTracker.js';
 export default {
     setup() {
@@ -58,25 +66,45 @@ export default {
             { label: 'ABOUT', route: '/' },
             { label: 'CONTACT', route: '/' },
         ]);
-        const navState = ref("NONE")
-        watch(scrollY, (newValue) => {
-            const threshold = viewportHeight.value / 2;
 
-            // Check if the user is scrolling down (scrolling away from the top)
-            if (newValue > threshold && newValue > prevScrollY) {
-                isNavbarHidden.value = true; // Add the class 'navbar-hide'
-            } else {
-                isNavbarHidden.value = false; // Remove the class 'navbar-hide'
-            }
-
-            // Update the previous scroll position
-            prevScrollY = newValue;
+        const leftNavItems = computed(() => {
+            return navItems.value.slice(0, 2);
         });
+
+        const rightNavItems = computed(() => {
+            return navItems.value.slice(2);
+        });
+        const navState = ref("NONE")
+        let accumulatedScroll = 0;
+
+watch(scrollY, (newValue) => {
+    const threshold = 200;
+
+    // Calculate the difference in scroll position
+    const scrollDifference = newValue - prevScrollY;
+
+    // Check if the user is scrolling up
+    if (scrollDifference < 0) {
+        accumulatedScroll += Math.abs(scrollDifference);
+    } else {
+        accumulatedScroll = 0;
+    }
+
+    if (accumulatedScroll >= threshold || newValue === 0) {
+        isNavbarHidden.value = false; // Show the navbar
+    } else {
+        isNavbarHidden.value = true; // Hide the navbar
+    }
+
+    prevScrollY = newValue;
+});
 
 
 
         return {
             navItems,
+            leftNavItems,
+            rightNavItems,
             navState,
             navbarRef,
             isNavbarHidden
@@ -89,7 +117,7 @@ export default {
 @import "@/styles/variables.scss";
 @import "@/styles/animations.scss";
 
-$logoHeight: 6vh;
+$logoHeight: 9vh;
 
 .navbar {
     position: fixed;
@@ -98,7 +126,8 @@ $logoHeight: 6vh;
     left: 0;
     min-height: $navbar-height-l;
     margin: 0;
-    padding: $navbar-padding-l $x-gutter-l 0 $x-gutter-l;
+    padding: ($navbar-padding-l*.6) $x-gutter-l (
+        $navbar-padding-l*.6) $x-gutter-l;
     justify-content: space-between;
     box-sizing: border-box;
     line-height: 1.2rem;
@@ -107,7 +136,8 @@ $logoHeight: 6vh;
 }
 
 .navbar-hide {
-    top: -$navbar-height-l;
+    top: - $navbar-height-l - ($navbar-padding-l * 2);
+
 }
 
 .navbar-item,
@@ -132,6 +162,7 @@ $logoHeight: 6vh;
 .navbar-logo-container {
     // width: calc($navbar-height-l / 2);
     height: $logoHeight;
+    padding: $navbar-padding-l;
 }
 
 #logo-img {
@@ -179,8 +210,6 @@ $logoHeight: 6vh;
     flex-direction: row;
 
     li {
-        margin-left: 2vw;
-
         a {
             h6 {
                 font-weight: 300;
@@ -191,4 +220,11 @@ $logoHeight: 6vh;
 
     }
 }
-</style>
+
+.margin-right {
+    margin-right: 2vw;
+}
+
+.margin-left {
+    margin-left: 2vw;
+}</style>
