@@ -12,7 +12,7 @@
                         <img :src="rightCardUrl"/>
                     </div>
                 </div>
-                <div class="card-content flexCenterColumn position-relative ">
+                <div class="card-content flexCenterColumn position-relative" ref="cardContent">
                     <h4 class="card-count card-content-line">1/5</h4>
                     <h1 class="card-title card-content-line">{{ title }}</h1>
                     <h5 class="card-description card-content-line">{{ description }}</h5>
@@ -39,15 +39,9 @@ export default {
         const backgroundCircle = ref(null);
         const cardLeft = ref(null);
         const cardRight = ref(null);
+        const cardContent = ref(null);
         let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
         let { pointA, pointB, pointC, pointD, width, height } = useElementLocation(backgroundCircle);
-        // Watch the scrollY value and perform actions based on it
-
-        // onMounted(() => {
-        //     let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
-        //     let { pointA, pointB, pointC, pointD, width, height } = useElementLocation(backgroundCircle);
-        // });
-
         watch(scrollY, (newValue) => {
             let scrollPosition = newValue;
             let elStartPosOffset = -20;
@@ -60,13 +54,16 @@ export default {
             // console.log( scrollPosition, elStartPosCard, elEndPosCard,pointA.value.y)
             setAnimationProgress(cardLeft, scrollPosition, elStartPosCard, elEndPosCard)
             setAnimationProgress(cardRight, scrollPosition, elStartPosCard, elEndPosCard)
+            setAnimationProgress(cardContent, scrollPosition, elStartPosCard, elEndPosCard)
+            
         });
 
 
         return {
             backgroundCircle,
             cardLeft,
-            cardRight
+            cardRight,
+            cardContent
         };
     },
 };
@@ -227,6 +224,27 @@ img {
 .card-content {
     padding-top: 20rem;
     padding-bottom: 5rem;
+    opacity:1;
+    animation: contentOpacityAnimation 1s ease-out infinite;
+    animation-play-state: paused;
+    animation-iteration-count: 1;
+}
+@keyframes contentOpacityAnimation {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:1;
+    }
+    70% {
+        opacity:1;
+    }
+    90% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
 }
 .card-content-line{
     padding-bottom:1.5rem;
