@@ -15,7 +15,7 @@
                 <div class="card-content flexCenterColumn position-relative ">
                     <h4 class="card-count card-content-line">1/5</h4>
                     <h1 class="card-title card-content-line">{{ title }}</h1>
-                    <h6 class="card-description card-content-line">{{ description }}</h6>
+                    <h5 class="card-description card-content-line">{{ description }}</h5>
                 </div>
             </div>
         </div>
