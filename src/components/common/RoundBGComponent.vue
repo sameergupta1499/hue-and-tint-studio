@@ -75,7 +75,7 @@ export default {
 <style lang="scss" scoped>
 $padding-slide-padding-top: 5vh;
 $card-width: 45vw;
-$card-width-812: 33vw;
+$card-width-768: 33vw;
 $card-width-992: 21vw;
 
 
@@ -166,7 +166,10 @@ img {
         transform: translate3d(0px, -20%, 0px) rotate(-6deg);
     }
     50% {
-        transform: translate3d(0px, -55%, 0px) rotate(-10deg);
+        transform: translate3d(0px, -50%, 0px) rotate(-10deg);
+    }
+    70% {
+        transform: translate3d(0px, -70%, 0px) rotate(-10deg);
     }
     100% {
         transform: translate3d(0px, -120%, 0px) rotate(-13deg);
@@ -189,24 +192,22 @@ img {
         transform: translate3d(0px, -5%, 0px) rotate(12deg);
     }
     50% {
-        transform: translate3d(0px, -35%, 0px) rotate(3deg);
+        transform: translate3d(0px, -30%, 0px) rotate(3deg);
+    }
+    75% {
+        transform: translate3d(0px, -40%, 0px) rotate(6deg);
     }
     100% {
         transform: translate3d(0px, -70%, 0px) rotate(8deg);
     }
 }
 
-@media (min-width: 768px) {
-    .cards-wrapper {
-        width: $card-width-812;
-        // left:4%;
-    }
-
+@media (max-width: 768px) {
     .card-wrapper-left {
-        left: calc(50vw - ($card-width-812/1.5));
+        left: calc(50vw - ($card-width-768 * 1.1));
     }
     .card-wrapper-right {
-        left: calc(50vw);
+        left: calc(50vw - ($card-width-768 / 4));
     }
 }
 

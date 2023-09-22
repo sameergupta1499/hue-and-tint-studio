@@ -50,6 +50,7 @@ export default {
     /* Set the height based on the aspect ratio */
     background: black;
     box-sizing: border-box;
+    margin: -1px 0;    // to remove the top and bottom line that comes due to background mismatch (glitch)
 }
 
 .video-wrapper {
