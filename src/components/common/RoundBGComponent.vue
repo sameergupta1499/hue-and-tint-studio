@@ -211,7 +211,7 @@ img {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .cards-wrapper {
         width: $card-width-992;
     }
