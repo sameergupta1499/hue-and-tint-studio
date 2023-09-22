@@ -67,7 +67,7 @@ export default {
     }
 
     100% {
-        height: 100%;
+        height: 90%;
         /* Final border radius */
     }
 }
