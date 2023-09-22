@@ -44,7 +44,7 @@ export default {
         let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
         console.log(scrollY)
         const { masker, updateCursorPoints, updateCursorSize } = useMaskerFunctions(scrollY);
-        const heroContainerBgColor = getCSSVariableValue("--alabaster");
+        const heroContainerBgColor = getCSSVariableValue("--black");
         const bannerHiddenContainerBgColor = getCSSVariableValue("--yellow");
 
         // Function to set the width of the hidden container
@@ -74,6 +74,7 @@ export default {
 
 .banner-container {
     position: relative;
+    color:white;
     // background-image: url("https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/homepage/hero_bg.jpg");
     // background-size: cover;
     /* Scale to cover entire container */
@@ -86,12 +87,14 @@ export default {
     h1 {
         // @extend .tilt-shaking;
         @extend .slide-up;
+        color:white;
         /* Extend the .slide-up class */
     }
 }
 
 .animated-text{
     text-transform: capitalize;
+
 }
 .banner-container::before {
     content: "";

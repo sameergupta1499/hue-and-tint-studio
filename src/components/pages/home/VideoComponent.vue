@@ -49,7 +49,7 @@ export default {
     width: 100%;
     height: calc(100vw / 1.91);
     /* Set the height based on the aspect ratio */
-    background: var(--light-green);
+    background: black;
     box-sizing: border-box;
 }
 
@@ -67,7 +67,7 @@ export default {
     }
 
     100% {
-        height: 90%;
+        height: 100%;
         /* Final border radius */
     }
 }
