@@ -47,6 +47,7 @@ export function useElementLocation(elementToTrack) {
 
 
 export function setAnimationProgress(elementRef,scrollPosition, elemStartPos, elemEndPos) {
+  // console.log("i am here");
   let animationProgress = 0;
   if (scrollPosition >= elemStartPos && scrollPosition < elemEndPos) {
     animationProgress = (scrollPosition - elemStartPos) / (elemEndPos - elemStartPos);
@@ -56,6 +57,12 @@ export function setAnimationProgress(elementRef,scrollPosition, elemStartPos, el
   }
   const animationDelay = -animationProgress + "s";
   elementRef.value.style.animationDelay = animationDelay;
+    // Set vendor-specific animation-delay properties
+    elementRef.value.style.webkitAnimationDelay = animationDelay; // Webkit
+    elementRef.value.style.mozAnimationDelay = animationDelay;    // Mozilla
+    elementRef.value.style.msAnimationDelay = animationDelay;     // Microsoft
+    elementRef.value.style.oAnimationDelay = animationDelay;      // Opera
+    // console.log(elementRef.value.style['-webkit-animation-delay']," and ",elementRef.value.style['animation-delay'])
   return animationDelay
 }
 

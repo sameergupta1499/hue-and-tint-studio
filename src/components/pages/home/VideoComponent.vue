@@ -27,7 +27,7 @@ export default {
             let elStartPosOffset = -viewportHeight.value;    
             let elStartPosBG = pointA.value.y + elStartPosOffset;
             let elEndPosBG = elStartPosBG + (viewportHeight.value/2);
-            setAnimationProgress(videoWrapper, scrollPosition, elStartPosBG, elEndPosBG);
+            console.log(setAnimationProgress(videoWrapper, scrollPosition, elStartPosBG, elEndPosBG));
         });
         return {
             videoWrapper
@@ -70,6 +70,9 @@ export default {
     animation: height-animation 1s linear;
     animation-play-state: paused;
     animation-iteration-count: 1;
+    -webkit-animation: height-animation 1s linear;
+    -webkit-animation-play-state: paused;
+    -webkit-animation-iteration-count: 1;
 
     // Vendor-specific prefixes for 'border-radius'
     -webkit-border-radius: 8rem;
@@ -111,7 +114,7 @@ export default {
         // animation: height-animation-mobile 1s linear; // Use the desktop-specific keyframe
 
         // Vendor-specific prefixes for 'border-radius'
-        -webkit-border-radius: 3rem;
+        // -webkit-border-radius: 3rem;
         -moz-border-radius: 3rem;
         border-radius: 3rem;
     }
