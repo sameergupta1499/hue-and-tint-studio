@@ -29,6 +29,7 @@ export default {
     onMounted(() => {
       scrollbar.value = init("scroll-wrapper");
     });
+    provide('scrollbar',scrollbar)
     return {
       scrollbar
     };
