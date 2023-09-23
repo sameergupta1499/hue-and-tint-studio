@@ -42,7 +42,7 @@ import { useScrollTracker } from '@/utils/useScrollTracker.js';
 export default {
     setup() {
         let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
-        console.log(scrollY)
+        // console.log(scrollY)
         const { masker, updateCursorPoints, updateCursorSize } = useMaskerFunctions(scrollY);
         const heroContainerBgColor = getCSSVariableValue("--black");
         const bannerHiddenContainerBgColor = getCSSVariableValue("--yellow");

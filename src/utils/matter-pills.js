@@ -71,7 +71,7 @@ function addEventListener(){
 	  
 		window.addEventListener('touchmove', (e) => {
       let deltaY = touchStartY - e.touches[0].clientY;
-      console.log(deltaY)
+      // console.log(deltaY)
       if (deltaY > 4) {
         startAnimation();
       }

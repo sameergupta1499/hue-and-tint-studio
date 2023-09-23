@@ -31,11 +31,6 @@ export function init(elem) {
     // });
     scrollbar.track.xAxis.element.remove();
     scrollbar.update();
-
-    console.log(scrollbar.limit)
-    console.log(scrollbar.offset)
-    console.log(scrollbar.scrollLeft)
-    console.log(scrollbar)
     scrollbar.addListener((s) => {
       // console.log(s.offset.y); // returns “scrollTop” equivalent
     });
