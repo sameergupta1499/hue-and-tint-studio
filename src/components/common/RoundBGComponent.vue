@@ -12,10 +12,10 @@
                         <img :src="rightCardUrl"/>
                     </div>
                 </div>
-                <div class="card-content flexCenterColumn position-relative" ref="cardContent">
-                    <h4 class="card-count card-content-line">1/5</h4>
-                    <h1 class="card-title card-content-line">{{ title }}</h1>
-                    <h5 class="card-description card-content-line">{{ description }}</h5>
+                <div class="card-content flexCenterColumn position-relative" ref="cardContent" >
+                    <h4 class="card-count card-content-line" :style="{ color: textColor }">{{ number }}/3</h4>
+                    <h1 class="card-title card-content-line" :style="{ color: textColor }">{{ title }}</h1>
+                    <h5 class="card-description card-content-line" :style="{ color: textColor }">{{ description }}</h5>
                 </div>
             </div>
         </div>
@@ -29,9 +29,11 @@ import { useScrollTracker} from '@/utils/useScrollTracker.js';
 export default {
     props: {
     leftCardUrl: String,
+    number: Number,
     rightCardUrl: String,
     topColor: String,
     backgroundColor: String,
+    textColor: String,
     title: String,
     description: String,
   },
@@ -200,11 +202,15 @@ img {
 }
 
 @media (max-width: 768px) {
+    .cards-wrapper {
+        width: calc($card-width * .85);
+    }
+    
     .card-wrapper-left {
-        left: calc(50vw - ($card-width-768 * 1.1));
+        left: calc(50vw - ($card-width-768 * 1));
     }
     .card-wrapper-right {
-        left: calc(50vw - ($card-width-768 / 4));
+        left: calc(50vw - ($card-width-768 / 10));
     }
 }
 

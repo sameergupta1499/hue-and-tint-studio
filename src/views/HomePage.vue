@@ -1,6 +1,6 @@
 <template>
   <v-main>
-    <!-- <NavigationBar /> -->
+    <NavigationBar v-if="scrollbar !== null" />
     <div id="scroll-wrapper">
       <div id="scroll-container-parent">
         <div id="scroll-container" v-if="scrollbar !== null">
