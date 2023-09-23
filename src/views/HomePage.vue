@@ -5,6 +5,7 @@
         <HeroBanner />
         <VideoComponent />
         <PortfolioComponent />
+        <DummyComponent />
 
     </div>
 

@@ -51,6 +51,16 @@ export default {
     background: black;
     box-sizing: border-box;
     margin: -1px 0;    // to remove the top and bottom line that comes due to background mismatch (glitch)
+
+    // Vendor-specific prefixes for 'box-sizing'
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    // Vendor-specific prefixes for 'margin'
+    -webkit-margin: -1px 0;
+    -moz-margin: -1px 0;
+    margin: -1px 0;
 }
 
 .video-wrapper {
@@ -60,6 +70,11 @@ export default {
     animation: height-animation 1s linear;
     animation-play-state: paused;
     animation-iteration-count: 1;
+
+    // Vendor-specific prefixes for 'border-radius'
+    -webkit-border-radius: 8rem;
+    -moz-border-radius: 8rem;
+    border-radius: 8rem;
 }
 
 @keyframes height-animation {
@@ -83,12 +98,22 @@ export default {
     height: 100%;
     object-fit: cover;
     /* Maintain aspect ratio and cover container */
+
+    // Vendor-specific prefixes for 'object-fit'
+    -o-object-fit: cover;
+    object-fit: cover;
 }
+
 @media (max-width: 768px) { // Adjust the breakpoint as needed for desktop
     .video-wrapper {
         border-radius: 3rem;
         height: 70%;
         // animation: height-animation-mobile 1s linear; // Use the desktop-specific keyframe
+
+        // Vendor-specific prefixes for 'border-radius'
+        -webkit-border-radius: 3rem;
+        -moz-border-radius: 3rem;
+        border-radius: 3rem;
     }
 }
 </style>

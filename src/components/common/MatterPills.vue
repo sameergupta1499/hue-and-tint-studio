@@ -43,7 +43,6 @@ export default {
   },
 };
 </script>
-  
 <style lang="scss" scoped>
 
 #matter-container {
@@ -52,17 +51,29 @@ export default {
   z-index: 6;
   pointer-events: none;
   background: none !important;
-  height:100%;
-  width:100%;
+  height: 100%;
+  width: 100%;
+
+  // Vendor-specific prefixes for 'background'
+  -webkit-background: none;
+  -moz-background: none;
+  background: none;
 }
 
 canvas {
   background: none !important;
   pointer-events: none;
+
+  // Vendor-specific prefixes for 'background'
+  -webkit-background: none !important;
+  -moz-background: none !important;
+  background: none !important;
+
+  // Vendor-specific prefixes for 'pointer-events'
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+  pointer-events: none;
 }
-
-
 
 /* Your CSS styles here */
 </style>
-  

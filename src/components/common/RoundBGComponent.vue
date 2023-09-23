@@ -75,7 +75,6 @@ $card-width: 45vw;
 $card-width-768: 33vw;
 $card-width-992: 21vw;
 
-
 .project-slide {
     padding-top: $padding-slide-padding-top;
     // height: auto;
@@ -86,12 +85,7 @@ $card-width-992: 21vw;
 .container-wrapper {
     padding-top: $padding-slide-padding-top;
 }
-// .content{
-//     height: calc(200vw - 100vh);
-//     min-height: 50vw;
-//     max-height: 200vw;
-//     // background:grey;
-// }
+
 .background-round {
     // background-color: rgb(255, 230, 153);
     border-radius: 50%;
@@ -101,12 +95,17 @@ $card-width-992: 21vw;
     animation: border-radius-animation 1s linear;
     animation-play-state: paused;
     animation-iteration-count: 1;
+
+    // Vendor-specific prefixes for 'border-radius'
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 }
+
 @keyframes border-radius-animation {
     0% {
         border-radius: 50%;
     }
-
     100% {
         border-radius: 0%;
         /* Final border radius */
@@ -115,15 +114,10 @@ $card-width-992: 21vw;
 
 .background-square {
     top: calc(calc(50vw + #{$padding-slide-padding-top}) - 2px);
-
-    height: 200vw;
+    height: 50vw;
     // background:grey !important;
 }
-// @media (min-aspect-ratio: 1/1) {
-//   .background-square {
-//     height: 0;
-//   }
-// }
+
 img {
     width: 100%;
     /* Set image width to 100% of the card */
@@ -131,6 +125,10 @@ img {
     /* Ensure the image covers the entire card */
     object-fit: cover;
     border-radius: 20px;
+
+    // Vendor-specific prefixes for 'object-fit'
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .card-container {
@@ -155,6 +153,7 @@ img {
     animation-play-state: paused;
     animation-iteration-count: 1;
 }
+
 @keyframes cardLeftAnimation {
     0% {
         transform: translate3d(0px, 50%, 0px) rotate(10deg);
@@ -181,6 +180,7 @@ img {
     animation-iteration-count: 1;
     z-index: 19;
 }
+
 @keyframes cardRightAnimation {
     0% {
         transform: translate3d(0px, 70%, 0px) rotate(16deg);
@@ -224,29 +224,25 @@ img {
 .card-content {
     padding-top: 20rem;
     padding-bottom: 5rem;
-    opacity:1;
+    opacity: 1;
     animation: contentOpacityAnimation 1s ease-out infinite;
     animation-play-state: paused;
     animation-iteration-count: 1;
 }
+
 @keyframes contentOpacityAnimation {
-    0% {
-        opacity:1;
-    }
-    50% {
-        opacity:1;
-    }
     70% {
-        opacity:1;
+        opacity: 1;
     }
     90% {
-        opacity:0;
+        opacity: 0;
     }
     100% {
-        opacity:0;
+        opacity: 0;
     }
 }
-.card-content-line{
-    padding-bottom:1.5rem;
+
+.card-content-line {
+    padding-bottom: 1.5rem;
 }
 </style>

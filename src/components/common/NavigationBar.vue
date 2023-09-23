@@ -133,6 +133,11 @@ $logoHeight: 9vh;
     line-height: 1.2rem;
     background: #000000;
     transition: top 0.5s ease-out;
+
+    // Vendor-specific prefixes for 'transition'
+    -webkit-transition: top 0.5s ease-out;
+    -moz-transition: top 0.5s ease-out;
+    transition: top 0.5s ease-out;
 }
 
 .navbar-hide {
@@ -227,4 +232,5 @@ $logoHeight: 9vh;
 
 .margin-left {
     margin-left: 2vw;
-}</style>
+}
+</style>

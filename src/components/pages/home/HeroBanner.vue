@@ -7,10 +7,10 @@
             <div class="flexCenterColumn banner" @mouseenter="updateCursorSize(size = 'large')"
                 @mouseleave="updateCursorSize(size = 'small')">
                 <div>
-                    <h1 class="animated-text " style="--delay: 0s;">PRESENT      YOUR</h1>       
-                </div> 
+                    <h1 class="animated-text " style="--delay: 0s;">PRESENT YOUR</h1>
+                </div>
                 <div>
-                    <h1 class="animated-text " style="--delay: .3s;">BRAND      WITH</h1>
+                    <h1 class="animated-text " style="--delay: .3s;">BRAND WITH</h1>
                 </div>
                 <div>
                     <h1 class="animated-text " style="--delay: .6s;">CONFIDENCE</h1>
@@ -38,7 +38,7 @@
 import { useMaskerFunctions } from '@/utils/js-masker/masker';
 import MatterPills from '@/components/common/MatterPills.vue';
 import { getCSSVariableValue } from '@/utils/utils';
-import { useScrollTracker} from '@/utils/useScrollTracker.js';
+import { useScrollTracker } from '@/utils/useScrollTracker.js';
 export default {
     setup() {
         let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
@@ -61,7 +61,6 @@ export default {
     },
 };
 </script>
-
 <style lang="scss" scoped>
 @import "@/utils/js-masker/masker.scss";
 @import "@/styles/animations.scss";
@@ -69,12 +68,11 @@ export default {
 
 .hero-container {
     position: relative;
-
 }
 
 .banner-container {
     position: relative;
-    color:white;
+    color: white;
     // background-image: url("https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/homepage/hero_bg.jpg");
     // background-size: cover;
     /* Scale to cover entire container */
@@ -87,15 +85,15 @@ export default {
     h1 {
         // @extend .tilt-shaking;
         @extend .slide-up;
-        color:white;
+        color: white;
         /* Extend the .slide-up class */
     }
 }
 
-.animated-text{
+.animated-text {
     text-transform: capitalize;
-
 }
+
 .banner-container::before {
     content: "";
     position: absolute;
@@ -107,6 +105,11 @@ export default {
     /* Black tint with 50% opacity */
     z-index: -1;
     /* Behind the content */
+
+    // Vendor-specific prefixes for 'background-color'
+    -webkit-background-color: rgba(0, 0, 0, 0.5);
+    -moz-background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .banner {
@@ -137,5 +140,10 @@ export default {
     // background-color: var(--alabaster);
     color: white; // width: 33%
     pointer-events: none;
-}</style>
-  
+
+    // Vendor-specific prefixes for 'pointer-events'
+    -webkit-pointer-events: none;
+    -moz-pointer-events: none;
+    pointer-events: none;
+}
+</style>
