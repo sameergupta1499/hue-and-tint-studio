@@ -21,13 +21,14 @@ class DisableScrollPlugin extends Scrollbar.ScrollbarPlugin {
 export function init(elem) {
 
   onMounted(() => {
-    Scrollbar.use(DisableScrollPlugin)
-    let scrollbar = Scrollbar.init(document.getElementById(elem), {
-      // damping: 0.2,
-      plugins: {
-        disableScroll: { direction: 'x' }
-      }
-    });
+    let scrollbar = Scrollbar.init(document.getElementById(elem));
+    // Scrollbar.use(DisableScrollPlugin)
+    // let scrollbar = Scrollbar.init(document.getElementById(elem), {
+    //   // damping: 0.2,
+    //   plugins: {
+    //     disableScroll: { direction: 'x' }
+    //   }
+    // });
     scrollbar.track.xAxis.element.remove();
     scrollbar.update();
 
