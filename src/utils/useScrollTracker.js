@@ -6,14 +6,18 @@ const scrollY = ref(0);
 const viewportWidth = ref(window.innerWidth);
 const viewportHeight = ref(window.innerHeight);
 
-document.addEventListener("DOMContentLoaded", function () {
+
+
+
+window.onload = function () {
   // Initialize SmoothScrollbar and GSAP ticker once the DOM is ready
   const scrollbar = Scrollbar.init(document.getElementById("scroll-wrapper"));
-  console.log(scrollbar);
+
   gsap.ticker.add(() => {
     scrollY.value = scrollbar.offset.y;
   });
-});
+};
+
 
 // Add event listeners for window resize
 // const handleResize = () => {
