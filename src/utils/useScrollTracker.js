@@ -28,7 +28,7 @@ const viewportHeight = ref(window.innerHeight);
 
 export function useScrollTracker() {
     // Initialize SmoothScrollbar and GSAP ticker once the DOM is ready
-    let scrollbar = Scrollbar.init(document.getElementById("scroll-wrapper"));
+    let scrollbar = Scrollbar.get(document.getElementById("scroll-wrapper"));
   
     gsap.ticker.add(() => {
       scrollY.value = scrollbar.offset.y;
