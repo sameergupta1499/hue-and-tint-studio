@@ -19,8 +19,6 @@ class DisableScrollPlugin extends Scrollbar.ScrollbarPlugin {
 
 
 export function init(elem) {
-
-  onMounted(() => {
     let scrollbar = Scrollbar.init(document.getElementById(elem));
     // Scrollbar.use(DisableScrollPlugin)
     // let scrollbar = Scrollbar.init(document.getElementById(elem), {
@@ -34,8 +32,5 @@ export function init(elem) {
     scrollbar.addListener((s) => {
       // console.log(s.offset.y); // returns “scrollTop” equivalent
     });
-  });
-  return {
-
-  };
-}
+    return scrollbar;
+};

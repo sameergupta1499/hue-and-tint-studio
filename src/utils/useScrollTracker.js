@@ -9,14 +9,7 @@ const viewportHeight = ref(window.innerHeight);
 
 
 
-window.onload = function () {
-  // Initialize SmoothScrollbar and GSAP ticker once the DOM is ready
-  const scrollbar = Scrollbar.init(document.getElementById("scroll-wrapper"));
 
-  gsap.ticker.add(() => {
-    scrollY.value = scrollbar.offset.y;
-  });
-};
 
 
 // Add event listeners for window resize
@@ -34,6 +27,14 @@ window.onload = function () {
 // });
 
 export function useScrollTracker() {
+  window.onload = function () {
+    // Initialize SmoothScrollbar and GSAP ticker once the DOM is ready
+    const scrollbar = Scrollbar.init(document.getElementById("scroll-wrapper"));
+  
+    gsap.ticker.add(() => {
+      scrollY.value = scrollbar.offset.y;
+    });
+  };
   return {
     scrollY,
     viewportWidth,
