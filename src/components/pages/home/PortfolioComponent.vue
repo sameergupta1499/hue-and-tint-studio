@@ -20,7 +20,7 @@ export default {
         const data = [
             {
                 "title": "TITAN",
-                "description": "Commercial and personal stories true the art.",
+                "description": "What we did: Motion Graphics & Ad Designing",
                 "top_color": getCSSVariableValue('--black'),
                 "background_color": getCSSVariableValue('--yellow'),
                 "text_color": getCSSVariableValue('--black'),
@@ -29,7 +29,7 @@ export default {
             },
             {
                 "title": "SECRET ALCHEMIST",
-                "description": "Commercial and personal stories true the art.",
+                "description": "What we did: Motion Graphics & Ad Designing",
                 "top_color": getCSSVariableValue('--yellow'),
                 "background_color": getCSSVariableValue('--almond'),
                 "text_color": getCSSVariableValue('--black'),
@@ -38,7 +38,7 @@ export default {
             },
             {
                 "title": "ASA BEAUTY",
-                "description": "Commercial and personal stories true the art.",
+                "description": "What we did: Motion Graphics & Ad Designing",
                 "top_color": getCSSVariableValue('--almond'),
                 "background_color": getCSSVariableValue('--black'),
                 "text_color": getCSSVariableValue('--white'),

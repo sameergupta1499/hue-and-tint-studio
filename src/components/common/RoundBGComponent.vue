@@ -15,7 +15,7 @@
                 <div class="card-content flexCenterColumn position-relative" ref="cardContent" >
                     <h5 class="card-count card-content-line" :style="{ color: textColor }">0{{ number }}</h5>
                     <h2 class="card-title card-content-line fontface-antonio" :style="{ color: textColor }">{{ title }}</h2>
-                    <h4 class="card-description card-content-line" :style="{ color: textColor }">{{ description }}</h4>
+                    <h4 class="card-description card-content-line" :style="{ color: textColor }" v-html="description"></h4>
                 </div>
             </div>
         </div>
@@ -239,6 +239,8 @@ img {
     animation: contentOpacityAnimation 1s ease-out infinite;
     animation-play-state: paused;
     animation-iteration-count: 1;
+    margin: 1px 0px;
+
 }
 
 @keyframes contentOpacityAnimation {
@@ -256,4 +258,8 @@ img {
 .card-content-line {
     padding-bottom: 1.5rem;
 }
+span {
+    font-family: inherit;
+    font-size: inherit;
+    }
 </style>

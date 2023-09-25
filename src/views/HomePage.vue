@@ -8,6 +8,7 @@
           <!-- <DummyComponent /> -->
           <VideoComponent />
           <PortfolioComponent />
+          <TestifyComponent />
           <DummyComponent />
         </div>
       </div>
@@ -22,6 +23,7 @@ import DummyComponent from '@/components/common/DummyComponent.vue';
 import NavigationBar from '@/components/common/NavigationBar.vue';
 import PortfolioComponent from '@/components/pages/home/PortfolioComponent.vue';
 import VideoComponent from '@/components/pages/home/VideoComponent.vue';
+import TestifyComponent from '@/components/pages/home/TestifyComponent.vue';
 import { init } from '@/utils/smoothScroll.js';
 export default {
   setup() {
@@ -39,7 +41,8 @@ export default {
     DummyComponent,
     NavigationBar,
     PortfolioComponent,
-    VideoComponent
+    VideoComponent,
+    TestifyComponent
   },
 };
 </script>

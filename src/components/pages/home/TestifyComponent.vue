@@ -1,11 +1,7 @@
 <template>
-    <div class="container position-relative content-section">
+    <div class="container position-relative content-section margin-jitter">
         <div class="container heading-wrapper">
-            <h3 class="fontface-antonio">WHY ME FOR <span class="yellow-color fontface-antonio font-size-inherit">GOOD STUFF?</span></h3>
-        </div>
-        <div class="container content-wrapper">
-            <h5>If you're searching for a designer to transform your ideas into reality,<br>
-                let's collaborate and bring them to life!</h5>
+            <h3 class="fontface-antonio">TESTIFYING <span class="yellow-color fontface-antonio font-size-inherit">GOOD STUFF</span></h3>
         </div>
     </div>
 </template>
@@ -27,8 +23,8 @@ export default {
 .content-section {
     background:var(--black);
     text-align: center;
-    padding:3.5rem 0 0;
-    margin-top: 2px;
+    padding:3.5rem 0 1rem;
+    // margin-top: 2px;
 }
 .heading-wrapper{
     h3{
