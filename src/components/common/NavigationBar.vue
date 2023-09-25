@@ -169,11 +169,11 @@ $logoHeight: 9vh;
     padding: calc($navbar-padding-l * 0.7);
     position: absolute;
     left: calc(50% + calc($navbar-padding-l * 0.7));
-    -webkit-transform: translateX(-50%); /* Safari and Chrome */
-    -moz-transform: translateX(-50%); /* Firefox */
-    -ms-transform: translateX(-50%); /* IE */
-    -o-transform: translateX(-50%); /* Opera */
-    transform: translateX(-50%);
+    -webkit-transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7))); /* Safari and Chrome */
+    -moz-transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7))); /* Firefox */
+    -ms-transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7))); /* IE */
+    -o-transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7))); /* Opera */
+    transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7)));
 }
 
 #logo-img {
