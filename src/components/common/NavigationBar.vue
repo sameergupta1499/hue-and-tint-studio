@@ -165,9 +165,15 @@ $logoHeight: 9vh;
 
 //Logo in navbar
 .navbar-logo-container {
-    // width: calc($navbar-height-l / 2);
     height: $logoHeight;
-    padding: calc($navbar-padding-l*.7);
+    padding: calc($navbar-padding-l * 0.7);
+    position: absolute;
+    left: calc(50% + calc($navbar-padding-l * 0.7));
+    -webkit-transform: translateX(-50%); /* Safari and Chrome */
+    -moz-transform: translateX(-50%); /* Firefox */
+    -ms-transform: translateX(-50%); /* IE */
+    -o-transform: translateX(-50%); /* Opera */
+    transform: translateX(-50%);
 }
 
 #logo-img {
