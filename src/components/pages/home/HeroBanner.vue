@@ -100,6 +100,7 @@ export default {
 .animated-text {
     text-transform: capitalize;
     overflow: visible;
+    font-weight:600;
 }
 
 .banner-container::before {
@@ -160,6 +161,10 @@ export default {
     line-height: .7;
     /* --delay: .3s; */
     overflow: visible;
+    h1{
+        font-weight:300;
+
+    }
 }
 
 .yellow-color {
@@ -168,5 +173,8 @@ export default {
 
 .last-text-container {
     margin-top: 2rem;
+    h5{
+        letter-spacing: 3px;
+    }
 }
 </style>
