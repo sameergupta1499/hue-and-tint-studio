@@ -14,7 +14,7 @@
                 </div>
                 <div class="card-content flexCenterColumn position-relative" ref="cardContent" >
                     <h4 class="card-count card-content-line" :style="{ color: textColor }">{{ number }}/3</h4>
-                    <h1 class="card-title card-content-line" :style="{ color: textColor }">{{ title }}</h1>
+                    <h2 class="card-title card-content-line" :style="{ color: textColor }">{{ title }}</h2>
                     <h5 class="card-description card-content-line" :style="{ color: textColor }">{{ description }}</h5>
                 </div>
             </div>

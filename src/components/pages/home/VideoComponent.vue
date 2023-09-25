@@ -2,7 +2,7 @@
     <div class="intro-video-container flexCenter position-relative" >
         <div class="video-wrapper" ref="videoWrapper">
             <video autoplay loop muted playsinline>
-                <source src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/homepage/Intro-video.mp4"
+                <source src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/homepage/Intro-video.mp4?updatedAt=1695624727782"
                     type="video/mp4">
                 <!-- Your browser does not support the video tag. -->
             </video>

@@ -11,7 +11,7 @@
         </div>
         <div class="navbar-logo-container">
             <a href="" class="logo-link ">
-                <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png?updatedAt=1691862962368"
+                <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png"
                     id="logo-img" class="orange-hover" alt="Logo" />
             </a>
         </div>
@@ -167,7 +167,7 @@ $logoHeight: 9vh;
 .navbar-logo-container {
     // width: calc($navbar-height-l / 2);
     height: $logoHeight;
-    padding: $navbar-padding-l;
+    padding: calc($navbar-padding-l*.7);
 }
 
 #logo-img {

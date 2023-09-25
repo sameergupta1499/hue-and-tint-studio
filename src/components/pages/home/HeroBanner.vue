@@ -6,28 +6,35 @@
             <!-- <div class="flexCenterColumn banner"> -->
             <div class="flexCenterColumn banner" @mouseenter="updateCursorSize(size = 'large')"
                 @mouseleave="updateCursorSize(size = 'small')">
-                <div>
-                    <h1 class="animated-text " style="--delay: 0s;">PRESENT YOUR</h1>
+                <div class="overflow-visible">
+                    <!-- creating good designs since 2018 graphic designer & founder -->
+                    <h2 class="animated-text fontface-antonio" style="--delay: 0s;">CREATING</h2>
                 </div>
-                <div>
-                    <h1 class="animated-text " style="--delay: .3s;">BRAND WITH</h1>
+                <div class="middle-text-container overflow-visible">
+                    <h1 class="animated-text  yellow-color fontface-fortune" style="--delay: .3s;">Good Designs</h1>
                 </div>
-                <div>
-                    <h1 class="animated-text " style="--delay: .6s;">CONFIDENCE</h1>
+                <div class="overflow-visible">
+                    <h2 class="animated-text fontface-antonio" style="--delay: .6s;">SINCE 2018</h2>
+                </div>
+                <div class="overflow-visible last-text-container">
+                    <h5 class="animated-text fontface-antonio" style="--delay: .9s;">GRAPHIC DESIGNER & FOUNDER</h5>
                 </div>
             </div>
         </div>
         <div class="banner-hidden-container flexCenter container js-masker"
             :style="{ background: bannerHiddenContainerBgColor }" ref="masker">
             <div class="flexCenterColumn banner">
-                <div>
-                    <h1 class="animated-text">WITH</h1>
+                <div class="overflow-visible">
+                    <h2 class="animated-text fontface-antonio">HIDING</h2>
                 </div>
-                <div>
-                    <h1 class="animated-text">BETTER</h1>
+                <div class="middle-text-container overflow-visible">
+                    <h1 class="animated-text fontface-fortune">Bad Designs</h1>
                 </div>
-                <div>
-                    <h1 class="animated-text">DESIGNS</h1>
+                <div class="overflow-visible">
+                    <h2 class="animated-text fontface-antonio">SINCE 2018</h2>
+                </div>
+                <div class="overflow-visible last-text-container">
+                    <h5 class="animated-text fontface-antonio" style="--delay: .9s;">GRAPHIC DESIGNER & FOUNDER</h5>
                 </div>
             </div>
         </div>
@@ -82,7 +89,7 @@ export default {
     /* Prevent repeating the background */
     // mix-blend-mode: darken;
 
-    h1 {
+    .animated-text {
         // @extend .tilt-shaking;
         @extend .slide-up;
         color: white;
@@ -92,6 +99,7 @@ export default {
 
 .animated-text {
     text-transform: capitalize;
+    overflow: visible;
 }
 
 .banner-container::before {
@@ -117,6 +125,7 @@ export default {
     flex: none;
     text-transform: capitalize;
     margin: calc(20vh) 0;
+    position: relative;
     /* Use your font-family name */
     // width: 47rem; //change this for the width manipulation
     // flex: 1;
@@ -145,5 +154,19 @@ export default {
     -webkit-pointer-events: none;
     -moz-pointer-events: none;
     pointer-events: none;
+}
+
+.middle-text-container {
+    line-height: .7;
+    /* --delay: .3s; */
+    overflow: visible;
+}
+
+.yellow-color {
+    color: var(--yellow) !important;
+}
+
+.last-text-container {
+    margin-top: 2rem;
 }
 </style>
