@@ -1,12 +1,17 @@
 <template>
-    <div class="intro-video-container flexCenter position-relative" >
-        <div class="video-wrapper" ref="videoWrapper">
-            <video autoplay loop muted playsinline>
-                <source src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/homepage/Intro-video.mp4?updatedAt=1695624727782"
-                    type="video/mp4">
-                <!-- Your browser does not support the video tag. -->
-            </video>
+    <div>
+        <WhyMeComponent />
+        <div class="intro-video-container flexCenter position-relative">
+            <div class="video-wrapper" ref="videoWrapper">
+                <video autoplay loop muted playsinline>
+                    <source
+                        src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/homepage/Intro-video.mp4?updatedAt=1695624727782"
+                        type="video/mp4">
+                    <!-- Your browser does not support the video tag. -->
+                </video>
+            </div>
         </div>
+
     </div>
 </template>
 
@@ -15,23 +20,27 @@
 <script>
 import { watch, ref, onMounted } from 'vue';
 import { setAnimationProgress, useElementLocation } from '@/utils/useElementPosition';
-import { useScrollTracker} from '@/utils/useScrollTracker.js';
+import { useScrollTracker } from '@/utils/useScrollTracker.js';
+import WhyMeComponent from '@/components/pages/home/WhyMeComponent.vue';
 export default {
     setup() {
         const videoWrapper = ref(null);
         let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
         let { pointA, pointB, pointC, pointD, width, height } = useElementLocation(videoWrapper);
-        
+
         watch(scrollY, (newValue) => {
             let scrollPosition = newValue;
-            let elStartPosOffset = -viewportHeight.value;    
+            let elStartPosOffset = -viewportHeight.value;
             let elStartPosBG = pointA.value.y + elStartPosOffset;
-            let elEndPosBG = elStartPosBG + (viewportHeight.value/2);
+            let elEndPosBG = elStartPosBG + (viewportHeight.value / 2);
             console.log(setAnimationProgress(videoWrapper, scrollPosition, elStartPosBG, elEndPosBG));
         });
         return {
             videoWrapper
         };
+    },
+    components: {
+        WhyMeComponent,
     },
 };
 </script>
@@ -50,7 +59,7 @@ export default {
     /* Set the height based on the aspect ratio */
     background: black;
     box-sizing: border-box;
-    margin: -1px 0;    // to remove the top and bottom line that comes due to background mismatch (glitch)
+    // margin: -1px 0; // to remove the top and bottom line that comes due to background mismatch (glitch)
 
     // Vendor-specific prefixes for 'box-sizing'
     -webkit-box-sizing: border-box;
@@ -86,6 +95,7 @@ export default {
         /* Final border radius */
     }
 }
+
 @keyframes height-animation-mobile {
     0% {
         height: 70%;
@@ -107,7 +117,9 @@ export default {
     object-fit: cover;
 }
 
-@media (max-width: 768px) { // Adjust the breakpoint as needed for desktop
+@media (max-width: 768px) {
+
+    // Adjust the breakpoint as needed for desktop
     .video-wrapper {
         border-radius: 3rem;
         height: 70%;
@@ -118,5 +130,4 @@ export default {
         -moz-border-radius: 3rem;
         border-radius: 3rem;
     }
-}
-</style>
+}</style>

@@ -13,9 +13,9 @@
                     </div>
                 </div>
                 <div class="card-content flexCenterColumn position-relative" ref="cardContent" >
-                    <h4 class="card-count card-content-line" :style="{ color: textColor }">0{{ number }}</h4>
+                    <h5 class="card-count card-content-line" :style="{ color: textColor }">0{{ number }}</h5>
                     <h2 class="card-title card-content-line fontface-antonio" :style="{ color: textColor }">{{ title }}</h2>
-                    <h3 class="card-description card-content-line" :style="{ color: textColor }">{{ description }}</h3>
+                    <h4 class="card-description card-content-line" :style="{ color: textColor }">{{ description }}</h4>
                 </div>
             </div>
         </div>
@@ -81,6 +81,7 @@ $card-width-992: 21vw;
     padding-top: $padding-slide-padding-top;
     // height: auto;
     overscroll-behavior: none;
+
     // height:100vh;
 }
 

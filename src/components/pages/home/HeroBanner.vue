@@ -167,10 +167,6 @@ export default {
     }
 }
 
-.yellow-color {
-    color: var(--yellow) !important;
-}
-
 .last-text-container {
     margin-top: 2rem;
     h5{

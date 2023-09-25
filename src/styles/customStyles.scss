@@ -45,6 +45,12 @@
 .hidden{
     display:none;
 }
+.font-size-inherit {
+   font-size: inherit;
+} 
+.font-family-inherit {
+   font-family: inherit;
+} 
 .position-relative{
     position:relative;
 }
@@ -94,4 +100,11 @@
 }
 .fontface-antonio{
     font-family: 'Antonio', sans-serif;
+    font-weight:600;
+}
+.yellow-color {
+    color: var(--yellow) !important;
+}
+.margin-jitter {
+    margin: -1px 0;
 }

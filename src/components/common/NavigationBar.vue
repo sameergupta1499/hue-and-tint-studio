@@ -11,8 +11,8 @@
         </div>
         <div class="navbar-logo-container">
             <a href="" class="logo-link ">
-                <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png"
-                    id="logo-img" class="orange-hover" alt="Logo" />
+                <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png" id="logo-img" class="orange-hover"
+                    alt="Logo" />
             </a>
         </div>
         <div class="navbar-navbar">
@@ -77,27 +77,27 @@ export default {
         const navState = ref("NONE")
         let accumulatedScroll = 0;
 
-watch(scrollY, (newValue) => {
-    const threshold = 200;
+        watch(scrollY, (newValue) => {
+            const threshold = 200;
 
-    // Calculate the difference in scroll position
-    const scrollDifference = newValue - prevScrollY;
+            // Calculate the difference in scroll position
+            const scrollDifference = newValue - prevScrollY;
 
-    // Check if the user is scrolling up
-    if (scrollDifference < 0) {
-        accumulatedScroll += Math.abs(scrollDifference);
-    } else {
-        accumulatedScroll = 0;
-    }
+            // Check if the user is scrolling up
+            if (scrollDifference < 0) {
+                accumulatedScroll += Math.abs(scrollDifference);
+            } else {
+                accumulatedScroll = 0;
+            }
 
-    if (accumulatedScroll >= threshold || newValue === 0) {
-        isNavbarHidden.value = false; // Show the navbar
-    } else {
-        isNavbarHidden.value = true; // Hide the navbar
-    }
+            if (accumulatedScroll >= threshold || newValue === 0) {
+                isNavbarHidden.value = false; // Show the navbar
+            } else {
+                isNavbarHidden.value = true; // Hide the navbar
+            }
 
-    prevScrollY = newValue;
-});
+            prevScrollY = newValue;
+        });
 
 
 
@@ -141,7 +141,8 @@ $logoHeight: 9vh;
 }
 
 .navbar-hide {
-    top: - $navbar-height-l - ($navbar-padding-l * 2);
+    top: - $navbar-height-l - ($navbar-padding-l * 2
+    );
 
 }
 
@@ -161,6 +162,14 @@ $logoHeight: 9vh;
     height: $hamburger-icon-height;
     width: $hamburger-icon-height;
 
+
+    svg {
+        path {
+            color: white;
+        }
+
+    }
+
 }
 
 //Logo in navbar
@@ -169,10 +178,14 @@ $logoHeight: 9vh;
     padding: calc($navbar-padding-l * 0.7);
     position: absolute;
     left: calc(50% + calc($navbar-padding-l * 0.7));
-    -webkit-transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7))); /* Safari and Chrome */
-    -moz-transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7))); /* Firefox */
-    -ms-transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7))); /* IE */
-    -o-transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7))); /* Opera */
+    -webkit-transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7)));
+    /* Safari and Chrome */
+    -moz-transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7)));
+    /* Firefox */
+    -ms-transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7)));
+    /* IE */
+    -o-transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7)));
+    /* Opera */
     transform: translateX(calc(-50% - calc($navbar-padding-l * 0.7)));
 }
 
@@ -185,7 +198,18 @@ $logoHeight: 9vh;
 @media (max-width: 768px) {
     .navbar-logo-container {
         height: $logoHeight-s;
-
+        // padding: calc($navbar-padding-l * 0.7);
+        position: absolute;
+        left: calc(4% + calc($navbar-padding-l * 0.7));
+        -webkit-transform: translateX(calc(4% - calc($navbar-padding-l * 0.7)));
+        /* Safari and Chrome */
+        -moz-transform: translateX(calc(4% - calc($navbar-padding-l * 0.7)));
+        /* Firefox */
+        -ms-transform: translateX(calc(4% - calc($navbar-padding-l * 0.7)));
+        /* IE */
+        -o-transform: translateX(calc(4% - calc($navbar-padding-l * 0.7)));
+        /* Opera */
+        transform: translateX(calc(4% - calc($navbar-padding-l * 0.7)));
     }
 
     .navbar {
@@ -198,7 +222,10 @@ $logoHeight: 9vh;
     }
 
     .navbar-menu-container {
-        display: block;
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+
     }
 
     .navbar-list.collapsed {
