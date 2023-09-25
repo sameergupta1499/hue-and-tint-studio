@@ -116,8 +116,7 @@ $card-width-992: 21vw;
 
 .background-square {
     top: calc(calc(50vw + #{$padding-slide-padding-top}) - 2px);
-    height: 50vw;
-    // background:grey !important;
+    height: calc(calc(50vw) + 2px);
 }
 
 img {
@@ -213,6 +212,11 @@ img {
         left: calc(50vw - ($card-width-768 / 10));
     }
 }
+// @media (max-width: 321px) {
+//     .card-content {
+//         padding-top: 14rem;
+//     }
+// } IN PROGRESS
 
 @media (min-width: 768px) {
     .cards-wrapper {

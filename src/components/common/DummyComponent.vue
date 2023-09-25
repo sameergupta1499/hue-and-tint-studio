@@ -12,6 +12,7 @@
   
   <style scoped>
   .dummy-component {
+    position:relative;
     width: 100vw;
     height: 100vh;
     background-color: lightgray; /* Optional background color */
