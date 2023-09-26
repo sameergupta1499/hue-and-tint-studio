@@ -4,14 +4,24 @@
             <h3 class="fontface-antonio display-content">CLIENT STORIES</h3>
         </div>
     </div>
+    <div class="container position-relative testimonial-section margin-jitter">
+        <div class="container flexCenterColumn">
+            <div class="testimonial-content">
+                <h5 class="display-content fontface-Brandon-Grotesque-Regular">Testimonial</h5>
+
+            </div>
+        </div>
+    </div>
     <div class="carousel-wrapper">
         <Carousel :autoplay="4000" :slideWidth="4000" :wrap-around="true" :items-to-show="itemsToShow" snap-align="center"
             @slide-start="handleEvents" @slide-end="handleEvents">
             <Slide v-for="slide in 5" :key="slide">
-                <div class="carousel__item">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                <h5 class="carousel__item">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Cum laudantium culpa perspiciatis ad exercitationem animi quas obcaecati doloribus,
                     odit laborum. Ipsum, nostrum qui? Aspernatur dolorum enim iste ullam, quas
-                    illo!</div>
+                    illo!<br/><br/>
+                    - Tina Vellore, Titan
+                </h5>
             </Slide>
 
             <template #addons>
@@ -69,7 +79,16 @@ export default defineComponent({
 $gradient-width: 20%;
 $gradient-intensity: 1;
 
+.testimonial-section {
+    background: var(--black);
+    padding-bottom:.1rem;
+}
 
+.testimonial-content{
+    background: var(--yellow);
+    padding: 0.4rem 2.7rem;
+    border-radius: 7rem;
+}
 .content-section {
     margin: -1px 0;
     
@@ -95,14 +114,6 @@ $gradient-intensity: 1;
         overflow:visible;
     }
 }
-
-
-
-
-
-
-
-
 
 .carousel {
     overflow: visible;
@@ -142,6 +153,7 @@ $gradient-intensity: 1;
 .carousel__pagination {
     list-style: none !important;
     background: var(--black);
+    padding-top: 3rem;
 }
 
 .carousel__pagination-item {
@@ -165,7 +177,7 @@ $gradient-intensity: 1;
 .carousel-wrapper {
     position: relative;
     overflow: hidden;
-    padding: 0 5rem;
+    padding: 0 5rem 2rem 5rem;
     background: black;
 }
 
