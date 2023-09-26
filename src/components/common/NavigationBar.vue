@@ -11,7 +11,7 @@
         </div>
         <div class="navbar-logo-container">
             <a href="" class="logo-link ">
-                <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png?updatedAt=1695719780647" id="logo-img" class="orange-hover"
+                <img :src="urls.home['logo-png']" id="logo-img" class="orange-hover"
                     alt="Logo" />
             </a>
         </div>
@@ -53,6 +53,7 @@
 
 <script>
 import { watch, ref, computed } from 'vue';
+import { urls } from '@/assets/const.js';
 import { useScrollTracker } from '@/utils/useScrollTracker.js';
 export default {
     setup() {
@@ -107,7 +108,8 @@ export default {
             rightNavItems,
             navState,
             navbarRef,
-            isNavbarHidden
+            isNavbarHidden,
+            urls
         };
     },
 };

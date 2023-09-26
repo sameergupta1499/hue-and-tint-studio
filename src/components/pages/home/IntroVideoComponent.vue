@@ -4,9 +4,8 @@
         <div class="intro-video-container flexCenter position-relative">
             <div class="video-wrapper" ref="videoWrapper">
                 <video autoplay loop muted playsinline>
-                    <source
-                        src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/homepage/Intro-video.mp4?updatedAt=1695624727782"
-                        type="video/mp4">
+                    <source :src="urls.home['intro-video']" 
+                    type="video/mp4">
                     <!-- Your browser does not support the video tag. -->
                 </video>
             </div>
@@ -19,6 +18,7 @@
 
 <script>
 import { watch, ref, onMounted } from 'vue';
+import { urls } from '@/assets/const.js';
 import { setAnimationProgress, useElementLocation } from '@/utils/useElementPosition';
 import { useScrollTracker } from '@/utils/useScrollTracker.js';
 import WhyMeComponent from '@/components/pages/home/WhyMeComponent.vue';
@@ -36,7 +36,8 @@ export default {
             console.log(setAnimationProgress(videoWrapper, scrollPosition, elStartPosBG, elEndPosBG));
         });
         return {
-            videoWrapper
+            videoWrapper,
+            urls
         };
     },
     components: {
@@ -130,4 +131,5 @@ export default {
         -moz-border-radius: 3rem;
         border-radius: 3rem;
     }
-}</style>
+}
+</style>

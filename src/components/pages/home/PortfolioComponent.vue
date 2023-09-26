@@ -15,6 +15,8 @@
 <script>
 import RoundBGComponent from '@/components/common/RoundBGComponent.vue';
 import { getCSSVariableValue } from '@/utils/utils';
+import { urls } from '@/assets/const.js';
+
 export default {
     setup() {
         const data = [
@@ -24,8 +26,8 @@ export default {
                 "top_color": getCSSVariableValue('--black'),
                 "background_color": getCSSVariableValue('--yellow'),
                 "text_color": getCSSVariableValue('--black'),
-                "left_card_url": "https://images.ctfassets.net/8b1jz4cf6kyy/6aosNheaRtPUBQRf4RE2fx/48291d8abbe63cccb400c9efa0660fc1/45.png?w=1024&fm=webp&q=92",
-                "right_card_url": "https://images.ctfassets.net/8b1jz4cf6kyy/6aosNheaRtPUBQRf4RE2fx/48291d8abbe63cccb400c9efa0660fc1/45.png?w=1024&fm=webp&q=92",
+                "left_card_url": urls.home['first-card-left'],
+                "right_card_url": urls.home['first-card-right'],
             },
             {
                 "title": "SECRET ALCHEMIST",
@@ -33,8 +35,8 @@ export default {
                 "top_color": getCSSVariableValue('--yellow'),
                 "background_color": getCSSVariableValue('--almond'),
                 "text_color": getCSSVariableValue('--black'),
-                "left_card_url": "https://images.ctfassets.net/8b1jz4cf6kyy/6aosNheaRtPUBQRf4RE2fx/48291d8abbe63cccb400c9efa0660fc1/45.png?w=1024&fm=webp&q=92",
-                "right_card_url": "https://images.ctfassets.net/8b1jz4cf6kyy/6aosNheaRtPUBQRf4RE2fx/48291d8abbe63cccb400c9efa0660fc1/45.png?w=1024&fm=webp&q=92",
+                "left_card_url": urls.home['second-card-left'],
+                "right_card_url": urls.home['second-card-right'],
             },
             {
                 "title": "ASA BEAUTY",
@@ -42,8 +44,8 @@ export default {
                 "top_color": getCSSVariableValue('--almond'),
                 "background_color": getCSSVariableValue('--black'),
                 "text_color": getCSSVariableValue('--white'),
-                "left_card_url": "https://images.ctfassets.net/8b1jz4cf6kyy/6aosNheaRtPUBQRf4RE2fx/48291d8abbe63cccb400c9efa0660fc1/45.png?w=1024&fm=webp&q=92",
-                "right_card_url": "https://images.ctfassets.net/8b1jz4cf6kyy/6aosNheaRtPUBQRf4RE2fx/48291d8abbe63cccb400c9efa0660fc1/45.png?w=1024&fm=webp&q=92",
+                "left_card_url": urls.home['third-card-left'],
+                "right_card_url": urls.home['third-card-right'],
             }
         ]
         return {

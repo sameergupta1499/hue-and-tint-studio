@@ -5,7 +5,7 @@
             <div class="video-wrapper" ref="videoWrapper">
                 <video autoplay loop muted playsinline>
                     <source
-                        src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/homepage/brand-work.mp4?updatedAt=1695732045632"
+                        :src="urls.home['brand-works-video']"
                         type="video/mp4">
                     <!-- Your browser does not support the video tag. -->
                 </video>
@@ -19,28 +19,14 @@
 
 <script>
 import { watch, ref, onMounted } from 'vue';
-// import { setAnimationProgress, useElementLocation } from '@/utils/useElementPosition';
-// import { useScrollTracker } from '@/utils/useScrollTracker.js';
-// import WhyMeComponent from '@/components/pages/home/WhyMeComponent.vue';
+import { urls } from '@/assets/const.js';
 export default {
     setup() {
-        // const videoWrapper = ref(null);
-        // let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
-        // let { pointA, pointB, pointC, pointD, width, height } = useElementLocation(videoWrapper);
-
-        // watch(scrollY, (newValue) => {
-        //     let scrollPosition = newValue;
-        //     let elStartPosOffset = -viewportHeight.value;
-        //     let elStartPosBG = pointA.value.y + elStartPosOffset;
-        //     let elEndPosBG = elStartPosBG + (viewportHeight.value / 2);
-        //     console.log(setAnimationProgress(videoWrapper, scrollPosition, elStartPosBG, elEndPosBG));
-        // });
         return {
-            // videoWrapper
+            urls
         };
     },
     components: {
-        // WhyMeComponent,
     },
 };
 </script>
