@@ -11,7 +11,7 @@
         </div>
         <div class="navbar-logo-container">
             <a href="" class="logo-link ">
-                <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png" id="logo-img" class="orange-hover"
+                <img src="https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/logo.png?updatedAt=1695719780647" id="logo-img" class="orange-hover"
                     alt="Logo" />
             </a>
         </div>
