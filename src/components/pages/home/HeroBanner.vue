@@ -34,7 +34,7 @@
                     <h2 class="animated-text fontface-antonio">SINCE 2018</h2>
                 </div>
                 <div class="overflow-visible last-text-container">
-                    <h5 class="animated-text fontface-antonio" style="--delay: .9s;">GRAPHIC DESIGNER & FOUNDER</h5>
+                    <h5 class="animated-text fontface-antonio" style="--delay: .9s;">WHATEVER YOU WANT ME TO BE</h5>
                 </div>
             </div>
         </div>
