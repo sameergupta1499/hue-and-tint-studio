@@ -70,7 +70,7 @@ export default {
     // Vendor-specific prefixes for 'margin'
     -webkit-margin: -1px 0;
     -moz-margin: -1px 0;
-    margin: -1px 0;
+    margin: -2px 0;
 }
 
 .video-wrapper {
@@ -88,6 +88,7 @@ export default {
     -webkit-border-radius: 8rem;
     -moz-border-radius: 8rem;
     border-radius: 8rem;
+    overflow:hidden;
 }
 
 @keyframes height-animation {

@@ -60,6 +60,9 @@
 .overflow-visible{
     overflow: visible;
 }
+.display-content{
+    display: contents;
+}
 // Matter-styling
 .matter-objects {
     position: absolute;
@@ -108,4 +111,16 @@
 }
 .margin-jitter {
     margin: -1px 0;
+}
+// pagination button
+.carousel__pagination-button::after {
+    height: 0.7rem !important;
+    width: 0.7rem !important;
+    border-radius : 50% !important;
+    background-color:white !important;
+    margin: 0 .4rem;
+}
+// pagination button
+.carousel__pagination-button--active::after {
+    background-color: var(--yellow) !important;
 }

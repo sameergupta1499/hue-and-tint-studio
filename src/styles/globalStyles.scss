@@ -4,7 +4,7 @@
   border: 0;
   box-sizing: border-box; /* Keeps padding and border within element's dimensions */
   font-size: 1vw;   /* For 1200 screens */
-  overflow: hidden;
+  // overflow: hidden;
   color: #000000;
   font-family: 'Brandon-Grotesque-Light', sans-serif;
   
@@ -60,17 +60,8 @@ h6 { font-size: 1rem; }
 
 // Scroll for cross browser
 /* Apply overflow hidden to specific elements that might have scrollbars */
-body,
-div,
-section,
-article,
-aside,
-nav,
-ul,
-ol,
-dl,
-table,
-fieldset {
+body
+ {
   overflow: hidden;
 }
 ::-webkit-scrollbar {

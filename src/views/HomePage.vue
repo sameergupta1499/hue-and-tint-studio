@@ -9,6 +9,7 @@
           <IntroVideoComponent />
           <PortfolioComponent />
           <BrandVideoComponent />
+          <ClientStoriesCarousal />
 
           <!-- <TestifyComponent /> -->
           <DummyComponent />
@@ -27,6 +28,7 @@ import PortfolioComponent from '@/components/pages/home/PortfolioComponent.vue';
 import IntroVideoComponent from '@/components/pages/home/IntroVideoComponent.vue';
 import BrandVideoComponent from '@/components/pages/home/BrandVideoComponent.vue';
 import TestifyComponent from '@/components/pages/home/TestifyComponent.vue';
+import ClientStoriesCarousal from '@/components/pages/home/ClientStoriesCarousal.vue';
 import { init } from '@/utils/smoothScroll.js';
 export default {
   setup() {
@@ -46,7 +48,8 @@ export default {
     PortfolioComponent,
     IntroVideoComponent,
     TestifyComponent,
-    BrandVideoComponent
+    BrandVideoComponent,
+    ClientStoriesCarousal
   },
 };
 </script>

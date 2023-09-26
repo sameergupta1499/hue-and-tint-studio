@@ -73,6 +73,7 @@ export default {
     -webkit-border-radius: 8rem;
     -moz-border-radius: 8rem;
     border-radius: 8rem;
+    overflow:hidden;
 }
 
 // @keyframes height-animation {
