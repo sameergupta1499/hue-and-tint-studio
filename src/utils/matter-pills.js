@@ -39,6 +39,8 @@ const init = (width, height) => {
 
   Matter.World.add(engine.world, [
     // wall(width / 2, -10, width, 20), // Top wall
+    // Add a top wall
+    wall(width / 2, -10, width, 20),
     wall(width / 2, height + 10, width, 20), // Bottom wall
     wall(-10, height / 2, 20, height), // Left wall
     wall(width + 10, height / 2, 20, height), // Right wall
@@ -120,7 +122,7 @@ const createBoxes = (width,height) => {
     const n = gsap.quickSetter(boxElement, "x", "px")
     const a = gsap.utils.random(.2 * -Math.PI, .2 * Math.PI)
     const o = gsap.quickSetter(boxElement, "y", "px")
-    const body = Matter.Bodies.rectangle(rand(100,width-100), -300, w, h, {
+    const body = Matter.Bodies.rectangle(rand(100,width-100), 30, w, h, {
       chamfer: {
         radius: Math.min(w, h) / 2,
     },
