@@ -12,7 +12,7 @@
           <ClientStoriesCarousal />
 
           <!-- <TestifyComponent /> -->
-          <DummyComponent />
+          <!-- <DummyComponent /> -->
         </div>
       </div>
     </div>
