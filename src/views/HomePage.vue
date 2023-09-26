@@ -6,8 +6,10 @@
         <div id="scroll-container" v-if="scrollbar !== null">
           <HeroBanner />
           <!-- <DummyComponent /> -->
-          <VideoComponent />
+          <IntroVideoComponent />
           <PortfolioComponent />
+          <BrandVideoComponent />
+
           <!-- <TestifyComponent /> -->
           <DummyComponent />
         </div>
@@ -22,7 +24,8 @@ import HeroBanner from '@/components/pages/home/HeroBanner.vue';
 import DummyComponent from '@/components/common/DummyComponent.vue';
 import NavigationBar from '@/components/common/NavigationBar.vue';
 import PortfolioComponent from '@/components/pages/home/PortfolioComponent.vue';
-import VideoComponent from '@/components/pages/home/VideoComponent.vue';
+import IntroVideoComponent from '@/components/pages/home/IntroVideoComponent.vue';
+import BrandVideoComponent from '@/components/pages/home/BrandVideoComponent.vue';
 import TestifyComponent from '@/components/pages/home/TestifyComponent.vue';
 import { init } from '@/utils/smoothScroll.js';
 export default {
@@ -41,8 +44,9 @@ export default {
     DummyComponent,
     NavigationBar,
     PortfolioComponent,
-    VideoComponent,
-    TestifyComponent
+    IntroVideoComponent,
+    TestifyComponent,
+    BrandVideoComponent
   },
 };
 </script>
