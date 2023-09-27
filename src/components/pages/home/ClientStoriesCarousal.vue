@@ -13,15 +13,32 @@
         </div>
     </div>
     <div class="carousel-wrapper">
-        <Carousel :autoplay="4000" :slideWidth="4000" :wrap-around="true" :items-to-show="itemsToShow" snap-align="center"
+        <Carousel :slideWidth="4000" :autoplay="4000" :wrap-around="true" :items-to-show="itemsToShow" snap-align="center"
             @slide-start="handleEvents" @slide-end="handleEvents">
             <Slide v-for="slide in 5" :key="slide">
-                <h5 class="carousel__item">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Cum laudantium culpa perspiciatis ad exercitationem animi quas obcaecati doloribus,
-                    odit laborum. Ipsum, nostrum qui? Aspernatur dolorum enim iste ullam, quas
-                    illo!<br/><br/>
-                    - Tina Vellore, Titan
-                </h5>
+                <div>
+                    <h5 class="carousel__item flexCenterColumn">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Cum laudantium culpa perspiciatis ad exercitationem animi quas obcaecati doloribus,
+                        odit laborum. Ipsum, nostrum qui? Aspernatur dolorum enim iste ullam, quas
+                        illo!<br /><br />
+
+                        <div class="brand-container container flexCenter">
+                            <div class="brand-img-container">
+                                <a href="" class="brand-img-href container">
+                                    <img src="batman.png" class="brand-img" alt="Logo" />
+                                </a>
+                            </div>
+                            <div class="brand-person-container flexCenterColumn">
+                                <h5 class="white-color">- Tina Vellore</h5>
+                                    <h6 class="white-color">Marketing Head, Titan</h6>
+                            </div>
+                        </div>
+
+                    </h5>
+
+                </div>
+
+
             </Slide>
 
             <template #addons>
@@ -79,39 +96,61 @@ export default defineComponent({
 $gradient-width: 20%;
 $gradient-intensity: 1;
 
-.testimonial-section {
-    background: var(--black);
-    padding-bottom:.1rem;
+.brand-container {
+}
+.brand-img-container {
+    justify-content: flex-start;
+    // height: 5rem;
 }
 
-.testimonial-content{
+.brand-img {
+    height: 4rem;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-person-container {
+    align-items: flex-start;
+    padding: 0.6rem 1.5rem;
+
+}
+.testimonial-section {
+    background: var(--black);
+    padding-bottom: .1rem;
+}
+
+.testimonial-content {
     background: var(--yellow);
     padding: 0.4rem 2.7rem;
     border-radius: 7rem;
 }
+
 .content-section {
     margin: -1px 0;
-    
+
 
 }
 
 .content-section {
-    background:var(--black);
+    background: var(--black);
     text-align: center;
-    padding:3.5rem 0 1rem;
+    padding: 3.5rem 0 1rem;
     // margin-top: 2px;
 }
-.heading-wrapper{
-    h3{
-        color:white;
-        padding:.1rem 0;
+
+.heading-wrapper {
+    h3 {
+        color: white;
+        padding: .1rem 0;
     }
 }
-.content-wrapper{
-    padding:1.5rem 0 1rem;
-    h5{
-        color:white;
-        overflow:visible;
+
+.content-wrapper {
+    padding: 1.5rem 0 1rem;
+
+    h5 {
+        color: white;
+        overflow: visible;
     }
 }
 
@@ -123,12 +162,12 @@ $gradient-intensity: 1;
 
 .carousel__item {
     min-height: 150px;
-    padding: 0 1rem;
+    padding: 3rem 2rem;
     width: 100%;
-    background-color: var(--black);
+    background-color: var(--grey);
     color: #fff;
     font-size: 20px;
-    border-radius: 8px;
+    border-radius: 2.2rem;
     display: flex;
     justify-content: center;
     align-items: center;

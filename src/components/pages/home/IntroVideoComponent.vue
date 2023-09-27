@@ -33,7 +33,7 @@ export default {
             let elStartPosOffset = -viewportHeight.value;
             let elStartPosBG = pointA.value.y + elStartPosOffset;
             let elEndPosBG = elStartPosBG + (viewportHeight.value / 2);
-            console.log(setAnimationProgress(videoWrapper, scrollPosition, elStartPosBG, elEndPosBG));
+            setAnimationProgress(videoWrapper, scrollPosition, elStartPosBG, elEndPosBG);
         });
         return {
             videoWrapper,
