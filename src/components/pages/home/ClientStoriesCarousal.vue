@@ -25,7 +25,7 @@
                         <div class="brand-container container flexCenter">
                             <div class="brand-img-container">
                                 <a href="" class="brand-img-href container">
-                                    <img src="batman.png" class="brand-img" alt="Logo" />
+                                    <img src="/batman.png" class="brand-img" alt="Logo" />
                                 </a>
                             </div>
                             <div class="brand-person-container flexCenterColumn">
