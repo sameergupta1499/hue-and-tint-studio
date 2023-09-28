@@ -5,7 +5,7 @@
             <div class="white-color heading-contact fontface-Brandon-Grotesque-Light h4-5">GET IN TOUCH TO CREATE GREAT
                 STUFF TOGETHER!</div>
         </div>
-        <div class="container contact-container contact-content-container flexCenter  margin-jitter">
+        <div class="container contact-container contact-content-container flexCenter margin-jitter">
             <div class="white-color item fontface-Brandon-Grotesque-Light h3-5 flexCenter">
                 <a href="" class="brand-img-href">
                     <img src="/linkedin.png" class="img" alt="Logo" />
@@ -128,5 +128,22 @@ export default {
 .hidden-box:hover {
     opacity: 1;
     
+}
+@media (max-width: 768px) {
+
+/* You can adjust the breakpoint to your preferred mobile width */
+.contact-container {
+    padding: .7rem 5% 0 5%;
+    flex-wrap: wrap;
+}
+.animated-box {
+    width: 50%;
+    position:relative;
+}
+.contact-developer-container {
+    h6 {
+        width: 50%;
+    }
+}
 }
 </style>
