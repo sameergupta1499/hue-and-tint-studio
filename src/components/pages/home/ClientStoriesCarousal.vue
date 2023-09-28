@@ -29,8 +29,8 @@
                                 </a>
                             </div>
                             <div class="brand-person-container flexCenterColumn">
-                                <h5 class="white-color">- Tina Vellore</h5>
-                                    <h6 class="white-color">Marketing Head, Titan</h6>
+                                <h5 class="white-color brand-header">- Tina Vellore</h5>
+                                    <h6 class="white-color brand-description">Marketing Head, Titan</h6>
                             </div>
                         </div>
 
@@ -111,9 +111,13 @@ $gradient-intensity: 1;
 
 .brand-person-container {
     align-items: flex-start;
-    padding: 0.6rem 1.5rem;
-
+    padding: 0.4rem 1.5rem;
 }
+
+.brand-description{
+    padding-top:.7rem;
+}
+
 .testimonial-section {
     background: var(--black);
     padding-bottom: .1rem;

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import RoundBGComponent from '@/components/common/RoundBGComponent.vue';
+import RoundBGComponent from '@/components/pages/home/RoundBGComponent.vue';
 import { getCSSVariableValue } from '@/utils/utils';
 import { urls } from '@/assets/const.js';
 

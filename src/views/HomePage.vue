@@ -10,6 +10,7 @@
           <PortfolioComponent />
           <BrandVideoComponent />
           <ClientStoriesCarousal />
+          <ContactComponent />
 
           <!-- <TestifyComponent /> -->
           <!-- <DummyComponent /> -->
@@ -29,6 +30,7 @@ import IntroVideoComponent from '@/components/pages/home/IntroVideoComponent.vue
 import BrandVideoComponent from '@/components/pages/home/BrandVideoComponent.vue';
 import TestifyComponent from '@/components/pages/home/TestifyComponent.vue';
 import ClientStoriesCarousal from '@/components/pages/home/ClientStoriesCarousal.vue';
+import ContactComponent from '@/components/common/ContactComponent.vue';
 import { init } from '@/utils/smoothScroll.js';
 export default {
   setup() {
@@ -49,7 +51,8 @@ export default {
     IntroVideoComponent,
     TestifyComponent,
     BrandVideoComponent,
-    ClientStoriesCarousal
+    ClientStoriesCarousal,
+    ContactComponent
   },
 };
 </script>
@@ -59,11 +62,5 @@ export default {
   width: 100%;
   overflow: auto;
 }
-
-/* .container-scrollbar {
-  height: 100vh;
-  width: 100%;
-  overflow: auto;
-} */
 </style>
 
