@@ -15,7 +15,7 @@
     position:relative;
     width: 100vw;
     height: 100vh;
-    background-color: lightgray; /* Optional background color */
+     /* Optional background color */
     /* Add any other styles you need for your dummy component */
   }
   </style>

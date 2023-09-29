@@ -4,14 +4,14 @@
             <ul class="navbar-list">
                 <li class="navbar-item margin-left" v-for="(item, index) in leftNavItems" :key="index">
                     <router-link :to="item.route">
-                        <h6 class=" orange-hover">{{ item.label }}</h6>
+                        <h6 class="yellow-hover">{{ item.label }}</h6>
                     </router-link>
                 </li>
             </ul>
         </div>
         <div class="navbar-logo-container">
             <a href="" class="logo-link ">
-                <img :src="urls.home['logo-png']" id="logo-img" class="orange-hover"
+                <img :src="urls.home['logo-png']" id="logo-img" class="yellow-hover"
                     alt="Logo" />
             </a>
         </div>
@@ -19,7 +19,7 @@
             <ul class="navbar-list">
                 <li class="navbar-item margin-right" v-for="(item, index) in rightNavItems" :key="index">
                     <router-link :to="item.route">
-                        <h6 class=" orange-hover">{{ item.label }}</h6>
+                        <h6 class=" yellow-hover">{{ item.label }}</h6>
                     </router-link>
                 </li>
             </ul>
@@ -28,7 +28,7 @@
         <div class="navbar-menu-container">
             <v-menu>
                 <template v-slot:activator="{ props }">
-                    <div class="navbar-hamburger-icon  orange-hover" v-bind="props">
+                    <div class="navbar-hamburger-icon  yellow-hover" v-bind="props">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
@@ -39,7 +39,7 @@
                 <ul class="navbar-list collapsed">
                     <li class="navbar-item" v-for="(item, index) in navItems" :key="index">
                         <router-link :to="item.route" @click="menuOpen = false">
-                            <h6 class=" orange-hover">{{ item.label }}</h6>
+                            <h6 class=" yellow-hover">{{ item.label }}</h6>
                         </router-link>
                     </li>
                 </ul>
@@ -61,7 +61,7 @@ export default {
         let prevScrollY = 0;
         const navItems = ref([
             { label: 'HOME', route: '/' },
-            { label: 'WORK', route: '/' },
+            { label: 'WORK', route: '/work/' },
             { label: 'ABOUT', route: '/' },
             { label: 'CONTACT', route: '/' },
         ]);
