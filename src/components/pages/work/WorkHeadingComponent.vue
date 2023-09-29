@@ -10,7 +10,7 @@
         <div class="container position-relative testimonial-section margin-jitter">
             <div class="container flexCenterColumn">
                 <div class="testimonial-content">
-                    <h5 class="display-content fontface-Brandon-Grotesque-Regular">Testimonial</h5>
+                    <h5 class="display-content fontface-Brandon-Grotesque-Regular">Client Work</h5>
 
                 </div>
             </div>
