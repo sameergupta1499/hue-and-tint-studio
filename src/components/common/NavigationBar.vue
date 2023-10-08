@@ -10,7 +10,7 @@
             </ul>
         </div>
         <div class="navbar-logo-container">
-            <a href="" class="logo-link ">
+            <a href="/" class="logo-link ">
                 <img :src="urls.home['logo-png']" id="logo-img" class="yellow-hover"
                     alt="Logo" />
             </a>
