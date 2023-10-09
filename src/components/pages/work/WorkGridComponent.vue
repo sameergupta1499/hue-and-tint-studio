@@ -10,7 +10,7 @@
                             <div class="h5-6 white-color fontface-Brandon-Grotesque-Light hover-task">{{ item.tasks }}</div>
                             <div class="hover-button-container">
                                 <a href="www.google.com">
-                                    <h6 class="hover-button fontface-Brandon-Grotesque-Light">Let's Explore</h6>
+                                    <div class="h5-6 hover-button fontface-Brandon-Grotesque-Light">Let's Explore</div>
                                 </a>
                             </div>
                         </div>
@@ -93,7 +93,7 @@ export default {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     font-size: 1.2rem;
-      opacity: 0;
+    //   opacity: 0;
     // pointer-events: none;
     transition: opacity 0.3s ease-in-out;
 }
@@ -104,13 +104,13 @@ export default {
 
     .hover-task {
         font-weight: 300;
-        padding: .25rem 0 .75rem;
+        padding: .4rem 0 1.2rem;
     }
 
     .hover-button-container {
         background: var(--yellow);
-        padding: 0.2rem 1rem;
-        border-radius: 3px;
+        padding: 0.5rem 1.5rem;
+        border-radius: 10px;
         position:relative;
         z-index: 10;
     }
