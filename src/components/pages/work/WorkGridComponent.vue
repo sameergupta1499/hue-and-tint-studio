@@ -10,7 +10,7 @@
                             <div class="h5-6 white-color fontface-Brandon-Grotesque-Light hover-task">{{ item.tasks }}</div>
                             <div class="hover-button-container">
                                 <a href="www.google.com">
-                                    <div class="h5-6 hover-button fontface-Brandon-Grotesque-Light">Let's Explore</div>
+                                    <div class="h5-6 hover-button fontface-Brandon-Grotesque-Medium">Let's Explore</div>
                                 </a>
                             </div>
                         </div>
