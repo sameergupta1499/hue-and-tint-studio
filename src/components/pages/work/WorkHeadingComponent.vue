@@ -11,7 +11,6 @@
             <div class="container flexCenterColumn">
                 <div class="testimonial-content">
                     <h5 class="display-content fontface-Brandon-Grotesque-Regular">Client Work</h5>
-
                 </div>
             </div>
         </div>

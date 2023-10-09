@@ -1,12 +1,26 @@
 <template>
-    <div class="container position-relative">
+    <div class="grid-container position-relative">
         <div class="grid">
             <article v-for="(item, index) in urls.work" :key="index" class="position-relative">
-                <img :src="item.url" :alt="'Image for ' + item.brand" class="position-relative">
+                <div class="image-container position-relative">
+                    <img :src="item.url" :alt="'Image for ' + item.brand" class="position-relative">
+                    <div class="hover-text container">
+                        <div class="hover-content container flexCenterColumn">
+                            <div class="h5-6 white-color fontface-Brandon-Grotesque-Medium hover-header">What I Did:</div>
+                            <div class="h5-6 white-color fontface-Brandon-Grotesque-Light hover-task">{{ item.tasks }}</div>
+                            <div class="hover-button-container">
+                                <a href="www.google.com">
+                                    <h6 class="hover-button fontface-Brandon-Grotesque-Light">Let's Explore</h6>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="text">
                     <div class="white-color h4-5 fontface-Brandon-Grotesque-Medium flexCenter">{{ item.brand }}</div>
                     <h6 class="white-color fontface-Brandon-Grotesque-Light flexCenter">{{ item.category }}</h6>
                 </div>
+
             </article>
         </div>
     </div>
@@ -23,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.grid-container {
     padding: 5rem 10% 0 10%;
     box-sizing: border-box;
 }
@@ -36,7 +50,18 @@ export default {
     align-items: stretch;
 }
 
-.grid>article {}
+.image-container {
+    transition: transform .3s ease-in-out;
+    transform-origin: center bottom;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    .hover-text{
+        opacity:1;
+    }
+}
+
 
 .grid>article img {
     max-width: 100%;
@@ -58,12 +83,48 @@ export default {
     }
 }
 
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+      opacity: 0;
+    // pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hover-content {
+    align-items: flex-start;
+    padding: 0 7%;
+
+    .hover-task {
+        font-weight: 300;
+        padding: .25rem 0 .75rem;
+    }
+
+    .hover-button-container {
+        background: var(--yellow);
+        padding: 0.2rem 1rem;
+        border-radius: 3px;
+        position:relative;
+        z-index: 10;
+    }
+
+    .hover-button-container:hover {
+        cursor: pointer;
+    }
+}
+
 @media (max-width: 768px) {
 
     /* You can adjust the breakpoint to your preferred mobile width */
-    .container {
+    .grid-container {
         padding: 6rem 15% 0 15%;
         box-sizing: border-box;
     }
-}
-</style>
+}</style>
