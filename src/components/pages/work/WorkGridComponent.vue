@@ -93,7 +93,7 @@ export default {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     font-size: 1.2rem;
-    //   opacity: 0;
+      opacity: 0;
     // pointer-events: none;
     transition: opacity 0.3s ease-in-out;
 }
