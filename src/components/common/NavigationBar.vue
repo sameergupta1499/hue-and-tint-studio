@@ -66,8 +66,8 @@ export default {
         const navItems = ref([
             { label: 'HOME', route: '/' },
             { label: 'WORK', route: '/work/' },
-            { label: 'ABOUT', route: '' },
-            { label: 'CONTACT', route: '/' },
+            { label: 'ABOUT', route: '/' },
+            { label: 'CONTACT', route: '' },
         ]);
 
         const leftNavItems = computed(() => {
