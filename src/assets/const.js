@@ -20,38 +20,45 @@ const urls = {
         },
         {
             "brand": "THE FACE SHOP",
-            "category": "Cosmetics",
+            "category": "Beauty & Personal Care",
             "tasks": "Product Promotion Ad Design",
             "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/the-face-shop.jpg?updatedAt=Latest",
             "page-url": "/the-face-shop/"
         },
         {
             "brand": "SECRET ALCHEMIST",
-            "category": "Cosmetics",
+            "category": "Beauty & Personal Care",
             "tasks": "Product Promotion Ad Design",
             "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/secret-alchemist.jpg?updatedAt=Latest",
             "page-url": "/secret-alchemist/"
         },
         {
             "brand": "ZEME FRESH",
-            "category": "Cosmetics",
+            "category": "Beauty & Personal Care",
             "tasks": "Product Promotion Ad Design",
             "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/zeme-fresh.jpg?updatedAt=Latest",
             "page-url": "/zeme-fresh/"
         },
         {
             "brand": "THE PINK FOUNDRY",
-            "category": "Cosmetics",
+            "category": "Beauty & Personal Care",
             "tasks": "Product Promotion Ad Design",
             "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/the-pink-foundry.jpg?updatedAt=Latest",
             "page-url": "/the-pink-foundry/"
         },
         {
             "brand": "ASA BEAUTY",
-            "category": "Cosmetics",
+            "category": "Beauty & Personal Care",
             "tasks": "Product Promotion Ad Design",
             "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/asa-beauty.jpg?updatedAt=Latest",
             "page-url": "/asa-beauty/"
+        },
+        {
+            "brand": "SEE LOVE",
+            "category": "Beauty & Personal Care",
+            "tasks": "Product Promotion Ad Design",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/see-love.jpg?updatedAt=Latest",
+            "page-url": "/see-love/"
         },
         {
             "brand": "IRA SOLES",
@@ -62,7 +69,7 @@ const urls = {
         },
         {
             "brand": "CERYS SKINTIALS",
-            "category": "Cosmetics",
+            "category": "Beauty & Personal Care",
             "tasks": "Product Promotion Ad Design",
             "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/cerys-skintials.jpg?updatedAt=Latest",
             "page-url": "/cerys-skintials/"
