@@ -17,7 +17,7 @@
         <div class="navbar-navbar">
             <ul class="navbar-list">
                 <li class="navbar-item margin-right" v-for="(item, index) in rightNavItems" :key="index" >
-                    <router-link :to="item.route" @click="item.label === 'ABOUT' ? scrollTO('hit-me-up') : null">
+                    <router-link :to="item.route" @click="item.label === 'CONTACT' ? scrollTO('hit-me-up') : null">
                         <h6 class=" yellow-hover">{{ item.label }}</h6>
                     </router-link>
                 </li>
