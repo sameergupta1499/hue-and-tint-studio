@@ -11,14 +11,13 @@
         </div>
         <div class="navbar-logo-container">
             <a href="/" class="logo-link ">
-                <img :src="urls.home['logo-png']" id="logo-img" class="yellow-hover"
-                    alt="Logo" />
+                <img :src="urls.home['logo-png']" id="logo-img" class="yellow-hover" alt="Logo" />
             </a>
         </div>
         <div class="navbar-navbar">
             <ul class="navbar-list">
-                <li class="navbar-item margin-right" v-for="(item, index) in rightNavItems" :key="index">
-                    <router-link :to="item.route">
+                <li class="navbar-item margin-right" v-for="(item, index) in rightNavItems" :key="index" >
+                    <router-link :to="item.route" @click="item.label === 'ABOUT' ? scrollTO('hit-me-up') : null">
                         <h6 class=" yellow-hover">{{ item.label }}</h6>
                     </router-link>
                 </li>
@@ -55,14 +54,19 @@ import { urls } from '@/assets/const.js';
 import { useScrollTracker } from '@/utils/useScrollTracker.js';
 export default {
     setup() {
-        const { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
+        const { scrollY, viewportWidth, viewportHeight, scrollbar } = useScrollTracker();
         const navbarRef = ref(null)
         const isNavbarHidden = ref(false);
+        const scrollTO = (elem_id) => {
+            let elem = document.getElementById(elem_id);
+            console.log("called", elem, elem_id)
+            scrollbar.scrollIntoView(elem);
+        };
         let prevScrollY = 0;
         const navItems = ref([
             { label: 'HOME', route: '/' },
             { label: 'WORK', route: '/work/' },
-            { label: 'ABOUT', route: '/' },
+            { label: 'ABOUT', route: '' },
             { label: 'CONTACT', route: '/' },
         ]);
 
@@ -107,7 +111,8 @@ export default {
             navState,
             navbarRef,
             isNavbarHidden,
-            urls
+            urls,
+            scrollTO
         };
     },
 };

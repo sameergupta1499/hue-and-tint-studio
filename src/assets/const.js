@@ -82,18 +82,18 @@ const urls = {
             "page-url": "/label-society/"
         },
         {
-            "brand": "SHIPYAARI",
-            "category": "Logistics",
-            "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/shipyaari.jpg?updatedAt=Latest",
-            "page-url": "/shipyaari/"
-        },
-        {
             "brand": "ACFS LOGISTICS",
             "category": "Logistics",
             "tasks": "Product Promotion Ad Design",
             "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/acfs-logistics.jpg?updatedAt=Latest",
             "page-url": "/acfs-logistics/"
+        },
+        {
+            "brand": "SHIPYAARI",
+            "category": "Logistics",
+            "tasks": "Product Promotion Ad Design",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/shipyaari.jpg?updatedAt=Latest",
+            "page-url": "/shipyaari/"
         },
         {
             "brand": "FUELLED",
