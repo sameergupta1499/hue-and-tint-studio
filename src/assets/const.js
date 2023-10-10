@@ -15,81 +15,93 @@ const urls = {
             "brand": "TITAN",
             "category": "Accessories",
             "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/work.jpg?updatedAt=Latest",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/titan.jpg?updatedAt=Latest",
+            "page-url": "/titan/"
         },
         {
             "brand": "THE FACE SHOP",
             "category": "Cosmetics",
             "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/work.jpg?updatedAt=Latest",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/the-face-shop.jpg?updatedAt=Latest",
+            "page-url": "/the-face-shop/"
         },
         {
             "brand": "SECRET ALCHEMIST",
             "category": "Cosmetics",
             "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/work.jpg?updatedAt=Latest",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/secret-alchemist.jpg?updatedAt=Latest",
+            "page-url": "/secret-alchemist/"
         },
         {
             "brand": "ZEME FRESH",
             "category": "Cosmetics",
             "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/work.jpg?updatedAt=Latest",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/zeme-fresh.jpg?updatedAt=Latest",
+            "page-url": "/zeme-fresh/"
         },
         {
             "brand": "THE PINK FOUNDRY",
             "category": "Cosmetics",
             "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/work.jpg?updatedAt=Latest",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/the-pink-foundry.jpg?updatedAt=Latest",
+            "page-url": "/the-pink-foundry/"
         },
         {
             "brand": "ASA BEAUTY",
             "category": "Cosmetics",
             "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/work.jpg?updatedAt=Latest",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/asa-beauty.jpg?updatedAt=Latest",
+            "page-url": "/asa-beauty/"
         },
         {
             "brand": "IRA SOLES",
             "category": "Accessories",
             "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/work.jpg?updatedAt=Latest",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/ira-soles.jpg?updatedAt=Latest",
+            "page-url": "/ira-soles/"
         },
         {
             "brand": "CERYS SKINTIALS",
             "category": "Cosmetics",
             "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/work.jpg?updatedAt=Latest",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/cerys-skintials.jpg?updatedAt=Latest",
+            "page-url": "/cerys-skintials/"
         },
         {
             "brand": "LABEL SOCIETY",
             "category": "Clothing",
             "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/work.jpg?updatedAt=Latest",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/label-society.jpg?updatedAt=Latest",
+            "page-url": "/label-society/"
         },
         {
             "brand": "SHIPYAARI",
             "category": "Logistics",
             "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/work.jpg?updatedAt=Latest",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/shipyaari.jpg?updatedAt=Latest",
+            "page-url": "/shipyaari/"
         },
         {
             "brand": "ACFS LOGISTICS",
             "category": "Logistics",
             "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/work.jpg?updatedAt=Latest",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/acfs-logistics.jpg?updatedAt=Latest",
+            "page-url": "/acfs-logistics/"
         },
         {
             "brand": "FUELLED",
             "category": "Food & Beverage",
             "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/work.jpg?updatedAt=Latest",
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/fuelled.jpg?updatedAt=Latest",
+            "page-url": "/fuelled/"
         },
         {
             "brand": "SPIRIT ANIMAL",
             "category": "Clothing",
             "tasks": "Product Promotion Ad Design",
-            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/work.jpg?updatedAt=Latest",
-        },
-
+            "url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/spirit-animal.jpg?updatedAt=Latest",
+            "page-url": "/spirit-animal/"
+        }
     ]
 };
 

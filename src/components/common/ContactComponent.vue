@@ -31,7 +31,7 @@
         </div>
         <div class="container contact-container contact-developer-container flexCenter margin-jitter">
             <h6 class="white-color item fontface-Brandon-Grotesque-Light flexCenter">
-                Designed with ❤️ by <a href="https://www.linkedin.com/in/sameer-gupta-a9531612a" target="_blank"> Sameer Gupta</a></h6>
+                Designed with ❤️ by <a href="https://www.linkedin.com/in/guptasamofficial/" target="_blank"> Sameer Gupta</a></h6>
             <h6 class="white-color item fontface-Brandon-Grotesque-Light">Hue & Tint Studio All Right Reserved.</h6>
         </div>
 
