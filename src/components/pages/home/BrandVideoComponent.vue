@@ -3,12 +3,7 @@
         <!-- <WhyMeComponent /> -->
         <div class="intro-video-container flexCenter position-relative">
             <div class="video-wrapper" ref="videoWrapper">
-                <video autoplay loop muted playsinline>
-                    <source
-                        :src="urls.home['brand-works-video']"
-                        type="video/mp4">
-                    <!-- Your browser does not support the video tag. -->
-                </video>
+                <VideoComponent :videoUrl="urls.home['brand-works-video']" />
             </div>
         </div>
 
@@ -18,8 +13,8 @@
 
 
 <script>
-import { watch, ref, onMounted } from 'vue';
 import { urls } from '@/assets/const.js';
+import VideoComponent from '@/components/common/VideoComponent.vue';
 export default {
     setup() {
         return {
@@ -27,17 +22,12 @@ export default {
         };
     },
     components: {
+        VideoComponent
     },
 };
 </script>
  
 <style lang="scss" scoped>
-// $padding-slide-padding-top: 5vh;
-// .intro-video-container {
-//     width: 100vw;
-//     height: 52.36vw; //depends on the aspect ratio. Explicitly set the height 
-//     background:pink;
-// }
 
 .intro-video-container {
     width: 100%;
@@ -45,7 +35,6 @@ export default {
     /* Set the height based on the aspect ratio */
     background: black;
     box-sizing: border-box;
-    // margin: -1px 0; // to remove the top and bottom line that comes due to background mismatch (glitch)
 
     // Vendor-specific prefixes for 'box-sizing'
     -webkit-box-sizing: border-box;
@@ -61,48 +50,9 @@ export default {
 .video-wrapper {
     height: 75%;
     border-radius: 8rem;
-    // will-change: height;
-    // animation: height-animation 1s linear;
-    // animation-play-state: paused;
-    // animation-iteration-count: 1;
-    // -webkit-animation: height-animation 1s linear;
-    // -webkit-animation-play-state: paused;
-    // -webkit-animation-iteration-count: 1;
-
-    // Vendor-specific prefixes for 'border-radius'
     -webkit-border-radius: 8rem;
     -moz-border-radius: 8rem;
-    border-radius: 8rem;
     overflow:hidden;
-}
-
-// @keyframes height-animation {
-//     100% {
-//         height: 90%;
-//         /* Final border radius */
-//     }
-// }
-
-// @keyframes height-animation-mobile {
-//     0% {
-//         height: 70%;
-//     }
-
-//     100% {
-//         height: 90%;
-//     }
-// }
-
-.video-wrapper video {
-    // width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Maintain aspect ratio and cover container */
-
-    // Vendor-specific prefixes for 'object-fit'
-    -o-object-fit: cover;
-    object-fit: cover;
-    -webkit-object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -111,12 +61,8 @@ export default {
     .video-wrapper {
         border-radius: 3rem;
         height: 80%;
-        // animation: height-animation-mobile 1s linear; // Use the desktop-specific keyframe
-
-        // Vendor-specific prefixes for 'border-radius'
-        // -webkit-border-radius: 3rem;
+        -webkit-border-radius: 3rem;
         -moz-border-radius: 3rem;
-        border-radius: 3rem;
     }
 }
 </style>

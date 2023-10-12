@@ -3,10 +3,7 @@
         <WhyMeComponent />
         <div class="intro-video-container flexCenter position-relative">
             <div class="video-wrapper" ref="videoWrapper">
-                <video autoplay loop muted playsinline>
-                    <source :src="urls.home['intro-video']" type="video/mp4">
-                    <!-- Your browser does not support the video tag. -->
-                </video>
+                <VideoComponent :videoUrl="urls.home['intro-video']" />
             </div>
         </div>
 
@@ -21,6 +18,7 @@ import { urls } from '@/assets/const.js';
 import { setAnimationProgress, useElementLocation } from '@/utils/useElementPosition';
 import { useScrollTracker } from '@/utils/useScrollTracker.js';
 import WhyMeComponent from '@/components/pages/home/WhyMeComponent.vue';
+import VideoComponent from '@/components/common/VideoComponent.vue';
 export default {
     setup() {
         const videoWrapper = ref(null);
@@ -41,6 +39,7 @@ export default {
     },
     components: {
         WhyMeComponent,
+        VideoComponent
     },
 };
 </script>
@@ -104,17 +103,6 @@ export default {
     100% {
         height: 90%;
     }
-}
-
-.video-wrapper video {
-    // width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Maintain aspect ratio and cover container */
-
-    // Vendor-specific prefixes for 'object-fit'
-    -o-object-fit: cover;
-    -webkit-object-fit: cover;
 }
 
 @media (max-width: 768px) {
