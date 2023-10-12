@@ -61,7 +61,7 @@ export default {
 .video-wrapper {
     height: 75%;
     border-radius: 8rem;
-    will-change: height;
+    // will-change: height;
     // animation: height-animation 1s linear;
     // animation-play-state: paused;
     // animation-iteration-count: 1;
@@ -94,7 +94,7 @@ export default {
 // }
 
 .video-wrapper video {
-    width: 100%;
+    // width: 100%;
     height: 100%;
     object-fit: cover;
     /* Maintain aspect ratio and cover container */
@@ -102,6 +102,7 @@ export default {
     // Vendor-specific prefixes for 'object-fit'
     -o-object-fit: cover;
     object-fit: cover;
+    -webkit-object-fit: cover;
 }
 
 @media (max-width: 768px) {

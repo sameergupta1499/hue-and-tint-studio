@@ -86,7 +86,6 @@ export default {
     // Vendor-specific prefixes for 'border-radius'
     -webkit-border-radius: 8rem;
     -moz-border-radius: 8rem;
-    border-radius: 8rem;
     overflow: hidden;
 }
 
@@ -108,14 +107,14 @@ export default {
 }
 
 .video-wrapper video {
-    width: 100%;
+    // width: 100%;
     height: 100%;
     object-fit: cover;
     /* Maintain aspect ratio and cover container */
 
     // Vendor-specific prefixes for 'object-fit'
     -o-object-fit: cover;
-    object-fit: cover;
+    -webkit-object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -127,9 +126,8 @@ export default {
         // animation: height-animation-mobile 1s linear; // Use the desktop-specific keyframe
 
         // Vendor-specific prefixes for 'border-radius'
-        // -webkit-border-radius: 3rem;
+        -webkit-border-radius: 3rem;
         -moz-border-radius: 3rem;
-        border-radius: 3rem;
     }
 }
 </style>
