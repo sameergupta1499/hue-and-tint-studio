@@ -15,7 +15,7 @@
 <script>
 import RoundBGComponent from '@/components/pages/home/RoundBGComponent.vue';
 import { getCSSVariableValue } from '@/utils/utils';
-import { urls } from '@/assets/const.js';
+import { data } from '@/assets/const.js';
 
 export default {
     setup() {
@@ -26,8 +26,8 @@ export default {
                 "top_color": getCSSVariableValue('--black'),
                 "background_color": getCSSVariableValue('--yellow'),
                 "text_color": getCSSVariableValue('--black'),
-                "left_card_url": urls.home['first-card-left'],
-                "right_card_url": urls.home['first-card-right'],
+                "left_card_url": data.home['first-card-left'],
+                "right_card_url": data.home['first-card-right'],
             },
             {
                 "title": "SECRET ALCHEMIST",
@@ -35,8 +35,8 @@ export default {
                 "top_color": getCSSVariableValue('--yellow'),
                 "background_color": getCSSVariableValue('--almond'),
                 "text_color": getCSSVariableValue('--black'),
-                "left_card_url": urls.home['second-card-left'],
-                "right_card_url": urls.home['second-card-right'],
+                "left_card_url": data.home['second-card-left'],
+                "right_card_url": data.home['second-card-right'],
             },
             {
                 "title": "ASA BEAUTY",
@@ -44,8 +44,8 @@ export default {
                 "top_color": getCSSVariableValue('--almond'),
                 "background_color": getCSSVariableValue('--black'),
                 "text_color": getCSSVariableValue('--white'),
-                "left_card_url": urls.home['third-card-left'],
-                "right_card_url": urls.home['third-card-right'],
+                "left_card_url": data.home['third-card-left'],
+                "right_card_url": data.home['third-card-right'],
             }
         ]
         return {

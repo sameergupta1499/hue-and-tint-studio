@@ -3,7 +3,7 @@
         <!-- <WhyMeComponent /> -->
         <div class="intro-video-container flexCenter position-relative">
             <div class="video-wrapper" ref="videoWrapper">
-                <VideoComponent :videoUrl="urls.home['brand-works-video']" />
+                <VideoComponent :videoUrl="data.home['brand-works-video']" />
             </div>
         </div>
 
@@ -13,12 +13,12 @@
 
 
 <script>
-import { urls } from '@/assets/const.js';
+import { data } from '@/assets/const.js';
 import VideoComponent from '@/components/common/VideoComponent.vue';
 export default {
     setup() {
         return {
-            urls
+            data
         };
     },
     components: {

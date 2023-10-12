@@ -11,7 +11,7 @@
         </div>
         <div class="navbar-logo-container">
             <a href="/" class="logo-link ">
-                <img :src="urls.home['logo-png']" id="logo-img" class="yellow-hover" alt="Logo" />
+                <img :src="data.home['logo-png']" id="logo-img" class="yellow-hover" alt="Logo" />
             </a>
         </div>
         <div class="navbar-navbar">
@@ -50,7 +50,7 @@
 
 <script>
 import { watch, ref, computed } from 'vue';
-import { urls } from '@/assets/const.js';
+import { data } from '@/assets/const.js';
 import { useScrollTracker } from '@/utils/useScrollTracker.js';
 export default {
     setup() {
@@ -59,7 +59,6 @@ export default {
         const isNavbarHidden = ref(false);
         const scrollTO = (elem_id) => {
             let elem = document.getElementById(elem_id);
-            console.log("called", elem, elem_id)
             scrollbar.scrollIntoView(elem);
         };
         let prevScrollY = 0;
@@ -111,7 +110,7 @@ export default {
             navState,
             navbarRef,
             isNavbarHidden,
-            urls,
+            data,
             scrollTO
         };
     },

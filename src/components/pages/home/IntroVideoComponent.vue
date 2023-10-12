@@ -3,7 +3,7 @@
         <WhyMeComponent />
         <div class="intro-video-container flexCenter position-relative">
             <div class="video-wrapper" ref="videoWrapper">
-                <VideoComponent :videoUrl="urls.home['intro-video']" />
+                <VideoComponent :videoUrl="data.home['intro-video']" />
             </div>
         </div>
 
@@ -14,7 +14,7 @@
 
 <script>
 import { watch, ref, onMounted } from 'vue';
-import { urls } from '@/assets/const.js';
+import { data } from '@/assets/const.js';
 import { setAnimationProgress, useElementLocation } from '@/utils/useElementPosition';
 import { useScrollTracker } from '@/utils/useScrollTracker.js';
 import WhyMeComponent from '@/components/pages/home/WhyMeComponent.vue';
@@ -34,7 +34,7 @@ export default {
 
         return {
             videoWrapper,
-            urls
+            data
         };
     },
     components: {

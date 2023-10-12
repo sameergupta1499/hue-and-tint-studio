@@ -1,9 +1,9 @@
 <template>
     <div class="grid-container position-relative">
         <div class="grid">
-            <article v-for="(item, index) in urls.work" :key="index" class="position-relative">
+            <article v-for="(item, index) in data.work" :key="index" class="position-relative">
                 <div class="image-container position-relative">
-                    <img :src="item.url" :alt="'Image for ' + item.brand" class="position-relative">
+                    <img :src="item.work_page_hero_img_url" :alt="'Image for ' + item.brand" class="position-relative">
                     <div class="hover-text container">
                         <div class="hover-content container flexCenterColumn">
                             <div class="h5-6 white-color fontface-Brandon-Grotesque-Medium hover-header">What I Did:</div>
@@ -20,17 +20,16 @@
                     <div class="white-color h4-5 fontface-Brandon-Grotesque-Medium flexCenter">{{ item.brand }}</div>
                     <h6 class="white-color fontface-Brandon-Grotesque-Light flexCenter">{{ item.category }}</h6>
                 </div>
-
             </article>
         </div>
     </div>
 </template>
 <script>
-import { urls } from '@/assets/const.js';
+import { data } from '@/assets/const.js';
 export default {
     setup() {
         return {
-            urls
+            data
         }
     },
 }
