@@ -4,8 +4,7 @@
         <div class="intro-video-container flexCenter position-relative">
             <div class="video-wrapper" ref="videoWrapper">
                 <video autoplay loop muted playsinline>
-                    <source :src="urls.home['intro-video']" 
-                    type="video/mp4">
+                    <source :src="urls.home['intro-video']" type="video/mp4">
                     <!-- Your browser does not support the video tag. -->
                 </video>
             </div>
@@ -27,15 +26,14 @@ export default {
         const videoWrapper = ref(null);
         let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
         let { pointA, pointB, pointC, pointD, width, height } = useElementLocation(videoWrapper);
-
-        watch(scrollY, (newValue) => {
-            console.log(pointA.value.y,"pointA")
-            let scrollPosition = newValue;
+        watch([scrollY, pointA], ([scrollValue, pointAValue]) => {
+            let scrollPosition = scrollValue;
             let elStartPosOffset = -viewportHeight.value;
-            let elStartPosBG = pointA.value.y + elStartPosOffset;
+            let elStartPosBG = pointAValue.y + elStartPosOffset;
             let elEndPosBG = elStartPosBG + (viewportHeight.value / 2);
             setAnimationProgress(videoWrapper, scrollPosition, elStartPosBG, elEndPosBG);
         });
+
         return {
             videoWrapper,
             urls
@@ -89,7 +87,7 @@ export default {
     -webkit-border-radius: 8rem;
     -moz-border-radius: 8rem;
     border-radius: 8rem;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 @keyframes height-animation {

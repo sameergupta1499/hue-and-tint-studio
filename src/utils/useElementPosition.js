@@ -13,7 +13,6 @@ export function useElementLocation(elementToTrack) {
   const height = ref(0);
 
   const updateElementPosition = () => {
-    console.log("updating position")
     if (elementToTrack.value) {
       const rect = elementToTrack.value.getBoundingClientRect();
       pointA.value = { x: rect.left + window.scrollX, y: rect.top + scrollY.value  };

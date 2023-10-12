@@ -1,7 +1,8 @@
 <template>
     <div class="project-slide position-relative overflow-visible" :style="{ background: topColor }">
         <div class="container-wrapper overflow-visible position-relative container">
-            <div class="background-round position-absolute " ref="backgroundCircle" :style="{ background: backgroundColor }" ></div>
+            <div class="background-round position-absolute " ref="backgroundCircle"
+                :style="{ background: backgroundColor }"></div>
             <div class="background-square position-absolute vpW" :style="{ background: backgroundColor }"></div>
             <div class="content overflow-visible position-relative ">
                 <div class="card-container">
@@ -9,10 +10,10 @@
                         <img :src="leftCardUrl">
                     </div>
                     <div class="cards-wrapper card-wrapper-right" ref="cardRight">
-                        <img :src="rightCardUrl"/>
+                        <img :src="rightCardUrl" />
                     </div>
                 </div>
-                <div class="card-content flexCenterColumn position-relative" ref="cardContent" >
+                <div class="card-content flexCenterColumn position-relative" ref="cardContent">
                     <h5 class="card-count card-content-line" :style="{ color: textColor }">0{{ number }}</h5>
                     <h2 class="card-title card-content-line fontface-antonio" :style="{ color: textColor }">{{ title }}</h2>
                     <h4 class="card-description card-content-line" :style="{ color: textColor }" v-html="description"></h4>
@@ -25,18 +26,18 @@
 <script>
 import { watch, ref, onMounted } from 'vue';
 import { setAnimationProgress, useElementLocation } from '@/utils/useElementPosition';
-import { useScrollTracker} from '@/utils/useScrollTracker.js';
+import { useScrollTracker } from '@/utils/useScrollTracker.js';
 export default {
     props: {
-    leftCardUrl: String,
-    number: Number,
-    rightCardUrl: String,
-    topColor: String,
-    backgroundColor: String,
-    textColor: String,
-    title: String,
-    description: String,
-  },
+        leftCardUrl: String,
+        number: Number,
+        rightCardUrl: String,
+        topColor: String,
+        backgroundColor: String,
+        textColor: String,
+        title: String,
+        description: String,
+    },
     setup() {
         const backgroundCircle = ref(null);
         const cardLeft = ref(null);
@@ -44,20 +45,18 @@ export default {
         const cardContent = ref(null);
         let { scrollY, viewportWidth, viewportHeight } = useScrollTracker();
         let { pointA, pointB, pointC, pointD, width, height } = useElementLocation(backgroundCircle);
-        watch(scrollY, (newValue) => {
-            let scrollPosition = newValue;
+        watch([scrollY, pointA], ([scrollValue, pointAValue]) => {
+            let scrollPosition = scrollValue;
             let elStartPosOffset = -20;
-            let elStartPosBG = pointA.value.y + elStartPosOffset;
-            let elEndPosBG = elStartPosBG + (height.value / 4);
+            let elStartPosBG = pointAValue.y + elStartPosOffset;
+            let elEndPosBG = elStartPosBG + height.value / 4;
             setAnimationProgress(backgroundCircle, scrollPosition, elStartPosBG, elEndPosBG);
 
-            let elStartPosCard = pointA.value.y + elStartPosOffset - (viewportHeight.value); //we want to start the animation moment circle is visible
-            let elEndPosCard = pointA.value.y + viewportHeight.value;
-            // console.log( scrollPosition, elStartPosCard, elEndPosCard,pointA.value.y)
-            setAnimationProgress(cardLeft, scrollPosition, elStartPosCard, elEndPosCard)
-            setAnimationProgress(cardRight, scrollPosition, elStartPosCard, elEndPosCard)
-            setAnimationProgress(cardContent, scrollPosition, elStartPosCard, elEndPosCard)
-            
+            let elStartPosCard = pointAValue.y + elStartPosOffset - viewportHeight.value;
+            let elEndPosCard = pointAValue.y + viewportHeight.value;
+            setAnimationProgress(cardLeft, scrollPosition, elStartPosCard, elEndPosCard);
+            setAnimationProgress(cardRight, scrollPosition, elStartPosCard, elEndPosCard);
+            setAnimationProgress(cardContent, scrollPosition, elStartPosCard, elEndPosCard);
         });
 
 
@@ -109,6 +108,7 @@ $card-width-992: 21vw;
     0% {
         border-radius: 50%;
     }
+
     100% {
         border-radius: 0%;
         /* Final border radius */
@@ -135,7 +135,7 @@ img {
 
 .card-container {
     padding-top: 7vw;
-    
+
     display: flex;
 }
 
@@ -160,15 +160,19 @@ img {
     0% {
         transform: translate3d(0px, 50%, 0px) rotate(10deg);
     }
+
     20% {
         transform: translate3d(0px, -20%, 0px) rotate(-6deg);
     }
+
     50% {
         transform: translate3d(0px, -50%, 0px) rotate(-10deg);
     }
+
     70% {
         transform: translate3d(0px, -70%, 0px) rotate(-10deg);
     }
+
     100% {
         transform: translate3d(0px, -120%, 0px) rotate(-13deg);
     }
@@ -187,15 +191,19 @@ img {
     0% {
         transform: translate3d(0px, 70%, 0px) rotate(16deg);
     }
+
     20% {
         transform: translate3d(0px, -5%, 0px) rotate(12deg);
     }
+
     50% {
         transform: translate3d(0px, -30%, 0px) rotate(3deg);
     }
+
     75% {
         transform: translate3d(0px, -40%, 0px) rotate(6deg);
     }
+
     100% {
         transform: translate3d(0px, -70%, 0px) rotate(8deg);
     }
@@ -205,14 +213,16 @@ img {
     .cards-wrapper {
         width: calc($card-width * .85);
     }
-    
+
     .card-wrapper-left {
         left: calc(50vw - ($card-width-768 * 1));
     }
+
     .card-wrapper-right {
         left: calc(50vw - ($card-width-768 / 10));
     }
 }
+
 // @media (max-width: 321px) {
 //     .card-content {
 //         padding-top: 14rem;
@@ -227,6 +237,7 @@ img {
     .card-wrapper-left {
         left: calc(50vw - ($card-width-992/1.5));
     }
+
     .card-wrapper-right {
         left: calc(50vw);
     }
@@ -247,9 +258,11 @@ img {
     70% {
         opacity: 1;
     }
+
     90% {
         opacity: 0;
     }
+
     100% {
         opacity: 0;
     }
@@ -258,8 +271,8 @@ img {
 .card-content-line {
     padding-bottom: 1.5rem;
 }
+
 span {
     font-family: inherit;
     font-size: inherit;
-    }
-</style>
+}</style>
