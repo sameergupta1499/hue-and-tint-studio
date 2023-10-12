@@ -29,6 +29,7 @@ export default {
         let { pointA, pointB, pointC, pointD, width, height } = useElementLocation(videoWrapper);
 
         watch(scrollY, (newValue) => {
+            console.log(pointA.value.y,"pointA")
             let scrollPosition = newValue;
             let elStartPosOffset = -viewportHeight.value;
             let elStartPosBG = pointA.value.y + elStartPosOffset;

@@ -13,11 +13,12 @@ export function useElementLocation(elementToTrack) {
   const height = ref(0);
 
   const updateElementPosition = () => {
+    console.log("updating position")
     if (elementToTrack.value) {
       const rect = elementToTrack.value.getBoundingClientRect();
-      pointA.value = { x: rect.left + window.scrollX, y: rect.top + window.scrollY };
-      pointB.value = { x: rect.right + window.scrollX, y: rect.top + scrollY.value };
-      pointC.value = { x: rect.right + window.scrollX, y: rect.bottom + scrollY.value };
+      pointA.value = { x: rect.left + window.scrollX, y: rect.top + scrollY.value  };
+      pointB.value = { x: rect.right + window.scrollX, y: rect.top + 0 };
+      pointC.value = { x: rect.right + window.scrollX, y: rect.bottom + 0 };
       pointD.value = { x: rect.left + window.scrollX, y: rect.bottom + scrollY.value };
       width.value = rect.width;
       height.value = rect.height;
@@ -25,10 +26,9 @@ export function useElementLocation(elementToTrack) {
     }
     
   };
-
+  window.addEventListener('resize', updateElementPosition); // adding resize event listener
   onMounted(() => {
     updateElementPosition();
-    window.addEventListener('resize', updateElementPosition);
   });
 
   onBeforeUnmount(() => {

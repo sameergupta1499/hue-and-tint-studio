@@ -13,18 +13,17 @@ const viewportHeight = ref(window.innerHeight);
 
 
 // Add event listeners for window resize
-// const handleResize = () => {
-//   viewportWidth.value = window.innerWidth;
-//   viewportHeight.value = window.innerHeight;
-// };
+const handleResize = () => {
+  viewportWidth.value = window.innerWidth;
+  viewportHeight.value = window.innerHeight;
+};
 
-// onMounted(() => {
-//   window.addEventListener('resize', handleResize);
-// });
+  window.addEventListener('resize', handleResize);
 
-// onBeforeUnmount(() => {
-//   window.removeEventListener('resize', handleResize);
-// });
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', handleResize);
+});
 
 export function useScrollTracker() {
     // Initialize SmoothScrollbar and GSAP ticker once the DOM is ready
