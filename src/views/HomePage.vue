@@ -4,9 +4,16 @@
     <div id="scroll-wrapper">
       <div id="scroll-container-parent">
         <div id="scroll-container" v-if="scrollbar !== null">
-          <DummyComponent />
+          <HeroBanner />
+          <!-- <DummyComponent /> -->
+          <IntroVideoComponent />
+          <PortfolioComponent />
+          <BrandVideoComponent />
+          <ClientStoriesCarousal />
+          <ContactComponent />
 
-          <gridTry />
+          <!-- <TestifyComponent /> -->
+          <!-- <DummyComponent /> -->
         </div>
       </div>
     </div>
@@ -17,7 +24,6 @@
 import { onMounted, provide, ref } from 'vue';
 import HeroBanner from '@/components/pages/home/HeroBanner.vue';
 import DummyComponent from '@/components/common/DummyComponent.vue';
-import gridTry from '@/components/common/gridTry.vue';
 import NavigationBar from '@/components/common/NavigationBar.vue';
 import PortfolioComponent from '@/components/pages/home/PortfolioComponent.vue';
 import IntroVideoComponent from '@/components/pages/home/IntroVideoComponent.vue';
@@ -46,8 +52,7 @@ export default {
     TestifyComponent,
     BrandVideoComponent,
     ClientStoriesCarousal,
-    ContactComponent,
-    gridTry
+    ContactComponent
   },
 };
 </script>
@@ -58,4 +63,3 @@ export default {
   overflow: auto;
 }
 </style>
-

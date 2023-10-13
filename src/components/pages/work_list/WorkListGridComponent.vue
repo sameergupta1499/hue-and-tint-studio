@@ -1,0 +1,160 @@
+<template>
+    <TopSectionComponent :imageUrl="workItemForBrand.work_list_hero_img_url" 
+    :tasks="workItemForBrand.tasks" :timeline="workItemForBrand.timeline"/>
+    <div class="grid-layout-container container flexCenter">
+        <div class="grid-layout-wrapper" ref="gridWrapper" :style="{ width: gridWrapperWidth }">
+            <!-- Add a condition to run grid-layout only when width is not zero -->
+            <grid-layout v-if="width !== 0" v-model:layout="layout" :col-num="2" :row-height="width / 2" :margin="margin"
+                :is-draggable="draggable" :is-resizable="resizable" :vertical-compact="true" :use-css-transforms="false" 
+                :responsive="true"
+                :preventCollision="true"
+                v-model:responsive-layouts="layouts"
+                :cols="{md: 2, sm: 1}"
+                :breakpoints="{md: breakpointValue+1, sm: breakpointValue}">
+                <grid-item v-for="item in layout" :key="item.i" :static="item.static" :x="item.x" :y="item.y" :w="item.w"
+                    :h="item.h" :i="item.i">
+                        <img v-if="item.type == 'image'" :src="item.url" alt="Image" />
+                    <VideoComponent v-else :videoUrl="item.url" />
+                </grid-item>
+            </grid-layout>
+        </div>
+    </div>
+</template>
+  
+  
+<script>
+import { ref, watch } from 'vue';
+import { GridLayout, GridItem } from 'vue3-grid-layout-next';
+import { data } from '@/assets/const.js';
+import { BRANDS } from '@/assets/brandNameConst.js';
+import { useElementLocation } from '@/utils/useElementPosition';
+import VideoComponent from '@/components/pages/work_list/VideoComponent.vue';
+import TopSectionComponent from '@/components/pages/work_list/TopSectionComponent.vue';
+
+export default {
+  props: {
+    brand: {
+      type: String,
+      required: true,
+    },
+  },
+  components: {
+    GridLayout,
+    GridItem,
+    VideoComponent,
+    TopSectionComponent
+  },
+  setup(props) {
+    const gridWrapperWidth = "65%";
+    let breakpointValue = 768 * 0.65 - 2;
+    let workItemForBrand = data.work.find(item => item.brand === props.brand);
+    const gridWrapper = ref(null);
+    const responsive = ref(true);
+    const layout = ref([]); // Define layout as a ref
+    const responsiveLayout = ref([]); // Define responsiveLayout as a ref
+
+    let { width } = useElementLocation(gridWrapper);
+
+    const convertToLayout = (data) => {
+      const templayout = [];
+      const responsiveout = [];
+      data.forEach((item, index) => {
+        let wValue = item.size === "l" ? 2 : 1;
+        let hValue = item.size === "l" ? item.h * 2 * 0.95 : item.h * 0.85;
+        const layoutItem = {
+          x: index % 2 === 0 ? 0 : 1,
+          y: 0,
+          w: wValue,
+          h: hValue,
+          i: item.id,
+          url: item.url,
+          type: item.type,
+        };
+        const responsiveItem = {
+          x: 0,
+          y: 0,
+          w: 2,
+          h: hValue * 2,
+          i: item.id,
+          url: item.url,
+          type: item.type,
+        };
+        templayout.push(layoutItem);
+        responsiveout.push(responsiveItem);
+      });
+      return { layout: templayout, responsiveLayout: responsiveout };
+    };
+
+    // Use the returned object to update the layout and responsiveLayout refs
+    const { layout: initialLayout, responsiveLayout: initialResponsiveLayout } = convertToLayout(
+      workItemForBrand.work_list_page
+    );
+
+    layout.value = initialLayout;
+    responsiveLayout.value = initialResponsiveLayout;
+
+    let layouts = {
+      md: layout.value,
+      sm: responsiveLayout.value,
+    };
+
+    let margin = ref([10, 10]);
+
+    watch(width, (newWidth) => {
+      margin.value = [newWidth * 0.05, newWidth * 0.05];
+      const { layout: newLayout, responsiveLayout: newResponsiveLayout } = convertToLayout(
+        workItemForBrand.work_list_page
+      );
+      layout.value = newLayout;
+      responsiveLayout.value = newResponsiveLayout;
+      layouts = {
+        md: layout.value,
+        sm: responsiveLayout.value,
+      };
+    });
+
+    const draggable = ref(false);
+    const resizable = ref(false);
+
+    return {
+      layout,
+      layouts,
+      responsiveLayout,
+      gridWrapperWidth,
+      gridWrapper,
+      draggable,
+      resizable,
+      width,
+      margin,
+      responsive,
+      breakpointValue,
+      workItemForBrand
+    };
+  },
+};
+
+</script>
+<style lang="scss" scoped>
+.grid-layout-container {
+    height: 100%;
+    background: black;
+}
+
+.grid-layout-wrapper {
+    height: 100%;
+    // background: pink;
+}
+
+.vue-grid-item
+,img {
+    // background: aqua;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+}
+
+img {
+    width: 100%;
+}
+</style>
+  

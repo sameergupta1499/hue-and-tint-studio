@@ -4,10 +4,10 @@ function convertToObject(arr) {
     }
   
     const sizeToValue = {
-      "m": 1.7778,
-      "s": 1,
+      "m": 1.77777777778,
+      "ss": 1,
       "sm": 1.25,
-      "l": 1.91,
+      "l": 0.52356,
     };
   
     return arr.map(item => {

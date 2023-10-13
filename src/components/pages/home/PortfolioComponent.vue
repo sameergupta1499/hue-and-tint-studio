@@ -6,7 +6,7 @@
                         WORK</span></h3>
             </div>
         </div>
-        <RoundBGComponent v-for="(item, index) in data" :key="index" :number="index + 1" :title="item.title"
+        <RoundBGComponent v-for="(item, index) in brandData" :key="index" :number="index + 1" :title="item.title"
             :description="item.description" :topColor="item.top_color" :backgroundColor="item.background_color"
             :textColor="item.text_color" :leftCardUrl="item.left_card_url" :rightCardUrl="item.right_card_url" />
     </div>
@@ -19,7 +19,7 @@ import { data } from '@/assets/const.js';
 
 export default {
     setup() {
-        const data = [
+        const brandData = [
             {
                 "title": "TITAN",
                 "description": "What we did: Motion Graphics & Ad Designing",
@@ -49,7 +49,7 @@ export default {
             }
         ]
         return {
-            data,
+            brandData,
         }
     },
     components: {

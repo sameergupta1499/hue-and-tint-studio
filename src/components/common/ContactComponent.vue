@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="contact-wrapper">
         <HitMeUpComponent />
         <div class="container contact-container flexCenter">
             <div class="white-color heading-contact fontface-Brandon-Grotesque-Light h4-5">GET IN TOUCH TO CREATE GREAT
@@ -31,7 +31,7 @@
         </div>
         <div class="container contact-container contact-developer-container flexCenter margin-jitter">
             <h6 class="white-color item fontface-Brandon-Grotesque-Light flexCenter">
-                Designed with ❤️ by <a href="https://www.linkedin.com/in/guptasamofficial/" target="_blank"> Sameer Gupta</a></h6>
+                Developed with ❤️ by <a href="https://www.linkedin.com/in/guptasamofficial/" target="_blank"> Sameer Gupta</a></h6>
             <h6 class="white-color item fontface-Brandon-Grotesque-Light">Hue & Tint Studio All Right Reserved.</h6>
         </div>
 
@@ -145,5 +145,10 @@ export default {
         width: 50%;
     }
 }
+.contact-wrapper {
+    padding-bottom: 20vh;
+    background: var(--black);
 }
+}
+
 </style>
