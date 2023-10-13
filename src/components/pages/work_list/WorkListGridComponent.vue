@@ -57,20 +57,26 @@ export default {
 const currentlyPlayingVideo = ref(null);
 
 const playVideo = (videoId) => {
-  if (currentlyPlayingVideo.value !== null) {
-    // Pause the currently playing video
-    currentlyPlayingVideo.value.pause();
-    currentlyPlayingVideo.value = null;
-  }
-
   const elem = document.getElementById(videoId);
-
   if (elem) {
-    // Play the clicked video
-    elem.play();
-    currentlyPlayingVideo.value = elem; // Update the currently playing video with the elem object
+    if (currentlyPlayingVideo.value === elem) {
+      // If the clicked video is the same as the currently playing video, pause it
+      if (!elem.paused) {
+        elem.pause();
+      }
+      currentlyPlayingVideo.value = null; // Set currentlyPlayingVideo to null
+    } else {
+      // If a different video is clicked, pause the currently playing video (if any)
+      if (currentlyPlayingVideo.value) {
+        currentlyPlayingVideo.value.pause();
+      }
+      // Play the clicked video
+      elem.play();
+      currentlyPlayingVideo.value = elem; // Update currentlyPlayingVideo with the new video
+    }
   }
 };
+
 
     onUnmounted(() => {
       if (videoElement.value) {
