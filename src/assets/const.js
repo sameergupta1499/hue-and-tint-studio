@@ -17,6 +17,7 @@ const data = {
     },
     "work": [
         {
+            "id":1,
             "brand": BRANDS["titan"],
             "category": "Accessories",
             "tasks": "Product Promotion Ad Design",
@@ -27,6 +28,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["titan"]]
         },
         {
+            "id":2,
             "brand": BRANDS["the_face_shop"],
             "category": "Beauty & Personal Care",
             "timeline": "On-Going Since 2023",
@@ -37,6 +39,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["the_face_shop"]]
         },
         {
+            "id":3,
             "brand": BRANDS["secret_alchemist"],
             "category": "Beauty & Personal Care",
             "timeline": "On-Going Since 2023",
@@ -47,6 +50,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["secret_alchemist"]]
         },
         {
+            "id":4,
             "brand": BRANDS["zeme_fresh"],
             "category": "Beauty & Personal Care",
             "timeline": "On-Going Since 2023",
@@ -57,6 +61,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["zeme_fresh"]]
         },
         {
+            "id":5,
             "brand": BRANDS["the_pink_foundry"],
             "category": "Beauty & Personal Care",
             "timeline": "On-Going Since 2023",
@@ -67,6 +72,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["the_pink_foundry"]]
         },
         {
+            "id":6,
             "brand": BRANDS["asa_beauty"],
             "category": "Beauty & Personal Care",
             "timeline": "On-Going Since 2023",
@@ -77,6 +83,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["asa_beauty"]]
         },
         {
+            "id":7,
             "brand": BRANDS["vyb_by_fastrack"],
             "category": "Accessories",
             "timeline": "On-Going Since 2023",
@@ -87,6 +94,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["vyb_by_fastrack"]]
         },
         {
+            "id":8,
             "brand": BRANDS["ira_soles"],
             "category": "Accessories",
             "timeline": "On-Going Since 2023",
@@ -97,6 +105,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["ira_soles"]]
         },
         {
+            "id":9,
             "brand": BRANDS["see_love"],
             "category": "Beauty & Personal Care",
             "timeline": "On-Going Since 2023",
@@ -107,6 +116,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["see_love"]]
         },
         {
+            "id":10,
             "brand": BRANDS["label_society"],
             "category": "Clothing",
             "timeline": "On-Going Since 2023",
@@ -117,6 +127,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["label_society"]]
         },
         {
+            "id":11,
             "brand": BRANDS["cerys_skintials"],
             "category": "Beauty & Personal Care",
             "timeline": "On-Going Since 2023",
@@ -127,6 +138,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["cerys_skintials"]]
         },
         {
+            "id":12,
             "brand": BRANDS["shipyaari"],
             "category": "Logistics",
             "timeline": "On-Going Since 2023",
@@ -137,6 +149,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["shipyaari"]]
         },
         {
+            "id":13,
             "brand": BRANDS["fuelled"],
             "category": "Food & Beverage",
             "timeline": "On-Going Since 2023",
@@ -147,6 +160,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["fuelled"]]
         },
         {
+            "id":14,
             "brand": BRANDS["spirit_animal"],
             "category": "Clothing",
             "timeline": "On-Going Since 2023",
@@ -157,6 +171,7 @@ const data = {
             "work_list_page": listPageData[BRANDS["spirit_animal"]]
         },
         {
+            "id":15,
             "brand": BRANDS["acfs_logistics"],
             "category": "Logistics",
             "timeline": "On-Going Since 2023",

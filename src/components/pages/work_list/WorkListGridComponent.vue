@@ -1,32 +1,30 @@
 <template>
-    <TopSectionComponent :imageUrl="workItemForBrand.work_list_hero_img_url" 
-    :tasks="workItemForBrand.tasks" :timeline="workItemForBrand.timeline"/>
-    <div class="grid-layout-container container flexCenter">
-        <div class="grid-layout-wrapper" ref="gridWrapper" :style="{ width: gridWrapperWidth }">
-            <!-- Add a condition to run grid-layout only when width is not zero -->
-            <grid-layout v-if="width !== 0" v-model:layout="layout" :col-num="2" :row-height="width / 2" :margin="margin"
-                :is-draggable="draggable" :is-resizable="resizable" :vertical-compact="true" :use-css-transforms="false" 
-                :responsive="true"
-                :preventCollision="true"
-                v-model:responsive-layouts="layouts"
-                :cols="{md: 2, sm: 1}"
-                :breakpoints="{md: breakpointValue+1, sm: breakpointValue}">
-                <grid-item v-for="item in layout" :key="item.i" :static="item.static" :x="item.x" :y="item.y" :w="item.w"
-                    :h="item.h" :i="item.i">
-                        <img v-if="item.type == 'image'" :src="item.url" alt="Image" />
-                    <VideoComponent v-else :videoUrl="item.url" />
-                </grid-item>
-            </grid-layout>
-        </div>
+  <TopSectionComponent :imageUrl="workItemForBrand.work_list_hero_img_url" :tasks="workItemForBrand.tasks"
+    :timeline="workItemForBrand.timeline" />
+  <div class="grid-layout-container container flexCenter">
+    <div class="grid-layout-wrapper" ref="gridWrapper" :style="{ width: gridWrapperWidth }">
+      <!-- Add a condition to run grid-layout only when width is not zero -->
+      <grid-layout v-if="width !== 0" v-model:layout="layout" :col-num="2" :row-height="width / 2" :margin="margin"
+        :is-draggable="draggable" :is-resizable="resizable" :vertical-compact="true" :use-css-transforms="false"
+        :responsive="true" :preventCollision="true" v-model:responsive-layouts="layouts" :cols="{ md: 2, sm: 1 }"
+        :breakpoints="{ md: breakpointValue + 1, sm: breakpointValue }">
+        <grid-item v-for="item in layout" :key="item.i" :static="item.static" :x="item.x" :y="item.y" :w="item.w"
+          :h="item.h" :i="item.i">
+          <img v-if="item.type == 'image'" :src="item.url" alt="Image" />
+          <video :id="`${workItemForBrand.id}_${item.i}`" :key="item.i" @click="playVideo(`${workItemForBrand.id}_${item.i}`)" :loop="true" :muted="false" playsInline="true">
+            <source :src="item.url" type="video/mp4">
+          </video>
+        </grid-item>
+      </grid-layout>
     </div>
+  </div>
 </template>
   
   
 <script>
-import { ref, watch } from 'vue';
+import { ref, watch,onUnmounted,onMounted } from 'vue';
 import { GridLayout, GridItem } from 'vue3-grid-layout-next';
 import { data } from '@/assets/const.js';
-import { BRANDS } from '@/assets/brandNameConst.js';
 import { useElementLocation } from '@/utils/useElementPosition';
 import VideoComponent from '@/components/pages/work_list/VideoComponent.vue';
 import TopSectionComponent from '@/components/pages/work_list/TopSectionComponent.vue';
@@ -50,10 +48,38 @@ export default {
     let workItemForBrand = data.work.find(item => item.brand === props.brand);
     const gridWrapper = ref(null);
     const responsive = ref(true);
+    const videoElement = ref(null);
     const layout = ref([]); // Define layout as a ref
     const responsiveLayout = ref([]); // Define responsiveLayout as a ref
 
     let { width } = useElementLocation(gridWrapper);
+//////////////////////////////////////////////////VIDEO SECTION START ///////////////////////////////////////////////////
+const currentlyPlayingVideo = ref(null);
+
+const playVideo = (videoId) => {
+  if (currentlyPlayingVideo.value !== null) {
+    // Pause the currently playing video
+    currentlyPlayingVideo.value.pause();
+    currentlyPlayingVideo.value = null;
+  }
+
+  const elem = document.getElementById(videoId);
+
+  if (elem) {
+    // Play the clicked video
+    elem.play();
+    currentlyPlayingVideo.value = elem; // Update the currently playing video with the elem object
+  }
+};
+
+    onUnmounted(() => {
+      if (videoElement.value) {
+        videoElement.value.pause(); // Pause the video
+        videoElement.value.removeAttribute('src'); // Remove the video source
+        videoElement.value.load(); // Load the video element to clear any resources
+      }
+    });
+//////////////////////////////////////////////////VIDEO SECTION END ///////////////////////////////////////////////////
 
     const convertToLayout = (data) => {
       const templayout = [];
@@ -128,7 +154,9 @@ export default {
       margin,
       responsive,
       breakpointValue,
-      workItemForBrand
+      workItemForBrand,
+      playVideo,
+      videoElement
     };
   },
 };
@@ -136,25 +164,39 @@ export default {
 </script>
 <style lang="scss" scoped>
 .grid-layout-container {
-    height: 100%;
-    background: black;
+  height: 100%;
+  background: black;
 }
 
 .grid-layout-wrapper {
-    height: 100%;
-    // background: pink;
+  height: 100%;
+  // background: pink;
 }
 
-.vue-grid-item
-,img {
-    // background: aqua;
-    border-radius: 3rem;
-    -webkit-border-radius: 3rem;
-    -moz-border-radius: 3rem;
+.vue-grid-item,
+img {
+  // background: aqua;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
+video {
+    // width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Maintain aspect ratio and cover container */
+  
+    // Vendor-specific prefixes for 'object-fit'
+    -o-object-fit: cover;
+    -webkit-object-fit: cover;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+  }
+  
 </style>
   
