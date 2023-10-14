@@ -8,11 +8,11 @@
     <div class="container info-container-wrapper flexCenter">
         <div class="container info-container flexCenter position-relative">
             <div class="position-absolute container separation-line"></div>
-            <div class="info-tabs flexCenterColumn">
+            <div class="info-tab-left flexCenterColumn">
                 <h5 class="white-color fontface-Brandon-Grotesque-Medium">Project Type:</h5>
                 <h5 class="white-color fontface-Brandon-Grotesque-Light">{{ tasks }}</h5>
             </div>
-            <div>
+            <div class="info-tab-right flexCenterColumn">
                 <h5 class="white-color fontface-Brandon-Grotesque-Medium">Date</h5>
                 <h5 class="white-color fontface-Brandon-Grotesque-Light">{{ timeline }}</h5>
             </div>
@@ -87,9 +87,14 @@ export default {
     justify-content:space-around;
     border-radius: 1rem;
 }
-.info-tabs {
+.info-tab-right{
+    margin-left:20%;
+}
+.info-tab-right,
+.info-tab-left {
     align-items: flex-start;
 }
+
 .separation-line{
     position: absolute;
     left: 50%; /* Position in the center horizontally */

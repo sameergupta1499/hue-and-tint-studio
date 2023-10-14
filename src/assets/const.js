@@ -184,4 +184,7 @@ const data = {
     ]
 };
 
-export { data };
+let getWorkBrandData =(brnd)=>{
+    return data.work.find(item => item.brand === BRANDS[brnd]);
+};
+export { data, getWorkBrandData };

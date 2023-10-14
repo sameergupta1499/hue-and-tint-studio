@@ -11,7 +11,7 @@
         <grid-item v-for="item in layout" :key="item.i" :static="item.static" :x="item.x" :y="item.y" :w="item.w"
           :h="item.h" :i="item.i">
           <img v-if="item.type == 'image'" :src="item.url" alt="Image" />
-          <video :id="`${workItemForBrand.id}_${item.i}`" :key="item.i" @click="playVideo(`${workItemForBrand.id}_${item.i}`)" :loop="true" :muted="false" playsInline="true">
+          <video v-else :id="`${workItemForBrand.id}_${item.i}`" :key="item.i" @click="playVideo(`${workItemForBrand.id}_${item.i}`)" :loop="true" :muted="false" playsInline="true">
             <source :src="item.url" type="video/mp4">
           </video>
         </grid-item>

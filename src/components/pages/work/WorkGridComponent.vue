@@ -2,7 +2,7 @@
     <div class="grid-container position-relative">
         <div class="grid">
             <article v-for="(item, index) in data.work" :key="index" class="position-relative">
-                <div class="image-container position-relative">
+                <a :href="item['page-url']"><div class="image-container position-relative">
                     <img :src="item.work_page_hero_img_url" :alt="'Image for ' + item.brand" class="position-relative">
                     <div class="hover-text container">
                         <div class="hover-content container flexCenterColumn">
@@ -16,9 +16,10 @@
                         </div>
                     </div>
                 </div>
+                </a>
                 <div class="text">
-                    <div class="white-color h4-5 fontface-Brandon-Grotesque-Medium flexCenter">{{ item.brand }}</div>
-                    <h6 class="white-color fontface-Brandon-Grotesque-Light flexCenter">{{ item.category }}</h6>
+                    <a :href="item['page-url']"><div class="white-color h4-5 fontface-Brandon-Grotesque-Medium flexCenter">{{ item.brand }}</div></a>
+                    <a :href="item['page-url']"><h6 class="white-color fontface-Brandon-Grotesque-Light flexCenter">{{ item.category }}</h6></a>
                 </div>
             </article>
         </div>
