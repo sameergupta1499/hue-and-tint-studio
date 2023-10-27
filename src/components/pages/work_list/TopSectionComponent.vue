@@ -81,6 +81,7 @@ export default {
     padding-bottom:4rem;
 }
 .info-container {
+    line-height: 1.4;
     background: #ffffff26;
     padding: 1.2rem 1rem 1.5rem;
     width:50%;
