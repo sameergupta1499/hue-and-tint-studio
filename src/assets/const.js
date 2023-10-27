@@ -43,7 +43,7 @@ const data = {
             "brand": BRANDS["secret_alchemist"],
             "category": "Beauty & Personal Care",
             "timeline": "On-Going Since 2023",
-            "tasks": "Product Promotion Ad Design",
+            "tasks": "Ad Design & Social Media Design",
             "work_page_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/secret-alchemist.jpg?updatedAt=Latest",
             "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/secret-alchemist/hero.jpg?updatedAt=Latest",
             "page-url": WORK_URL_PREFIX +"/secret-alchemist/",
