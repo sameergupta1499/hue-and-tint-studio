@@ -4,9 +4,9 @@
   <div class="grid-layout-container container flexCenter">
     <div class="grid-layout-wrapper" ref="gridWrapper" :style="{ width: gridWrapperWidth }">
       <!-- Add a condition to run grid-layout only when width is not zero -->
-      <grid-layout v-if="width !== 0" v-model:layout="layout" :col-num="2" :row-height="width / 2" :margin="margin"
+      <grid-layout v-if="width !== 0" v-model:layout="layout" :col-num="3" :row-height="width / 3" :margin="margin"
         :is-draggable="draggable" :is-resizable="resizable" :vertical-compact="true" :use-css-transforms="false"
-        :responsive="true" :preventCollision="true" v-model:responsive-layouts="layouts" :cols="{ md: 2, sm: 1 }"
+        :responsive="true" :preventCollision="true" v-model:responsive-layouts="layouts" :cols="{ md: 3, sm: 1 }"
         :breakpoints="{ md: breakpointValue + 1, sm: breakpointValue }">
         <grid-item v-for="item in layout" :key="item.i" :static="item.static" :x="item.x" :y="item.y" :w="item.w"
           :h="item.h" :i="item.i">
@@ -14,6 +14,7 @@
           <video v-else :id="`${workItemForBrand.id}_${item.i}`" :key="item.i" @click="playVideo(`${workItemForBrand.id}_${item.i}`)" :loop="true" :muted="false" playsInline="true">
             <source :src="item.url" type="video/mp4">
           </video>
+          <div class="play-button" @click="playVideo(`${workItemForBrand.id}_${item.i}`)"></div>
         </grid-item>
       </grid-layout>
     </div>
@@ -63,15 +64,18 @@ const playVideo = (videoId) => {
       // If the clicked video is the same as the currently playing video, pause it
       if (!elem.paused) {
         elem.pause();
+        elem.nextElementSibling.className='play-button'
       }
       currentlyPlayingVideo.value = null; // Set currentlyPlayingVideo to null
     } else {
       // If a different video is clicked, pause the currently playing video (if any)
       if (currentlyPlayingVideo.value) {
         currentlyPlayingVideo.value.pause();
+        currentlyPlayingVideo.value.nextElementSibling.className='play-button'
       }
       // Play the clicked video
       elem.play();
+      elem.nextElementSibling.className='playing-gif'
       currentlyPlayingVideo.value = elem; // Update currentlyPlayingVideo with the new video
     }
   }
@@ -94,7 +98,7 @@ const playVideo = (videoId) => {
         let wValue = item.size === "l" ? 2 : 1;
         let hValue = item.size === "l" ? item.h * 2 * 0.95 : item.h * 0.85;
         const layoutItem = {
-          x: index % 2 === 0 ? 0 : 1,
+          x: index % 3,
           y: 0,
           w: wValue,
           h: hValue,
@@ -106,7 +110,7 @@ const playVideo = (videoId) => {
           x: 0,
           y: 0,
           w: 2,
-          h: hValue * 2,
+          h: hValue * 3,
           i: item.id,
           url: item.url,
           type: item.type,
@@ -185,6 +189,9 @@ img {
   border-radius: 3rem;
   -webkit-border-radius: 3rem;
   -moz-border-radius: 3rem;
+  z-index: 2;
+  width: 100%;
+  position: absolute;
 }
 
 img {
@@ -194,6 +201,7 @@ video {
     // width: 100%;
     height: 100%;
     object-fit: cover;
+    position:relative;
     /* Maintain aspect ratio and cover container */
   
     // Vendor-specific prefixes for 'object-fit'
@@ -203,6 +211,36 @@ video {
     -webkit-border-radius: 3rem;
     -moz-border-radius: 3rem;
   }
+// .video-container {
+//   position: relative;
+// }
+.play-button {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  transform: translate(-50%, -50%);
+  width: 3.5rem;
+  height: 3.5rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-image: url('/play.png'); /* Replace with the path to your play button PNG */
+  background-size: contain; /* Adjust based on your design */
+}
+
+.playing-gif {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  transform: translate(-50%, -50%);
+  width: 3.5rem;
+  height: 3.5rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-image: url('/playing.gif'); /* Replace with the path to your play button PNG */
+  background-size: contain; /* Adjust based on your design */
+}
+
+
   
 </style>
   
