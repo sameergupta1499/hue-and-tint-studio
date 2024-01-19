@@ -4,12 +4,18 @@ import { convertToObject } from '@/assets/utils.js';
 const listPageData = {
     [BRANDS["titan"]]: (() => {
         return convertToObject([
-            ["1", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/1.mp4?updatedAt=Latest"],
-            ["2", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/2.mp4?updatedAt=Latest"],
-            ["3", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/3.jpg?updatedAt=Latest"],
-            ["4", "sm", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/4.mp4?updatedAt=Latest"],
-            ["5", "sm", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/5.mp4?updatedAt=Latest"],
-            ["6", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/6.mp4?updatedAt=Latest"],
+            ["1", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/1.jpg?updatedAt=Latest"],
+            ["2", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/2.jpg?updatedAt=Latest"],
+            ["3", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/3.mp4?updatedAt=Latest"],
+            ["4", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/4.jpg?updatedAt=Latest"],
+            ["5", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/5.mp4?updatedAt=Latest"],
+            ["6", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/6.mp4?updatedAt=Latest"],
+            ["7", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/7.mp4?updatedAt=Latest"],
+            ["8", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/8.mp4?updatedAt=Latest"],
+            ["9", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/9.mp4?updatedAt=Latest"],
+            ["10", "sm", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/10.mp4?updatedAt=Latest"],
+            ["11", "sm", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/11.mp4?updatedAt=Latest"],
+            ["12", "sm", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/12.mp4?updatedAt=Latest"],
         ]);
     })(),
     [BRANDS["secret_alchemist"]]: (() => {

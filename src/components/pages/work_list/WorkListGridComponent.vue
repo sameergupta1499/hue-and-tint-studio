@@ -186,9 +186,9 @@ const playVideo = (videoId) => {
 .vue-grid-item,
 img {
   // background: aqua;
-  border-radius: 3rem;
-  -webkit-border-radius: 3rem;
-  -moz-border-radius: 3rem;
+  border-radius: 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
   z-index: 2;
   width: 100%;
   position: absolute;
@@ -207,9 +207,9 @@ video {
     // Vendor-specific prefixes for 'object-fit'
     -o-object-fit: cover;
     -webkit-object-fit: cover;
-    border-radius: 3rem;
-    -webkit-border-radius: 3rem;
-    -moz-border-radius: 3rem;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
   }
 // .video-container {
 //   position: relative;
