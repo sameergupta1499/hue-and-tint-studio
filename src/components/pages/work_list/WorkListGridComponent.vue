@@ -64,6 +64,7 @@ const playVideo = (videoId) => {
       // If the clicked video is the same as the currently playing video, pause it
       if (!elem.paused) {
         elem.pause();
+        elem.style.filter= ''
         elem.nextElementSibling.className='play-button'
       }
       currentlyPlayingVideo.value = null; // Set currentlyPlayingVideo to null
@@ -71,10 +72,12 @@ const playVideo = (videoId) => {
       // If a different video is clicked, pause the currently playing video (if any)
       if (currentlyPlayingVideo.value) {
         currentlyPlayingVideo.value.pause();
+        currentlyPlayingVideo.value.style.filter= ''
         currentlyPlayingVideo.value.nextElementSibling.className='play-button'
       }
       // Play the clicked video
       elem.play();
+      elem.style.filter='brightness(100%)' //make it bright
       elem.nextElementSibling.className='playing-gif'
       currentlyPlayingVideo.value = elem; // Update currentlyPlayingVideo with the new video
     }
@@ -214,10 +217,8 @@ video {
     border-radius: 1.5rem;
     -webkit-border-radius: 1.5rem;
     -moz-border-radius: 1.5rem;
+    filter: brightness(55%);
   }
-// .video-container {
-//   position: relative;
-// }
 .play-button {
   position: absolute;
   top: 3rem;
