@@ -16,6 +16,9 @@ const listPageData = {
             ["10", "sm", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/10.mp4?updatedAt=Latest"],
             ["11", "sm", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/11.mp4?updatedAt=Latest"],
             ["12", "sm", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/12.mp4?updatedAt=Latest"],
+            ["13", "ll", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/13.jpg?updatedAt=Latest"],
+            ["14", "ll", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/14.jpg?updatedAt=Latest"],
+            ["15", "ll", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/15.jpg?updatedAt=Latest"],
         ]);
     })(),
     [BRANDS["secret_alchemist"]]: (() => {

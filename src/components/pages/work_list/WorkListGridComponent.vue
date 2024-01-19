@@ -95,8 +95,11 @@ const playVideo = (videoId) => {
       const templayout = [];
       const responsiveout = [];
       data.forEach((item, index) => {
-        let wValue = item.size === "l" ? 2 : 1;
-        let hValue = item.size === "l" ? item.h * 2 * 0.95 : item.h * 0.85;
+        // let wValue = item.size === "l" ? 2 : 1;
+        // let hValue = item.size === "l" ? item.h * 2 * 0.95 : item.h * 0.85;
+        let wValue = item.size.startsWith("l") ? 3 : 1;
+        let hValue = item.size.startsWith("l") ? item.h * 3 * 0.95 : item.h * 0.85;
+
         const layoutItem = {
           x: index % 3,
           y: 0,
@@ -198,8 +201,8 @@ img {
   width: 100%;
 }
 video {
-    // width: 100%;
-    height: 100%;
+    width: 100%;
+    // height: 100%;
     object-fit: cover;
     position:relative;
     /* Maintain aspect ratio and cover container */
