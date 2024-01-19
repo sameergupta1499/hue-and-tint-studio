@@ -202,7 +202,7 @@ img {
 }
 video {
     width: 100%;
-    // height: 100%;
+    height: 100%;
     object-fit: cover;
     position:relative;
     /* Maintain aspect ratio and cover container */
