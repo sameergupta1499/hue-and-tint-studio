@@ -109,10 +109,11 @@ const playVideo = (videoId) => {
           url: item.url,
           type: item.type,
         };
+        hValue = item.size.startsWith("l") ? item.h * 0.95 : item.h * 0.85;    // for responsive we ddon't want thrice the size of value since there are only 1 column
         const responsiveItem = {
           x: 0,
           y: 0,
-          w: 2,
+          w: 3,
           h: hValue * 3,
           i: item.id,
           url: item.url,
