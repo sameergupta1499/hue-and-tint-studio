@@ -34,6 +34,7 @@ const router = createRouter({
         { path: '/work/vyb-by-fastrack/', component: WorkListPage, props: { brand: "VYB BY FASTRACK" }},
         { path: '/work/ira-soles/', component: WorkListPage, props: { brand: "IRA SOLES" }},
         { path: '/work/see-love/', component: WorkListPage, props: { brand: "SEE LOVE" }},
+        { path: '/work/label-society/', component: WorkListPage, props: { brand: "LABEL SOCIETY" }},
         ...getRoutes(),
 
     ]

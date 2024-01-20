@@ -84,6 +84,19 @@ const listPageData = {
             ["12", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/12.gif?updatedAt=Latest"],
         ]);
     })(),
+    [BRANDS["label_society"]]: (() => {
+        return convertToObject([
+            ["1", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/label-society/1.mp4?updatedAt=Latest"],
+            ["2", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/label-society/2.mp4?updatedAt=Latest"],
+            ["3", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/label-society/3.mp4?updatedAt=Latest"],
+            ["4", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/label-society/4.mp4?updatedAt=Latest"],
+            ["5", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/label-society/5.mp4?updatedAt=Latest"],
+            ["6", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/label-society/6.jpg?updatedAt=Latest"],
+            ["7", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/label-society/7.mp4?updatedAt=Latest"],
+            ["8", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/label-society/8.mp4?updatedAt=Latest"],
+            ["9", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/label-society/9.mp4?updatedAt=Latest"],
+        ]);
+    })(),
     [BRANDS["secret_alchemist"]]: (() => {
         return convertToObject([
             ["1", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/secret-alchemist/1.mp4?updatedAt=Latest"],
