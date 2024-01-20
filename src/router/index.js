@@ -31,6 +31,9 @@ const router = createRouter({
         { path: '/work/secret-alchemist/', component: WorkListPage, props: { brand: "SECRET ALCHEMIST" }},
         { path: '/work/zeme-fresh/', component: WorkListPage, props: { brand: "ZEME FRESH" }},
         { path: '/work/the-pink-foundry/', component: WorkListPage, props: { brand: "THE PINK FOUNDRY" }},
+        { path: '/work/vyb-by-fastrack/', component: WorkListPage, props: { brand: "VYB BY FASTRACK" }},
+        { path: '/work/ira-soles/', component: WorkListPage, props: { brand: "IRA SOLES" }},
+        { path: '/work/see-love/', component: WorkListPage, props: { brand: "SEE LOVE" }},
         ...getRoutes(),
 
     ]

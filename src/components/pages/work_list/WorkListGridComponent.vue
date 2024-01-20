@@ -44,8 +44,8 @@ export default {
     TopSectionComponent
   },
   setup(props) {
-    const gridWrapperWidth = "65%";
-    let breakpointValue = 768 * 0.65 - 2;
+    const gridWrapperWidth = "75%";
+    let breakpointValue = 768 * 0.75 - 2;
     let workItemForBrand = data.work.find(item => item.brand === props.brand);
     const gridWrapper = ref(null);
     const responsive = ref(true);

@@ -21,6 +21,15 @@ const listPageData = {
             ["15", "ll", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/titan/15.jpg?updatedAt=Latest"],
         ]);
     })(),
+    [BRANDS["vyb_by_fastrack"]]: (() => {
+        return convertToObject([
+            ["1", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/vyb-by-fastrack/1.jpg?updatedAt=Latest"],
+            ["2", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/vyb-by-fastrack/2.mp4?updatedAt=Latest"],
+            ["3", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/vyb-by-fastrack/3.mp4?updatedAt=Latest"],
+            ["4", "lm", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/vyb-by-fastrack/4.mp4?updatedAt=Latest"],
+            ["5", "ls", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/vyb-by-fastrack/5.jpg?updatedAt=Latest"],
+        ]);
+    })(),
     [BRANDS["zeme_fresh"]]: (() => {
         return convertToObject([
             ["1", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/zeme-fresh/1.mp4?updatedAt=Latest"],
@@ -41,6 +50,38 @@ const listPageData = {
             ["16", "ll", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/zeme-fresh/16.jpg?updatedAt=Latest"],
             ["17", "ll", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/zeme-fresh/17.jpg?updatedAt=Latest"],
             ["18", "ll", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/zeme-fresh/18.jpg?updatedAt=Latest"],
+        ]);
+    })(),
+    [BRANDS["ira_soles"]]: (() => {
+        return convertToObject([
+            ["1", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/ira-soles/1.jpg?updatedAt=Latest"],
+            ["2", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/ira-soles/2.mp4?updatedAt=Latest"],
+            ["3", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/ira-soles/3.mp4?updatedAt=Latest"],
+            ["4", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/ira-soles/4.mp4?updatedAt=Latest"],
+            ["5", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/ira-soles/5.jpg?updatedAt=Latest"],
+            ["6", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/ira-soles/6.jpg?updatedAt=Latest"],
+            ["7", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/ira-soles/7.mp4?updatedAt=Latest"],
+            ["8", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/ira-soles/8.mp4?updatedAt=Latest"],
+            ["9", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/ira-soles/9.jpg?updatedAt=Latest"],
+            ["10", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/ira-soles/10.mp4?updatedAt=Latest"],
+            ["11", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/ira-soles/11.mp4?updatedAt=Latest"],
+            ["12", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/ira-soles/12.mp4?updatedAt=Latest"],
+        ]);
+    })(),
+    [BRANDS["see_love"]]: (() => {
+        return convertToObject([
+            ["1", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/1.mp4?updatedAt=Latest"],
+            ["2", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/2.jpg?updatedAt=Latest"],
+            ["3", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/3.gif?updatedAt=Latest"],
+            ["4", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/4.mp4?updatedAt=Latest"],
+            ["5", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/5.gif?updatedAt=Latest"],
+            ["6", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/6.gif?updatedAt=Latest"],
+            ["7", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/7.jpg?updatedAt=Latest"],
+            ["8", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/8.mp4?updatedAt=Latest"],
+            ["9", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/9.jpg?updatedAt=Latest"],
+            ["10", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/10.mp4?updatedAt=Latest"],
+            ["11", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/11.mp4?updatedAt=Latest"],
+            ["12", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/12.gif?updatedAt=Latest"],
         ]);
     })(),
     [BRANDS["secret_alchemist"]]: (() => {

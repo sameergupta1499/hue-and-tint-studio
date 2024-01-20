@@ -90,7 +90,7 @@ const data = {
             "timeline": "On-Going Since 2023",
             "tasks": "Product Promotion Ad Design",
             "work_page_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/vyb-by-fastrack.jpg?updatedAt=Latest",
-            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/vyb-by-fastrack.jpg?updatedAt=Latest",
+            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/vyb-by-fastrack/hero.jpg?updatedAt=Latest",
             "page-url": WORK_URL_PREFIX +"/vyb-by-fastrack/",
             "work_list_page": listPageData[BRANDS["vyb_by_fastrack"]]
         },
@@ -101,7 +101,7 @@ const data = {
             "timeline": "On-Going Since 2023",
             "tasks": "Product Promotion Ad Design",
             "work_page_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/ira-soles.jpg?updatedAt=Latest",
-            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/ira-soles.jpg?updatedAt=Latest",
+            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/ira-soles/hero.jpg?updatedAt=Latest",
             "page-url": WORK_URL_PREFIX +"/ira-soles/",
             "work_list_page": listPageData[BRANDS["ira_soles"]]
         },
@@ -112,7 +112,7 @@ const data = {
             "timeline": "On-Going Since 2023",
             "tasks": "Product Promotion Ad Design",
             "work_page_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/see-love.jpg?updatedAt=Latest",
-            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/see-love.jpg?updatedAt=Latest",
+            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/hero.jpg?updatedAt=Latest",
             "page-url": WORK_URL_PREFIX +"/see-love/",
             "work_list_page": listPageData[BRANDS["see_love"]]
         },
