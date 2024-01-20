@@ -101,8 +101,7 @@ const playVideo = (videoId) => {
         // let wValue = item.size === "l" ? 2 : 1;
         // let hValue = item.size === "l" ? item.h * 2 * 0.95 : item.h * 0.85;
         let wValue = item.size.startsWith("l") ? 3 : 1;
-        let hValue = item.size.startsWith("l") ? item.h * 3 * 0.95 : item.h * 0.85;
-
+        let hValue = item.size.startsWith("l") ? item.h * 3 : item.h * 1;
         const layoutItem = {
           x: index % 3,
           y: 0,
@@ -112,7 +111,7 @@ const playVideo = (videoId) => {
           url: item.url,
           type: item.type,
         };
-        hValue = item.size.startsWith("l") ? item.h * 0.95 : item.h * 0.85;    // for responsive we ddon't want thrice the size of value since there are only 1 column
+        hValue = item.size.startsWith("l") ? item.h * 1 : item.h * 1;    // for responsive we ddon't want thrice the size of value since there are only 1 column
         const responsiveItem = {
           x: 0,
           y: 0,
@@ -144,7 +143,8 @@ const playVideo = (videoId) => {
     let margin = ref([10, 10]);
 
     watch(width, (newWidth) => {
-      margin.value = [newWidth * 0.05, newWidth * 0.05];
+      console.log(width.value,newWidth,"width")
+      margin.value = [newWidth*0.03,0];
       const { layout: newLayout, responsiveLayout: newResponsiveLayout } = convertToLayout(
         workItemForBrand.work_list_page
       );
