@@ -42,6 +42,7 @@ const listPageData = {
             ["17", "lm", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/secret-alchemist/17.jpg?updatedAt=Latest"],
             ["18", "ls", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/secret-alchemist/18.jpg?updatedAt=Latest"],
             ["19", "lm", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/secret-alchemist/19.jpg?updatedAt=Latest"],
+            
         ]);
     })()
 };
