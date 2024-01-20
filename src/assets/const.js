@@ -57,7 +57,7 @@ const data = {
             "timeline": "On-Going Since 2023",
             "tasks": "Product Promotion Ad Design",
             "work_page_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/zeme-fresh.jpg?updatedAt=Latest",
-            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/zeme-fresh.jpg?updatedAt=Latest",
+            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/zeme-fresh/hero.jpg?updatedAt=Latest",
             "page-url": WORK_URL_PREFIX +"/zeme-fresh/",
             "work_list_page": listPageData[BRANDS["zeme_fresh"]]
         },

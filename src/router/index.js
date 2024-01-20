@@ -29,6 +29,7 @@ const router = createRouter({
         { path: '/work/', component: WorkPage },
         { path: '/work/titan/', component: WorkListPage, props: { brand: "TITAN" }},
         { path: '/work/secret-alchemist/', component: WorkListPage, props: { brand: "SECRET ALCHEMIST" }},
+        { path: '/work/zeme-fresh/', component: WorkListPage, props: { brand: "ZEME FRESH" }},
         ...getRoutes(),
 
     ]
