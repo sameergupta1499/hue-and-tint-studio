@@ -26,8 +26,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$width_box : 35%;
-$width-box-min: calc(768*.35); //change this when you change width_box
+$width_box : 30%;
+$width-box-min: calc(768*.30); //change this when you change width_box
 $middle-margin: 4%;
 
 .service-container{
