@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage'
 import WorkPage from '../views/WorkPage'
 import WorkListPage from '../views/WorkListPage'
+import AboutPage from '../views/AboutPage'
 import { data } from '@/assets/const.js';
 // Define a function to generate routes
 const getRoutes = () => {
@@ -26,6 +27,7 @@ const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes: [
         { path: '/', component: HomePage  },
+        { path: '/about/', component: AboutPage  },
         { path: '/work/', component: WorkPage },
         { path: '/work/titan/', component: WorkListPage, props: { brand: "TITAN" }},
         { path: '/work/secret-alchemist/', component: WorkListPage, props: { brand: "SECRET ALCHEMIST" }},

@@ -65,7 +65,7 @@ export default {
         const navItems = ref([
             { label: 'HOME', route: '/' },
             { label: 'WORK', route: '/work/' },
-            { label: 'ABOUT', route: '/' },
+            { label: 'ABOUT', route: '/about/' },
             { label: 'CONTACT', route: '' },
         ]);
 
