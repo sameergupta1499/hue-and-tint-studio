@@ -80,7 +80,7 @@ $middle-margin: 4%;
     letter-spacing: 2.5px;
     line-height: 1.9rem;
     text-align: justify;
-    font-weight: 800;
+    font-weight: 500;
 }
 .heading-text{
     text-transform: uppercase;

@@ -22,8 +22,8 @@
     </div>
     <div class="intro-text-container flexCenter container">
         <div class="intro-header flexCenterColumn ">
-                    <h5 class=" intro-header-text white-color fontface-B-G-Medium">HI THERE!</h5>
-                    <h5 class=" intro-content-text white-color"><span class="fontface-B-G-Medium intro-content-text font-size-inherit  font-family-inherit white-color">I am Tanya Verma, the creative force behind Hue & Tint Studio.</span> With four years of design experience, including two years as a freelancer, I am passionate about product animation and social media design. My heart beats for the beauty and cosmetic space, where I craft visuals that captivate. When you collaborate with me, you're partnering with a designer who infuses passion and creativity into every project, making your brand stand out in the digital world.</h5>
+                    <h5 class=" intro-header-text white-color fontface-brandon-grotesque-Medium">HI THERE!</h5>
+                    <h5 class=" intro-content-text white-color"><span class="fontface-brandon-grotesque-Medium intro-content-text font-size-inherit  font-family-inherit white-color">I am Tanya Verma, the creative force behind Hue & Tint Studio.</span> With four years of design experience, including two years as a freelancer, I am passionate about product animation and social media design. My heart beats for the beauty and cosmetic space, where I craft visuals that captivate. When you collaborate with me, you're partnering with a designer who infuses passion and creativity into every project, making your brand stand out in the digital world.</h5>
                 </div>
     </div>
 </template>

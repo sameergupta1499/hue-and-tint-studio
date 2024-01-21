@@ -6,7 +6,7 @@
   font-size: 1vw;   /* For 1200 screens */
   // overflow: hidden;
   color: #000000;
-  font-family: 'B-G-Light', sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   
 }
 html{
@@ -89,38 +89,10 @@ background: #FF0000;
   
 }
 
-// FONTS IMPORT 
-@font-face {
-  font-family: 'Brand';
-  src: url('/fonts/Brand.woff2') format('woff2'),
-       url('/fonts/Brand.woff') format('woff'),
-       url('/fonts/Brand.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 @font-face {
   font-family: 'Fortune';
   src: url('/fonts/Fortune-Script.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
-
-@font-face {
-  font-family: 'B-G-Light';
-  src: url('/fonts/B-G-Light.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'B-G-Regular';
-  src: url('/fonts/B-G-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'B-G-Medium';
-  src: url('/fonts/B-G-Medium.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-

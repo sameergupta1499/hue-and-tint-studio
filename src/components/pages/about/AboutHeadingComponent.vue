@@ -8,7 +8,7 @@
         <div class="container position-relative testimonial-section margin-jitter">
             <div class="container flexCenterColumn">
                 <div class="testimonial-content flexCenter">
-                    <h5 class="display-content fontface-B-G-Regular">
+                    <h5 class="display-content fontface-brandon-grotesque-Medium">
                         {{ subheading }}
                         <div class="brand-img-container">
                             <a href="" class="brand-img-href container">
