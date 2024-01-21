@@ -181,6 +181,34 @@ const listPageData = {
             ["30", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-pink-foundry/30.mp4?updatedAt=Latest"],
         ]);
     })(),
+    [BRANDS["asa_beauty"]]: (() => {
+        return convertToObject([
+            ["1", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/1.mp4?updatedAt=Latest"],
+            ["2", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/2.mp4?updatedAt=Latest"],
+            ["3", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/3.mp4?updatedAt=Latest"],
+            ["4", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/4.mp4?updatedAt=Latest"],
+            ["5", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/5.mp4?updatedAt=Latest"],
+            ["6", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/6.mp4?updatedAt=Latest"],
+            ["7", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/7.mp4?updatedAt=Latest"],
+            ["8", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/8.mp4?updatedAt=Latest"],
+            ["9", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/9.mp4?updatedAt=Latest"],
+            ["10", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/10.mp4?updatedAt=Latest"],
+            ["11", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/11.mp4?updatedAt=Latest"],
+            ["12", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/12.jpg?updatedAt=Latest"],
+            ["13", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/13.mp4?updatedAt=Latest"],
+            ["14", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/14.gif?updatedAt=Latest"],
+            ["15", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/15.mp4?updatedAt=Latest"],
+            ["16", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/16.mp4?updatedAt=Latest"],
+            ["17", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/17.mp4?updatedAt=Latest"],
+            ["18", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/18.mp4?updatedAt=Latest"],
+            ["19", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/19.mp4?updatedAt=Latest"],
+            ["20", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/20.mp4?updatedAt=Latest"],
+            ["21", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/21.mp4?updatedAt=Latest"],
+            ["22", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/22.mp4?updatedAt=Latest"],
+            ["23", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/23.mp4?updatedAt=Latest"],
+            ["24", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/asa-beauty/24.mp4?updatedAt=Latest"],
+        ]);
+    })(),
     [BRANDS["the_face_shop"]]: (() => {
         return convertToObject([
             ["1", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/1.mp4?updatedAt=Latest"],
