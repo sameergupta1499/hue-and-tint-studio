@@ -134,7 +134,7 @@ const data = {
             "timeline": "On-Going Since 2023",
             "tasks": "Product Promotion Ad Design",
             "work_page_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/cerys-skintials.jpg?updatedAt=Latest",
-            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/cerys-skintials.jpg?updatedAt=Latest",
+            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/cerys-skintials/hero.jpg?updatedAt=Latest",
             "page-url": WORK_URL_PREFIX + "/cerys-skintials/",
             "work_list_page": listPageData[BRANDS["cerys_skintials"]]
         },
@@ -167,7 +167,7 @@ const data = {
             "timeline": "On-Going Since 2023",
             "tasks": "Product Promotion Ad Design",
             "work_page_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/spirit-animal.jpg?updatedAt=Latest",
-            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/spirit-animal.jpg?updatedAt=Latest",
+            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/spirit-animal/hero.jpg?updatedAt=Latest",
             "page-url": WORK_URL_PREFIX + "/spirit-animal/",
             "work_list_page": listPageData[BRANDS["spirit_animal"]]
         },

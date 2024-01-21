@@ -84,6 +84,32 @@ const listPageData = {
             ["12", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/see-love/12.gif?updatedAt=Latest"],
         ]);
     })(),
+    [BRANDS["cerys_skintials"]]: (() => {
+        return convertToObject([
+            ["1", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/cerys-skintials/1.jpg?updatedAt=Latest"],
+            ["2", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/cerys-skintials/2.mp4?updatedAt=Latest"],
+            ["3", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/cerys-skintials/3.jpg?updatedAt=Latest"],
+            ["4", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/cerys-skintials/4.jpg?updatedAt=Latest"],
+            ["5", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/cerys-skintials/5.jpg?updatedAt=Latest"],
+            ["6", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/cerys-skintials/6.jpg?updatedAt=Latest"],
+            ["7", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/cerys-skintials/7.mp4?updatedAt=Latest"],
+            ["8", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/cerys-skintials/8.mp4?updatedAt=Latest"],
+            ["9", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/cerys-skintials/9.mp4?updatedAt=Latest"],
+        ]);
+    })(),
+    [BRANDS["spirit_animal"]]: (() => {
+        return convertToObject([
+            ["1", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/spirit-animal/1.jpg?updatedAt=Latest"],
+            ["2", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/spirit-animal/2.gif?updatedAt=Latest"],
+            ["3", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/spirit-animal/3.gif?updatedAt=Latest"],
+            ["4", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/spirit-animal/4.gif?updatedAt=Latest"],
+            ["5", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/spirit-animal/5.jpg?updatedAt=Latest"],
+            ["6", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/spirit-animal/6.jpg?updatedAt=Latest"],
+            ["7", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/spirit-animal/7.mp4?updatedAt=Latest"],
+            ["8", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/spirit-animal/8.mp4?updatedAt=Latest"],
+            ["9", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/spirit-animal/9.mp4?updatedAt=Latest"],
+        ]);
+    })(),
     [BRANDS["label_society"]]: (() => {
         return convertToObject([
             ["1", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/label-society/1.mp4?updatedAt=Latest"],

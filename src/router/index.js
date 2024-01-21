@@ -38,6 +38,8 @@ const router = createRouter({
         { path: '/work/see-love/', component: WorkListPage, props: { brand: "SEE LOVE" }},
         { path: '/work/label-society/', component: WorkListPage, props: { brand: "LABEL SOCIETY" }},
         { path: '/work/the-face-shop/', component: WorkListPage, props: { brand: "THE FACE SHOP" }},
+        { path: '/work/cerys-skintials/', component: WorkListPage, props: { brand: "CERYS SKINTIALS" }},
+        { path: '/work/spirit-animal/', component: WorkListPage, props: { brand: "SPIRIT ANIMAL" }},
         ...getRoutes(),
 
     ]
