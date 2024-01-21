@@ -35,7 +35,7 @@ const data = {
             "timeline": "On-Going Since 2023",
             "tasks": "Product Promotion Ad Design",
             "work_page_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/the-face-shop.jpg?updatedAt=Latest",
-            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work/the-face-shop.jpg?updatedAt=Latest",
+            "work_list_hero_img_url": "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/hero.jpg?updatedAt=Latest",
             "page-url": WORK_URL_PREFIX + "/the-face-shop/",
             "work_list_page": listPageData[BRANDS["the_face_shop"]]
         },

@@ -155,6 +155,31 @@ const listPageData = {
             ["30", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-pink-foundry/30.mp4?updatedAt=Latest"],
         ]);
     })(),
+    [BRANDS["the_face_shop"]]: (() => {
+        return convertToObject([
+            ["1", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/1.mp4?updatedAt=Latest"],
+            ["2", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/2.mp4?updatedAt=Latest"],
+            ["3", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/3.mp4?updatedAt=Latest"],
+            ["4", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/4.jpg?updatedAt=Latest"],
+            ["5", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/5.jpg?updatedAt=Latest"],
+            ["6", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/6.jpg?updatedAt=Latest"],
+            ["7", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/7.jpg?updatedAt=Latest"],
+            ["8", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/8.jpg?updatedAt=Latest"],
+            ["9", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/9.jpg?updatedAt=Latest"],
+            ["10", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/10.mp4?updatedAt=Latest"],
+            ["11", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/11.mp4?updatedAt=Latest"],
+            ["12", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/12.jpg?updatedAt=Latest"],
+            ["13", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/13.mp4?updatedAt=Latest"],
+            ["14", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/14.gif?updatedAt=Latest"],
+            ["15", "ss", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/15.mp4?updatedAt=Latest"],
+            ["16", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/16.gif?updatedAt=Latest"],
+            ["17", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/17.gif?updatedAt=Latest"],
+            ["18", "m", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/18.gif?updatedAt=Latest"],
+            ["19", "lm", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/19.mp4?updatedAt=Latest"],
+            ["20", "lm", "https://ik.imagekit.io/cjciua4b58/hue-and-tint-studio/work-list-page/the-face-shop/20.mp4?updatedAt=Latest"],
+            
+        ]);
+    })(),
 };
 
 export { listPageData };
