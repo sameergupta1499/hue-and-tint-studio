@@ -2,37 +2,37 @@
     <div class="contact-wrapper">
         <HitMeUpComponent />
         <div class="container contact-container flexCenter">
-            <div class="white-color heading-contact fontface-Brandon-Grotesque-Light h4-5">GET IN TOUCH TO CREATE GREAT
+            <div class="white-color heading-contact fontface-B-G-Light h4-5">GET IN TOUCH TO CREATE GREAT
                 STUFF TOGETHER!</div>
         </div>
         <div class="container contact-container contact-content-container flexCenter margin-jitter">
-            <div class="white-color item fontface-Brandon-Grotesque-Light h3-5 flexCenter">
+            <div class="white-color item fontface-B-G-Light h3-5 flexCenter">
                 <a href="" class="brand-img-href">
                     <img src="/linkedin.png" class="img" alt="Logo" />
                 </a>
                 LinkedIn
             </div>
             <div class="animated-box">
-                <h5 class="white-color box item fontface-Brandon-Grotesque-Light">Email: <br />tanyaaacreates@gmail.com</h5>
-                <h5 class="white-color hidden-box item fontface-Brandon-Grotesque-Regular">100% I'll read it! <br /><span class="fontface-Brandon-Grotesque-thin font-size-inherit">tanyaaacreates@gmail.com</span></h5>
+                <h5 class="white-color box item fontface-B-G-Light">Email: <br />tanyaaacreates@gmail.com</h5>
+                <h5 class="white-color hidden-box item fontface-B-G-Regular">100% I'll read it! <br /><span class="fontface-B-G-thin font-size-inherit">tanyaaacreates@gmail.com</span></h5>
             </div>
         </div>
         <div class="container contact-container contact-content-container flexCenter">
-            <div class="white-color item fontface-Brandon-Grotesque-Light h3-5 flexCenter">
+            <div class="white-color item fontface-B-G-Light h3-5 flexCenter">
                 <a href="" class="brand-img-href">
                     <img src="/linkedin.png" class="img" alt="Logo" />
                 </a>
                 Instagram
             </div>
             <div class="animated-box">
-                <h5 class="white-color item fontface-Brandon-Grotesque-Light">Phone: <br />+91 7710942204</h5>
-                <h5 class="white-color hidden-box item fontface-Brandon-Grotesque-Regular">100% I'll read it! <br /><span class="fontface-Brandon-Grotesque-thin font-size-inherit">+91 7710942204</span></h5>
+                <h5 class="white-color item fontface-B-G-Light">Phone: <br />+91 7710942204</h5>
+                <h5 class="white-color hidden-box item fontface-B-G-Regular">100% I'll read it! <br /><span class="fontface-B-G-thin font-size-inherit">+91 7710942204</span></h5>
             </div>
         </div>
         <div class="container contact-container contact-developer-container flexCenter margin-jitter">
-            <h6 class="white-color item fontface-Brandon-Grotesque-Light flexCenter">
+            <h6 class="white-color item fontface-B-G-Light flexCenter">
                 Developed with ❤️ by <a href="https://www.linkedin.com/in/guptasamofficial/" target="_blank"> Sameer Gupta</a></h6>
-            <h6 class="white-color item fontface-Brandon-Grotesque-Light">Hue & Tint Studio All Right Reserved.</h6>
+            <h6 class="white-color item fontface-B-G-Light">Hue & Tint Studio All Right Reserved.</h6>
         </div>
 
     </div>

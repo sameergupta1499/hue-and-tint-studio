@@ -9,12 +9,12 @@
         <div class="container info-container flexCenter position-relative">
             <div class="position-absolute container separation-line"></div>
             <div class="info-tab-left flexCenterColumn">
-                <h5 class="white-color fontface-Brandon-Grotesque-Medium">Project Type:</h5>
-                <h5 class="white-color fontface-Brandon-Grotesque-Light">{{ tasks }}</h5>
+                <h5 class="white-color fontface-B-G-Medium">Project Type:</h5>
+                <h5 class="white-color fontface-B-G-Light">{{ tasks }}</h5>
             </div>
             <div class="info-tab-right flexCenterColumn">
-                <h5 class="white-color fontface-Brandon-Grotesque-Medium">Date</h5>
-                <h5 class="white-color fontface-Brandon-Grotesque-Light">{{ timeline }}</h5>
+                <h5 class="white-color fontface-B-G-Medium">Date</h5>
+                <h5 class="white-color fontface-B-G-Light">{{ timeline }}</h5>
             </div>
         </div>
     </div>

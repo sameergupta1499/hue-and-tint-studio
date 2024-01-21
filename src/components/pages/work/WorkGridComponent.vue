@@ -6,11 +6,11 @@
                     <img :src="item.work_page_hero_img_url" :alt="'Image for ' + item.brand" class="position-relative">
                     <div class="hover-text container">
                         <div class="hover-content container flexCenterColumn">
-                            <div class="h5-6 white-color fontface-Brandon-Grotesque-Medium hover-header">What I Did:</div>
-                            <div class="h5-6 white-color fontface-Brandon-Grotesque-Light hover-task">{{ item.tasks }}</div>
+                            <div class="h5-6 white-color fontface-B-G-Medium hover-header">What I Did:</div>
+                            <div class="h5-6 white-color fontface-B-G-Light hover-task">{{ item.tasks }}</div>
                             <div class="hover-button-container">
                                 <a :href="item['page-url']">
-                                    <div class="h5-6 hover-button fontface-Brandon-Grotesque-Medium">Let's Explore</div>
+                                    <div class="h5-6 hover-button fontface-B-G-Medium">Let's Explore</div>
                                 </a>
                             </div>
                         </div>
@@ -18,8 +18,8 @@
                 </div>
                 </a>
                 <div class="text">
-                    <a :href="item['page-url']"><div class="white-color h4-5 fontface-Brandon-Grotesque-Medium flexCenter">{{ item.brand }}</div></a>
-                    <a :href="item['page-url']"><h6 class="white-color fontface-Brandon-Grotesque-Light flexCenter">{{ item.category }}</h6></a>
+                    <a :href="item['page-url']"><div class="white-color h4-5 fontface-B-G-Medium flexCenter">{{ item.brand }}</div></a>
+                    <a :href="item['page-url']"><h6 class="white-color fontface-B-G-Light flexCenter">{{ item.category }}</h6></a>
                 </div>
             </article>
         </div>

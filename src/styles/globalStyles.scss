@@ -6,7 +6,7 @@
   font-size: 1vw;   /* For 1200 screens */
   // overflow: hidden;
   color: #000000;
-  font-family: 'Brandon-Grotesque-Light', sans-serif;
+  font-family: 'B-G-Light', sans-serif;
   
 }
 html{
@@ -106,20 +106,20 @@ background: #FF0000;
 }
 
 @font-face {
-  font-family: 'Brandon-Grotesque-Light';
-  src: url('/fonts/Brandon-Grotesque-Light.otf') format('opentype');
+  font-family: 'B-G-Light';
+  src: url('/fonts/B-G-Light.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Brandon-Grotesque-Regular';
-  src: url('/fonts/Brandon-Grotesque-Regular.otf') format('opentype');
+  font-family: 'B-G-Regular';
+  src: url('/fonts/B-G-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Brandon-Grotesque-Medium';
-  src: url('/fonts/Brandon-Grotesque-Medium.otf') format('opentype');
+  font-family: 'B-G-Medium';
+  src: url('/fonts/B-G-Medium.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
