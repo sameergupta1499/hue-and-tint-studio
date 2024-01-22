@@ -192,7 +192,7 @@ const listPageData = {
             ["7", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/asa-beauty/7.mp4"],
             ["8", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/asa-beauty/8.mp4"],
             ["9", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/asa-beauty/9.mp4"],
-            ["10", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/asa-beauty/10.mp4"],
+            ["10", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/asa-beauty/10.jpg"],
             ["11", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/asa-beauty/11.mp4"],
             ["12", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/asa-beauty/12.jpg"],
             ["13", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/asa-beauty/13.mp4"],
