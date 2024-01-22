@@ -23,8 +23,7 @@ const data = {
             "tasks": "Product Promotion Ad Design",
             "timeline": "On-Going Since 2023",
             "work_page_hero_img_url": "http://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/titan.jpg",
-            // "work_list_hero_img_url": "http://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/titan/hero.jpg",
-            "work_list_hero_img_url": "",
+            "work_list_hero_img_url": "http://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/titan/hero.jpg",
             "page-url": WORK_URL_PREFIX + "/titan/",
             "work_list_page": listPageData[BRANDS["titan"]]
         },
