@@ -144,7 +144,7 @@ const data = {
             "timeline": "On-Going Since 2023",
             "tasks": "Product Promotion Ad Design",
             "work_page_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/shipyaari.jpg",
-            "work_list_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/shipyaari.jpg",
+            "work_list_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/shipyaari/hero.jpg",
             "page-url": WORK_URL_PREFIX + "/shipyaari/",
             "work_list_page": listPageData[BRANDS["shipyaari"]]
         },

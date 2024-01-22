@@ -84,6 +84,21 @@ const listPageData = {
             ["12", "m", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/see-love/12.gif"],
         ]);
     })(),
+    [BRANDS["shipyaari"]]: (() => {
+        return convertToObject([
+            ["1", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/shipyaari/1.mp4"],
+            ["2", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/shipyaari/2.gif"],
+            ["3", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/shipyaari/3.mp4"],
+            ["4", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/shipyaari/4.gif"],
+            ["5", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/shipyaari/5.gif"],
+            ["6", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/shipyaari/6.jpg"],
+            ["7", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/shipyaari/7.jpg"],
+            ["8", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/shipyaari/8.mp4"],
+            ["9", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/shipyaari/9.jpg"],
+            ["10", "lm", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/shipyaari/10.gif"],
+            ["11", "lm", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/shipyaari/11.gif"],
+        ]);
+    })(),
     [BRANDS["cerys_skintials"]]: (() => {
         return convertToObject([
             ["1", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/cerys-skintials/1.jpg"],
