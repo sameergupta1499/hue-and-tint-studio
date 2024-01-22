@@ -10,8 +10,9 @@
         :breakpoints="{ md: breakpointValue + 1, sm: breakpointValue }">
         <grid-item v-for="item in layout" :key="item.i" :static="item.static" :x="item.x" :y="item.y" :w="item.w"
           :h="item.h" :i="item.i">
-          <img v-if="item.type == 'image'" :src="item.url" alt="Image" />
-          <video v-else :id="`${workItemForBrand.id}_${item.i}`" :key="item.i" @click="playVideo(`${workItemForBrand.id}_${item.i}`)" :loop="true" :muted="false" playsInline="true">
+          <img class='image' v-if="item.type == 'image'" :src="item.url" alt="Image" />
+          <img class='thumbnail' v-else :id="`${workItemForBrand.id}_${item.i}_thumbnail`" :src="getThumbnailUrl(item.url)" alt="Thumbnail" @click="playVideo(`${workItemForBrand.id}_${item.i}`)" />
+            <video :id="`${workItemForBrand.id}_${item.i}`" :key="item.i" @click="playVideo(`${workItemForBrand.id}_${item.i}`)" :loop="true" :muted="false" playsInline="true" preload="none">
             <source :src="item.url" type="video/mp4">
           </video>
           <div class="play-button" @click="playVideo(`${workItemForBrand.id}_${item.i}`)"></div>
@@ -55,11 +56,20 @@ export default {
 
     let { width } = useElementLocation(gridWrapper);
 //////////////////////////////////////////////////VIDEO SECTION START ///////////////////////////////////////////////////
+  const getThumbnailUrl = (videoUrl) => {
+        // Assuming the thumbnail URL follows a specific pattern
+        return videoUrl.replace('.mp4', '_thumbnail.jpg');
+      };
+
+
 const currentlyPlayingVideo = ref(null);
 
 const playVideo = (videoId) => {
   const elem = document.getElementById(videoId);
+  const thumbnail = document.getElementById(videoId+'_thumbnail');
   if (elem) {
+    //hidding the thumnail once a video has been played. 
+    thumbnail.style.display='none'
     if (currentlyPlayingVideo.value === elem) {
       // If the clicked video is the same as the currently playing video, pause it
       if (!elem.paused) {
@@ -174,7 +184,8 @@ const playVideo = (videoId) => {
       breakpointValue,
       workItemForBrand,
       playVideo,
-      videoElement
+      videoElement,
+      getThumbnailUrl
     };
   },
 };
@@ -192,12 +203,12 @@ const playVideo = (videoId) => {
 }
 
 .vue-grid-item,
-img {
+.image {
   // background: aqua;
   border-radius: 1.5rem;
   -webkit-border-radius: 1.5rem;
   -moz-border-radius: 1.5rem;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   position: absolute;
 }
@@ -220,6 +231,22 @@ video {
     -moz-border-radius: 1.5rem;
     filter: brightness(55%);
   }
+.thumbnail{
+    width: 100%;
+    // height: 100%;
+    object-fit: cover;
+    position:relative;
+    /* Maintain aspect ratio and cover container */
+  
+    // Vendor-specific prefixes for 'object-fit'
+    -o-object-fit: cover;
+    -webkit-object-fit: cover;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    filter: brightness(55%);
+  }
+
 .play-button {
   position: absolute;
   top: 3rem;
@@ -231,6 +258,7 @@ video {
   cursor: pointer;
   background-image: url('/play.png'); /* Replace with the path to your play button PNG */
   background-size: contain; /* Adjust based on your design */
+  z-index: 2;
 }
 
 .playing-gif {
@@ -244,6 +272,7 @@ video {
   cursor: pointer;
   background-image: url('/playing.gif'); /* Replace with the path to your play button PNG */
   background-size: contain; /* Adjust based on your design */
+  z-index: 2;
 }
 
 
