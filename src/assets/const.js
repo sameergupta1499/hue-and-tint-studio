@@ -219,10 +219,61 @@ const about_data = [
     }
 ];
 
+
+const client_story = [
+    {
+      id: 1,
+      message: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Cum laudantium culpa perspiciatis ad exercitationem animi quas obcaecati doloribus,
+                      odit laborum. Ipsum, nostrum qui? Aspernatur dolorum enim iste ullam, quas
+                      illo!`,
+      brand_img: "/batman.png",
+      brand_img_href: "#",  // Update with the actual URL
+      name: "Tina Vellore",
+      designation: "Marketing Head, Titan",
+    },
+    {
+      id: 2,
+      message: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Cum laudantium culpa perspiciatis ad exercitationem animi quas obcaecati doloribus,
+                      odit laborum. Ipsum, nostrum qui? Aspernatur dolorum enim iste ullam, quas
+                      illo!`,
+      brand_img: "/batman.png",
+      brand_img_href: "#",  // Update with the actual URL
+      name: "Tina Vellore",
+      designation: "Marketing Head, Titan",
+    },
+    {
+      id: 3,
+      message: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Cum laudantium culpa perspiciatis ad exercitationem animi quas obcaecati doloribus,
+                      odit laborum. Ipsum, nostrum qui? Aspernatur dolorum enim iste ullam, quas
+                      illo!`,
+      brand_img: "/batman.png",
+      brand_img_href: "#",  // Update with the actual URL
+      name: "Tina Vellore",
+      designation: "Marketing Head, Titan",
+    },
+    {
+      id: 4,
+      message: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Cum laudantium culpa perspiciatis ad exercitationem animi quas obcaecati doloribus,
+                      odit laborum. Ipsum, nostrum qui? Aspernatur dolorum enim iste ullam, quas
+                      illo!`,
+      brand_img: "/batman.png",
+      brand_img_href: "#",  // Update with the actual URL
+      name: "Tina Vellore",
+      designation: "Marketing Head, Titan",
+    },
+    // Add more client stories as needed
+  ];
+
+
+
 let getWorkBrandData = (brnd) => {
     return data.work.find(item => item.brand === BRANDS[brnd]);
 };
 
 
 
-export { about_data, data, getWorkBrandData };
+export { about_data, data, getWorkBrandData, client_story };

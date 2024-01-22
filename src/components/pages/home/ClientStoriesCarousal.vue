@@ -15,13 +15,10 @@
     <div class="carousel-wrapper">
         <Carousel :slideWidth="4000" :autoplay="4000" :wrap-around="true" :items-to-show="itemsToShow" snap-align="center"
             @slide-start="handleEvents" @slide-end="handleEvents">
-            <Slide v-for="slide in 5" :key="slide">
+            <Slide v-for="story in client_story" :key="story.id">
                 <div>
-                    <h5 class="carousel__item flexCenterColumn">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Cum laudantium culpa perspiciatis ad exercitationem animi quas obcaecati doloribus,
-                        odit laborum. Ipsum, nostrum qui? Aspernatur dolorum enim iste ullam, quas
-                        illo!<br /><br />
-
+                    <h5 class="carousel__item flexCenterColumn">{{ story.message }}<br /><br />
+                        
                         <div class="brand-container container flexCenter">
                             <div class="brand-img-container">
                                 <a href="" class="brand-img-href container">
@@ -29,8 +26,8 @@
                                 </a>
                             </div>
                             <div class="brand-person-container flexCenterColumn">
-                                <h5 class="white-color brand-header">- Tina Vellore</h5>
-                                    <h6 class="white-color brand-description">Marketing Head, Titan</h6>
+                                <h5 class="white-color brand-header">- {{ story.name }}</h5>
+                                    <h6 class="white-color brand-description">{{ story.designation }}</h6>
                             </div>
                         </div>
 
@@ -52,6 +49,7 @@
 <script>
 import { defineComponent, ref, onMounted, onBeforeUnmount } from "vue";
 import { Carousel, Pagination, Navigation, Slide } from "vue3-carousel";
+import { client_story } from '@/assets/const.js';
 
 import "vue3-carousel/dist/carousel.css";
 
@@ -64,8 +62,10 @@ export default defineComponent({
         Navigation,
     },
     data() {
+
         return {
             isSmallScreen: window.innerWidth <= 768,
+            client_story
         };
     },
     computed: {
