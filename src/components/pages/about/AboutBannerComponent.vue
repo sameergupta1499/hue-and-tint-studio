@@ -14,8 +14,8 @@
         </div>
         <div class="freelance-img-container position-relative ">
             <img :src="imageUrl"
-                @mouseover="changeImage('http://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/tanya.gif')"
-                @mouseout="changeImage('http://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/tanya.jpg')"
+                @mouseover="changeImage('https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/tanya.gif')"
+                @mouseout="changeImage('https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/tanya.jpg')"
                 alt="image-freelancer">
         </div>
         <!-- <div class="freelance container position-relative content-section margin-jitter"></div> -->
@@ -36,7 +36,7 @@ import { ref } from 'vue';
 export default {
 
     setup() {
-        const imageUrl = ref("http://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/tanya.jpg");
+        const imageUrl = ref("https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/tanya.jpg");
         const changeImage = (newImageUrl) => {
             imageUrl.value = newImageUrl;
         };

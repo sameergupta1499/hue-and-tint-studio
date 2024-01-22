@@ -80,7 +80,7 @@ export default {
 .banner-container {
     position: relative;
     color: white;
-    // background-image: url("http://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/homepage/hero_bg.jpg");
+    // background-image: url("https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/homepage/hero_bg.jpg");
     // background-size: cover;
     /* Scale to cover entire container */
     // background-position: center bottom;
