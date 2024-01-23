@@ -112,7 +112,7 @@ const playVideo = (videoId) => {
         // let hValue = item.size === "l" ? item.h * 2 * 0.95 : item.h * 0.85;
         let wValue = item.size.startsWith("l") ? 3 : 1;
         let hValue = item.size.startsWith("l") ? item.h * 3 : item.h * 1;
-        index = item.size.startsWith("l") ? 0 : index;
+        index = item.size.startsWith("l") ? 0 : item.id-1;
         const layoutItem = {
           x: index % 3,
           y: 0,
