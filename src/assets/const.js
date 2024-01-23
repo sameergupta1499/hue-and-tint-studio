@@ -155,7 +155,7 @@ const data = {
             "timeline": "On-Going Since 2023",
             "tasks": "Product Promotion Ad Design",
             "work_page_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/fuelled.jpg",
-            "work_list_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/fuelled.jpg",
+            "work_list_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/hero.jpg",
             "page-url": WORK_URL_PREFIX + "/fuelled/",
             "work_list_page": listPageData[BRANDS["fuelled"]]
         },
@@ -170,17 +170,6 @@ const data = {
             "page-url": WORK_URL_PREFIX + "/spirit-animal/",
             "work_list_page": listPageData[BRANDS["spirit_animal"]]
         },
-        {
-            "id": 15,
-            "brand": BRANDS["acfs_logistics"],
-            "category": "Logistics",
-            "timeline": "On-Going Since 2023",
-            "tasks": "Product Promotion Ad Design",
-            "work_page_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/acfs-logistics.jpg",
-            "work_list_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/acfs-logistics.jpg",
-            "page-url": WORK_URL_PREFIX + "/acfs-logistics/",
-            "work_list_page": listPageData[BRANDS["acfs_logistics"]]
-        }
     ]
 };
 

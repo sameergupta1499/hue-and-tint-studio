@@ -13,6 +13,5 @@ const BRANDS = {
     "shipyaari": "SHIPYAARI",
     "fuelled": "FUELLED",
     "spirit_animal": "SPIRIT ANIMAL",
-    "acfs_logistics": "ACFS LOGISTICS"
 };
 export { BRANDS };

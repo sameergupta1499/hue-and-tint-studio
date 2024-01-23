@@ -162,6 +162,23 @@ const listPageData = {
             
         ]);
     })(),
+    [BRANDS["fuelled"]]: (() => {
+        return convertToObject([
+            ["1", "ll", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/1.mp4"],
+            ["2", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/2.jpg"],
+            ["3", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/3.jpg"],
+            ["4", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/4.jpg"],
+            ["5", "sm", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/5.mp4"],
+            ["6", "sm", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/6.jpg"],
+            ["7", "sm", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/7.mp4"],
+            ["8", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/8.mp4"],
+            ["9", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/9.jpg"],
+            ["10", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/10.mp4"],
+            ["11", "m", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/11.jpg"],
+            ["12", "m", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/12.jpg"],
+            ["13", "m", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/fuelled/13.jpg"],
+        ]);
+    })(),
     [BRANDS["the_pink_foundry"]]: (() => {
         return convertToObject([
             ["1", "ss", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/the-pink-foundry/1.mp4"],

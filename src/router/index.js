@@ -41,6 +41,7 @@ const router = createRouter({
         { path: '/work/spirit-animal/', component: WorkListPage, props: { brand: "SPIRIT ANIMAL" }},
         { path: '/work/asa-beauty/', component: WorkListPage, props: { brand: "ASA BEAUTY" }},
         { path: '/work/shipyaari/', component: WorkListPage, props: { brand: "SHIPYAARI" }},
+        { path: '/work/fuelled/', component: WorkListPage, props: { brand: "FUELLED" }},
         ...getRoutes(),
 
     ]
