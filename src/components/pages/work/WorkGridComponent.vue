@@ -6,7 +6,7 @@
                     <img :src="item.work_page_hero_img_url" :alt="'Image for ' + item.brand" class="position-relative">
                     <div class="hover-text container">
                         <div class="hover-content container flexCenterColumn">
-                            <div class="h5-6 white-color fontface-brandon-grotesque-Medium hover-header">What I Did:</div>
+                            <div class="h5-6 white-color fontface-brandon-grotesque-Medium hover-header">Service Offered:</div>
                             <div class="h5-6 white-color fontface-brandon-grotesque-Light hover-task">{{ item.tasks }}</div>
                             <div class="hover-button-container">
                                 <a :href="item['page-url']">
