@@ -207,61 +207,66 @@ const about_data = [
 
     }
 ];
+let getWorkBrandData = (brnd) => {
+    return data.work.find(item => item.brand === BRANDS[brnd]);
+};
+
 
 
 const client_story = [
     {
       id: 1,
-      message: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Cum laudantium culpa perspiciatis ad exercitationem animi quas obcaecati doloribus,
-                      odit laborum. Ipsum, nostrum qui? Aspernatur dolorum enim iste ullam, quas
-                      illo!`,
+      message: `Delighted to have Tanya as our graphic designer at SA. She's a highly talented and hardworking asset who immediately understood our brand's aesthetic and consistently delivered stunning results. We're fortunate to have her on our team.`,
       brand_img: "/batman.png",
-      brand_img_href: "#",  // Update with the actual URL
-      name: "Tina Vellore",
-      designation: "Marketing Head, Titan",
+      brand_img_href: getWorkBrandData('secret_alchemist')['page-url'],  // Update with the actual URL
+      name: "Ankita Thadani",
+      designation: "Founder, Secret Alchemist",
     },
     {
       id: 2,
-      message: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Cum laudantium culpa perspiciatis ad exercitationem animi quas obcaecati doloribus,
-                      odit laborum. Ipsum, nostrum qui? Aspernatur dolorum enim iste ullam, quas
-                      illo!`,
+      message: `It's been wonderful working with Tanya, she is very professional in her approach and on time with her deliverables. Her grasp on the design language of the brand has been a big plus for us. I highly recommend her!`,
       brand_img: "/batman.png",
-      brand_img_href: "#",  // Update with the actual URL
-      name: "Tina Vellore",
-      designation: "Marketing Head, Titan",
+      brand_img_href: getWorkBrandData('zeme_fresh')['page-url'],  // Update with the actual URL
+      name: "Prerna Bhutani",
+      designation: "Founder, Zeme Fresh",
     },
     {
       id: 3,
-      message: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Cum laudantium culpa perspiciatis ad exercitationem animi quas obcaecati doloribus,
-                      odit laborum. Ipsum, nostrum qui? Aspernatur dolorum enim iste ullam, quas
-                      illo!`,
+      message: `I have been working with Tanya for almost 2 years now and I can see her grow and share her design skills with brands across categories. She is dedicated and disciplined. Looking forward to seeing her grow in all aspects of life.`,
       brand_img: "/batman.png",
-      brand_img_href: "#",  // Update with the actual URL
-      name: "Tina Vellore",
-      designation: "Marketing Head, Titan",
+      brand_img_href: "",
+      name: "Diksha Tandon",
+      designation: "Co-Founder, A Narrative",
     },
     {
       id: 4,
-      message: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Cum laudantium culpa perspiciatis ad exercitationem animi quas obcaecati doloribus,
-                      odit laborum. Ipsum, nostrum qui? Aspernatur dolorum enim iste ullam, quas
-                      illo!`,
+      message: `I've had the pleasure of collaborating with Tanya and it's been an amazing 9-month journey. She grasps briefs well, delivers on time, and her creativity shines. Her dedication, patience, and commitment to perfection left me truly impressed. I highly recommend Tanya!`,
       brand_img: "/batman.png",
-      brand_img_href: "#",  // Update with the actual URL
-      name: "Tina Vellore",
-      designation: "Marketing Head, Titan",
+      brand_img_href: "",  // Update with the actual URL
+      name: "Shivani Singh",
+      designation: "Senior Manager, Guava",
     },
+    {
+      id: 5,
+      message: `You really are one of the best designers I have worked with. I've never had to explain briefs and that really helped!`,
+      brand_img: "/batman.png",
+      brand_img_href: getWorkBrandData('the_face_shop')['page-url'],
+      name: "Riya Shah",
+      designation: "Social Media Manager, The Face Shop",
+    },
+    {
+      id: 6,
+      message: `Tanya understands our brand aesthetics like no other! We’ve had the most easy-going working relationship and her creatives have added a lot to the overall brand look and feel on instagram. She’s very receptive to feedback and it’s been a delight to work with her. :)`,
+      brand_img: "/batman.png",
+      brand_img_href: getWorkBrandData('label_society')['page-url'],
+      name: "Aastika & Geetanjali",
+      designation: "Founders, Label Society",
+    }
     // Add more client stories as needed
   ];
 
 
 
-let getWorkBrandData = (brnd) => {
-    return data.work.find(item => item.brand === BRANDS[brnd]);
-};
 
 
 

@@ -123,6 +123,8 @@ const listPageData = {
             ["7", "m", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/spirit-animal/7.mp4"],
             ["8", "m", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/spirit-animal/8.mp4"],
             ["9", "m", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/spirit-animal/9.mp4"],
+            ["10", "lm", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/spirit-animal/10.jpg"],
+            ["11", "lm", "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/spirit-animal/11.jpg"],
         ]);
     })(),
     [BRANDS["label_society"]]: (() => {

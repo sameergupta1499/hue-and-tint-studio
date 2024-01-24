@@ -21,7 +21,7 @@
                         
                         <div class="brand-container container flexCenter">
                             <div class="brand-img-container">
-                                <a href="" class="brand-img-href container">
+                                <a :href="story.brand_img_href" class="brand-img-href container">
                                     <img src="/batman.png" class="brand-img" alt="Logo" />
                                 </a>
                             </div>
@@ -165,7 +165,7 @@ $gradient-intensity: 1;
 }
 
 .carousel__item {
-    min-height: 150px;
+    min-height: 22rem;
     padding: 3rem 2rem;
     width: 100%;
     background-color: var(--grey);

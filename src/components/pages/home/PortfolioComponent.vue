@@ -42,14 +42,14 @@ export default {
                 "page_url": getWorkBrandData('secret_alchemist')['page-url'],
             },
             {
-                "title": getWorkBrandData('asa_beauty')['brand'],
-                "description": "What we did: "+ getWorkBrandData('asa_beauty')['tasks'],
+                "title": getWorkBrandData('the_pink_foundry')['brand'],
+                "description": "What we did: "+ getWorkBrandData('the_pink_foundry')['tasks'],
                 "top_color": getCSSVariableValue('--almond'),
                 "background_color": getCSSVariableValue('--black'),
                 "text_color": getCSSVariableValue('--white'),
                 "left_card_url": data.home['third-card-left'],
                 "right_card_url": data.home['third-card-right'],
-                "page_url": getWorkBrandData('asa_beauty')['page-url'],
+                "page_url": getWorkBrandData('the_pink_foundry')['page-url'],
             }
         ]
         return {
