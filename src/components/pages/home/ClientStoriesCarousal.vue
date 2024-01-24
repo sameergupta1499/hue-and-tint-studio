@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="carousel-wrapper">
-        <Carousel :slideWidth="4000" :autoplay="4000" :wrap-around="true" :items-to-show="itemsToShow" snap-align="center"
+        <Carousel :slideWidth="4000" :autoplay="false" :wrap-around="true" :items-to-show="itemsToShow" snap-align="center"
             @slide-start="handleEvents" @slide-end="handleEvents">
             <Slide v-for="story in client_story" :key="story.id">
                 <div>
@@ -112,6 +112,7 @@ $gradient-intensity: 1;
 .brand-person-container {
     align-items: flex-start;
     padding: 0.4rem 1.5rem;
+    line-height: 1rem;
 }
 
 .brand-description{
@@ -165,8 +166,10 @@ $gradient-intensity: 1;
 }
 
 .carousel__item {
-    min-height: 22rem;
-    padding: 3rem 2rem;
+    min-height: 25rem;
+    padding: 3rem 4rem;
+    line-height: 1.9rem;
+    text-align: center;
     width: 100%;
     background-color: var(--grey);
     color: #fff;
@@ -175,6 +178,9 @@ $gradient-intensity: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    word-spacing: 0px;
+    text-align: justify;
+    text-align-last: center;
 }
 
 .carousel__slide {

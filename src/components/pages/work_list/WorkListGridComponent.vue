@@ -249,32 +249,47 @@ video {
 
 .play-button {
   position: absolute;
-  top: 3rem;
-  left: 3rem;
-  transform: translate(-50%, -50%);
-  width: 3.5rem;
-  height: 3.5rem;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  background-image: url('/play.png'); /* Replace with the path to your play button PNG */
-  background-size: contain; /* Adjust based on your design */
-  z-index: 2;
+    top: 1.75rem;
+    left: 2.5rem;
+    transform: translate(-50%, -50%);
+    width: 3.5rem;
+    height: 1.75rem;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-image: url('/play.jpg');
+    background-size: contain;
+    z-index: 2;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
 }
 
 .playing-gif {
   position: absolute;
-  top: 3rem;
-  left: 3rem;
-  transform: translate(-50%, -50%);
-  width: 3.5rem;
-  height: 3.5rem;
+  top: 1.75rem;
+    left: 2.5rem;
+    transform: translate(-50%, -50%);
+    width: 3.5rem;
+    height: 1.75rem;
   background-repeat: no-repeat;
   cursor: pointer;
   background-image: url('/playing.gif'); /* Replace with the path to your play button PNG */
   background-size: contain; /* Adjust based on your design */
   z-index: 2;
+  border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .play-button,.playing-gif{
+    top: 2.25rem;
+    left: 3.5rem;
+    transform: translate(-50%, -50%);
+    width: 5rem;
+    height: 2.5em;
+  }
+}
 
   
 </style>

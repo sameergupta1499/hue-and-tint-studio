@@ -23,7 +23,7 @@ export default {
         const brandData = [
             {
                 "title": getWorkBrandData('titan')['brand'],
-                "description": "Service Offered: "+ getWorkBrandData('titan')['tasks'],
+                "description": getWorkBrandData('titan')['tasks'],
                 "top_color": getCSSVariableValue('--black'),
                 "background_color": getCSSVariableValue('--yellow'),
                 "text_color": getCSSVariableValue('--black'),
@@ -33,7 +33,7 @@ export default {
             },
             {
                 "title": getWorkBrandData('secret_alchemist')['brand'],
-                "description": "Service Offered: "+ getWorkBrandData('secret_alchemist')['tasks'],
+                "description": getWorkBrandData('secret_alchemist')['tasks'],
                 "top_color": getCSSVariableValue('--yellow'),
                 "background_color": getCSSVariableValue('--almond'),
                 "text_color": getCSSVariableValue('--black'),
@@ -43,7 +43,7 @@ export default {
             },
             {
                 "title": getWorkBrandData('the_pink_foundry')['brand'],
-                "description": "Service Offered: "+ getWorkBrandData('the_pink_foundry')['tasks'],
+                "description": getWorkBrandData('the_pink_foundry')['tasks'],
                 "top_color": getCSSVariableValue('--almond'),
                 "background_color": getCSSVariableValue('--black'),
                 "text_color": getCSSVariableValue('--white'),
