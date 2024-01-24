@@ -26,7 +26,7 @@
             </div>
             <div class="animated-box">
                 <h5 class="white-color item fontface-brandon-grotesque-Light">Phone: <br />+91 7710942204</h5>
-                <h5 class="white-color hidden-box item fontface-brandon-grotesque-Medium">100% I'll read it! <br /><span class="fontface-brandon-grotesque-thin font-size-inherit">+91 7710942204</span></h5>
+                <h5 class="white-color hidden-box item fontface-brandon-grotesque-Medium">70% chance I won't pick up! <br /><span class="fontface-brandon-grotesque-thin font-size-inherit">+91 7710942204</span></h5>
             </div>
         </div>
         <div class="container contact-container contact-developer-container flexCenter margin-jitter">
@@ -116,7 +116,7 @@ export default {
     background:var(--yellow);
     color:black !important;
     width:100%;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
     z-index: 1;
 }

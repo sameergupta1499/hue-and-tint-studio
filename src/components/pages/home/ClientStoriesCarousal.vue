@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="carousel-wrapper">
-        <Carousel :slideWidth="4000" :autoplay="false" :wrap-around="true" :items-to-show="itemsToShow" snap-align="center"
+        <Carousel :slideWidth="4000" :autoplay="4000" :wrap-around="true" :items-to-show="itemsToShow" snap-align="center"
             @slide-start="handleEvents" @slide-end="handleEvents">
             <Slide v-for="story in client_story" :key="story.id">
                 <div>
