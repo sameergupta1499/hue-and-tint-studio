@@ -10,10 +10,10 @@ const data = {
         "brand-works-video": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/homepage/brand-work.mp4",
         "first-card-left": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/homepage/first-card-left.jpg",
         "first-card-right": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/homepage/first-card-right.jpg",
-        "second-card-left": "https://images.ctfassets.net/8b1jz4cf6kyy/6aosNheaRtPUBQRf4RE2fx/48291d8abbe63cccb400c9efa0660fc1/45.png?w=1024&fm=webp&q=92",
-        "second-card-right": "https://images.ctfassets.net/8b1jz4cf6kyy/6aosNheaRtPUBQRf4RE2fx/48291d8abbe63cccb400c9efa0660fc1/45.png?w=1024&fm=webp&q=92",
-        "third-card-left": "https://images.ctfassets.net/8b1jz4cf6kyy/6aosNheaRtPUBQRf4RE2fx/48291d8abbe63cccb400c9efa0660fc1/45.png?w=1024&fm=webp&q=92",
-        "third-card-right": "https://images.ctfassets.net/8b1jz4cf6kyy/6aosNheaRtPUBQRf4RE2fx/48291d8abbe63cccb400c9efa0660fc1/45.png?w=1024&fm=webp&q=92",
+        "second-card-left": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/homepage/second-card-left.jpg",
+        "second-card-right": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/homepage/second-card-right.jpg",
+        "third-card-left": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/homepage/third-card-left.jpg",
+        "third-card-right": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/homepage/third-card-right.jpg",
     },
     "work": [
         {

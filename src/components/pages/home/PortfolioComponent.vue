@@ -35,7 +35,7 @@ export default {
                 "title": getWorkBrandData('secret_alchemist')['brand'],
                 "description": getWorkBrandData('secret_alchemist')['tasks'],
                 "top_color": getCSSVariableValue('--yellow'),
-                "background_color": getCSSVariableValue('--almond'),
+                "background_color": getCSSVariableValue('--semi-white'),
                 "text_color": getCSSVariableValue('--black'),
                 "left_card_url": data.home['second-card-left'],
                 "right_card_url": data.home['second-card-right'],
@@ -44,7 +44,7 @@ export default {
             {
                 "title": getWorkBrandData('the_pink_foundry')['brand'],
                 "description": getWorkBrandData('the_pink_foundry')['tasks'],
-                "top_color": getCSSVariableValue('--almond'),
+                "top_color": getCSSVariableValue('--semi-white'),
                 "background_color": getCSSVariableValue('--black'),
                 "text_color": getCSSVariableValue('--white'),
                 "left_card_url": data.home['third-card-left'],
