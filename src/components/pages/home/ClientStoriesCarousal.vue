@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="carousel-wrapper">
-        <Carousel :slideWidth="4000" :autoplay="4000" :wrap-around="true" :items-to-show="itemsToShow" snap-align="center"
+        <Carousel :slideWidth="4000" :autoplay="false" :wrap-around="true" :items-to-show="itemsToShow" snap-align="center"
             @slide-start="handleEvents" @slide-end="handleEvents">
             <Slide v-for="story in client_story" :key="story.id">
                 <div>
@@ -22,7 +22,7 @@
                         <div class="brand-container container flexCenter">
                             <div class="brand-img-container">
                                 <a :href="story.brand_img_href" class="brand-img-href container">
-                                    <img src="/batman.png" class="brand-img" alt="Logo" />
+                                    <img :src="story.brand_img" class="brand-img" alt="Logo" />
                                 </a>
                             </div>
                             <div class="brand-person-container flexCenterColumn">
@@ -107,6 +107,8 @@ $gradient-intensity: 1;
     height: 4rem;
     width: auto;
     object-fit: contain;
+    top: 0.25rem;
+    position: relative;
 }
 
 .brand-person-container {

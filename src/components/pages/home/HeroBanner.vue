@@ -14,10 +14,10 @@
                     <h1 class="animated-text  yellow-color fontface-fortune" style="--delay: .3s;">Good Designs</h1>
                 </div>
                 <div class="overflow-visible">
-                    <h2 class="animated-text fontface-antonio" style="--delay: .6s;">SINCE 2018</h2>
+                    <h2 class="animated-text fontface-antonio" style="--delay: .6s;">SINCE 2020</h2>
                 </div>
                 <div class="overflow-visible last-text-container">
-                    <h5 class="animated-text fontface-antonio" style="--delay: .9s;">GRAPHIC DESIGNER & FOUNDER</h5>
+                    <h5 class="animated-text fontface-antonio" style="--delay: .9s;">FREELANCE GRAPHIC DESIGNER</h5>
                 </div>
             </div>
         </div>
@@ -31,10 +31,15 @@
                     <h1 class="animated-text fontface-fortune">Bad Designs</h1>
                 </div>
                 <div class="overflow-visible">
-                    <h2 class="animated-text fontface-antonio">SINCE 2018</h2>
+                    <h2 class="animated-text fontface-antonio">SINCE 2020</h2>
                 </div>
-                <div class="overflow-visible last-text-container">
-                    <h5 class="animated-text fontface-antonio" style="--delay: .9s;">WHATEVER YOU WANT ME TO BE</h5>
+                <div class="overflow-visible flexCenter last-text-container">
+                    <h5 class="animated-text fontface-antonio" style="--delay: .9s;">CHIEF COFFEE DRINKER</h5>
+                        <div class="brand-img-container">
+                            <a href="" class="brand-img-href container">
+                                <img src="/coffee.png" class="brand-img" alt="Logo" loading="eager" crossorigin="anonymous"/>
+                            </a>
+                        </div>
                 </div>
             </div>
         </div>
@@ -80,14 +85,6 @@ export default {
 .banner-container {
     position: relative;
     color: white;
-    // background-image: url("https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/homepage/hero_bg.jpg");
-    // background-size: cover;
-    /* Scale to cover entire container */
-    // background-position: center bottom;
-    /* Position at the top center */
-    // background-repeat: no-repeat;
-    /* Prevent repeating the background */
-    // mix-blend-mode: darken;
 
     .animated-text {
         // @extend .tilt-shaking;
@@ -172,5 +169,16 @@ export default {
     h5{
         letter-spacing: 3px;
     }
+}
+.brand-img-container {
+    justify-content: flex-start;
+}
+.brand-img {
+    height: 4rem;
+    margin-left: 0.7rem;
+    width: auto;
+    object-fit: contain;
+    transform: translate(-20%, -55%);
+    position: absolute;
 }
 </style>

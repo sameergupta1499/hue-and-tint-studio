@@ -5,7 +5,7 @@
 
             <div class="service-content-container">
                 <div class="heading-container">
-                    <h4 class="fontface-antonio yellow-color heading-text">{{ item.heading }}:</h4>
+                    <h4 class="fontface-antonio yellow-color heading-text" v-html="item.heading"></h4>
                 </div>
                 <div class="content-container">
                     <div class="h5-6 content-text white-color">{{ item.content }}</div>
@@ -77,7 +77,7 @@ $middle-margin: 4%;
 }
 
 .content-text {
-    letter-spacing: 2.5px;
+    // letter-spacing: 2.5px;
     line-height: 1.9rem;
     text-align: justify;
     font-weight: 500;

@@ -7,7 +7,7 @@
         </div>
         <div class="container contact-container contact-content-container flexCenter margin-jitter">
             <div class="white-color item fontface-brandon-grotesque-Light h3-5 flexCenter">
-                <a href="" class="brand-img-href">
+                <a href="https://www.linkedin.com/in/tanya-verma-00621b155/" class="brand-img-href">
                     <img src="/linkedin.png" class="img" alt="Logo" />
                 </a>
                 LinkedIn
@@ -19,8 +19,8 @@
         </div>
         <div class="container contact-container contact-content-container flexCenter">
             <div class="white-color item fontface-brandon-grotesque-Light h3-5 flexCenter">
-                <a href="" class="brand-img-href">
-                    <img src="/linkedin.png" class="img" alt="Logo" />
+                <a href="https://www.instagram.com/hueandtintstudio/" class="brand-img-href">
+                    <img src="/instagram.png" class="img" alt="Logo" />
                 </a>
                 Instagram
             </div>

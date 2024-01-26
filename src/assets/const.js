@@ -165,7 +165,7 @@ const data = {
             "category": "Clothing",
             "timeline": "On-Going Since April 2023",
             "tasks": "Product Animation & Ad Design",
-            "work_page_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/spirit-animal.jpg",
+            "work_page_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/1.gif",
             "work_list_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/spirit-animal/hero.jpg",
             "page-url": WORK_URL_PREFIX + "/spirit-animal/",
             "work_list_page": listPageData[BRANDS["spirit_animal"]]
@@ -175,35 +175,35 @@ const data = {
 
 const about_data = [
     {
-        url: "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/spirit-animal.jpg",
-        heading: "MEDIA DESIGN",
-        content: "Elevate your online presence with our captivating social media design service. I create visually stunning graphics that will make your social media profiles pop. From eye-catching posts to compelling cover images, I know how brand stand out in the crowded to make your digital landscape."
+        url: "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/1.gif",
+        heading: "Social Media Design:",
+        content: "Let's make your social media pop!  From eye-catching posts to captivating stories, I craft designs that leave a lasting impression and drive engagement."
 
     },
     {
-        url: "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/spirit-animal.jpg",
-        heading: "social media design",
-        content: "Elevate your online presence with our captivating social media design service. I create visually stunning graphics that will make your social media profiles pop. From eye-catching posts to compelling cover images, I know how brand stand out in the crowded to make your digital landscape."
+        url: "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/2.gif",
+        heading: "Product Animation(2D):",
+        content: "When words and images aren't enough, it's time to bring your products to life with animation videos. Animations have the power to tell a story, demonstrate product features, and engage the audience. Let your products shine!"
     },    
     {
-        url: "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/spirit-animal.jpg",
-        heading: "social media design",
-        content: "Elevate your online presence with our captivating social media design service. I create visually stunning graphics that will make your social media profiles pop. From eye-catching posts to compelling cover images, I know how brand stand out in the crowded to make your digital landscape."
+        url: "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/3.gif",
+        heading: "Marketplace Listing Images:",
+        content: "First impressions matter, especially in the world of e-commerce. Enhance your product listings on leading marketplaces like Amazon, Nykaa, and more. I design high-quality images that highlight your products' features and attract potential customers, ultimately boosting sales."
     },    
     {
-        url: "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/spirit-animal.jpg",
-        heading: "social media design",
-        content: "Elevate your online presence with our captivating social media design service. I create visually stunning graphics that will make your social media profiles pop. From eye-catching posts to compelling cover images, I know how brand stand out in the crowded to make your digital landscape."
+        url: "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/4.gif",
+        heading: "Custom Email Design:",
+        content: "Your emails should be more than just messages – they should be visual experiences. I specialize in crafting email designs that leave a lasting impact. From newsletters to promotional campaigns,  email designs will help you connect with your audience and drive engagement."
     },    
     {
-        url: "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/spirit-animal.jpg",
-        heading: "social media design",
-        content: "Elevate your online presence with our captivating social media design service. I create visually stunning graphics that will make your social media profiles pop. From eye-catching posts to compelling cover images, I know how brand stand out in the crowded to make your digital landscape."
+        url: "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/5.gif",
+        heading: "Print Media Design <br>(Hoardings, Standee etc.):",
+        content: "Your brand deserves to shine both online and offline. Let's make your brand larger than life! From attention-grabbing hoardings to stand-out standees, I'll create designs that  leave a lasting impact."
     },    
     {
-        url: "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/spirit-animal.jpg",
-        heading: "EMAIL DESIGN",
-        content: "Elevate your online presence with our captivating social media design service. I create visually stunning graphics that will make your social media profiles pop. From eye-catching posts to compelling cover images, I know how brand stand out in the crowded to make your digital landscape."
+        url: "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/6.jpg",
+        heading: "Menu & Brochure Design:",
+        content: "Hungry for great design? I craft menus and brochures that tell your brand's story in a way that's impossible to ignore."
 
     }
 ];
@@ -217,7 +217,7 @@ const client_story = [
     {
       id: 1,
       message: `Delighted to have Tanya as our graphic designer at SA. She's a highly talented and hardworking asset who immediately understood our brand's aesthetic and consistently delivered stunning results. We're fortunate to have her on our team.`,
-      brand_img: "/batman.png",
+      brand_img: "/client-stories/secret-alchemist.png",
       brand_img_href: getWorkBrandData('secret_alchemist')['page-url'],  // Update with the actual URL
       name: "Ankita Thadani",
       designation: "Founder, Secret Alchemist",
@@ -225,7 +225,7 @@ const client_story = [
     {
       id: 2,
       message: `It's been wonderful working with Tanya, she is very professional in her approach and on time with her deliverables. Her grasp on the design language of the brand has been a big plus for us. I highly recommend her!`,
-      brand_img: "/batman.png",
+      brand_img: "/client-stories/zeme-fresh.png",
       brand_img_href: getWorkBrandData('zeme_fresh')['page-url'],  // Update with the actual URL
       name: "Prerna Bhutani",
       designation: "Founder, Zeme Fresh",
@@ -233,7 +233,7 @@ const client_story = [
     {
       id: 3,
       message: `I have been working with Tanya for almost 2 years now and I can see her grow and share her design skills with brands across categories. She is dedicated and disciplined. Looking forward to seeing her grow in all aspects of life.`,
-      brand_img: "/batman.png",
+      brand_img: "/client-stories/anarrative.png",
       brand_img_href: "",
       name: "Diksha Tandon",
       designation: "Co-Founder, A Narrative",
@@ -241,7 +241,7 @@ const client_story = [
     {
       id: 4,
       message: `I've had the pleasure of collaborating with Tanya and it's been an amazing 9-month journey. She grasps briefs well, delivers on time, and her creativity shines. Her dedication, patience, and commitment to perfection left me truly impressed. I highly recommend Tanya!`,
-      brand_img: "/batman.png",
+      brand_img: "/client-stories/guava.png",
       brand_img_href: "",  // Update with the actual URL
       name: "Shivani Singh",
       designation: "Senior Manager, Guava",
@@ -249,7 +249,7 @@ const client_story = [
     {
       id: 5,
       message: `You really are one of the best designers I have worked with. I've never had to explain briefs and that really helped!`,
-      brand_img: "/batman.png",
+      brand_img: "/client-stories/the-face-shop.png",
       brand_img_href: getWorkBrandData('the_face_shop')['page-url'],
       name: "Riya Shah",
       designation: "Social Media Manager, The Face Shop",
@@ -257,7 +257,7 @@ const client_story = [
     {
       id: 6,
       message: `Tanya understands our brand aesthetics like no other! We’ve had the most easy-going working relationship and her creatives have added a lot to the overall brand look and feel on instagram. She’s very receptive to feedback and it’s been a delight to work with her. :)`,
-      brand_img: "/batman.png",
+      brand_img: "/client-stories/label-society.png",
       brand_img_href: getWorkBrandData('label_society')['page-url'],
       name: "Aastika & Geetanjali",
       designation: "Founders, Label Society",

@@ -7,12 +7,12 @@
           <div class="about-page">
             <AboutHeadingComponent heading="BEHIND THE PIXELS" 
             subheading="A Little About Me" 
-            image="/batman.png" 
+            image="/emoji-1.png" 
             />
             <AboutBannerComponent />
             <AboutHeadingComponent heading="WHAT'S INSIDE THE TOOLBOX?" 
             subheading="Services I Offer" 
-            image="/batman.png" 
+            image="/emoji-2.png" 
             />
             <AboutContentComponent />
             <ContactComponent />

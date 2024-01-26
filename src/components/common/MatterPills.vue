@@ -14,7 +14,17 @@ export default {
     let engine = null;
     let render = null;
     let runner = null;
-    let boxList = ['Media Design', 'Video Editing', 'Motion Graphics', 'Digital Campaign Design', 'Social Media Design','Video Editing', 'Motion Graphics', 'Digital Campaign Design', 'Social Media Design', 'Video Editing','Video Editing', 'Motion Graphics', 'Digital Campaign Design', 'Social Media Design', 'Video Editing'];
+    
+
+
+
+
+
+
+    let boxList = [
+      'Social Media Design', 'Custom Email Design', 'Strategic Ad Creatives', 'Video Editing', 'Marketplace Listing Images','Print Media Designs','Product Animation Videos',
+      'Social Media Design', 'Custom Email Design', 'Strategic Ad Creatives', 'Video Editing', 'Marketplace Listing Images','Print Media Designs','Product Animation Videos',
+  ];
     // const boxBodyX = ref(box.body.position.x);
 
     // Function to update screen width and height when the window is resized
