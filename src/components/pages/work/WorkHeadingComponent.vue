@@ -3,7 +3,7 @@
         <div class="container position-relative content-section margin-jitter">
             <div class="container heading-wrapper">
                 <h3 class="fontface-antonio">LET'S EXPLORE <span
-                        class="yellow-color fontface-antonio font-size-inherit">GOOD
+                        class="yellow-color fontface-antonio font-size-inherit">SOME
                         DESIGNS</span></h3>
             </div>
         </div>

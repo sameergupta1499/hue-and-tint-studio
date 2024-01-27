@@ -2,8 +2,7 @@
     <div class="margin-jitter">
         <div class="container position-relative content-section margin-jitter">
             <div class="container heading-wrapper">
-                <h3 class="fontface-antonio">SELECTED <span class="yellow-color fontface-antonio font-size-inherit">GOOD
-                        WORK</span></h3>
+                <h3 class="fontface-antonio">SELECTED <span class="yellow-color fontface-antonio font-size-inherit">WORK</span></h3>
             </div>
         </div>
         <RoundBGComponent v-for="(item, index) in brandData" :key="index" :number="index + 1" :title="item.title"

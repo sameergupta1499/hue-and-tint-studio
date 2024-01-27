@@ -1,11 +1,10 @@
 <template>
     <div class="container position-relative content-section">
         <div class="container heading-wrapper">
-            <h3 class="fontface-antonio">WHY ME FOR <span class="yellow-color fontface-antonio font-size-inherit">GOOD STUFF?</span></h3>
+            <h3 class="fontface-antonio">LET'S <span class="yellow-color fontface-antonio font-size-inherit">TEAM UP</span></h3>
         </div>
-        <div class="container content-wrapper">
-            <h5>If you're searching for a designer to transform your ideas into reality,<br>
-                let's collaborate and bring them to life!</h5>
+        <div class="container content-wrapper flexCenter">
+            <h5>Obsessed with beauty, fashion, and wellness, I'm not your average designer. Some call it a limit, but for me, it's a chance. I help brands visually narrate their stories. Why settle for the usual when our brand can steal the spotlight?</h5>
         </div>
     </div>
 </template>
@@ -41,6 +40,7 @@ export default {
     h5{
         color:white;
         overflow:visible;
+        padding: 0 10%;
     }
 }
 
