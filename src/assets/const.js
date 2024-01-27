@@ -165,7 +165,7 @@ const data = {
             "category": "Clothing",
             "timeline": "On-Going Since April 2023",
             "tasks": "Product Animation & Ad Design",
-            "work_page_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/about/1.gif",
+            "work_page_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work/spirit-animal.jpg",
             "work_list_hero_img_url": "https://d35ymq1x8kutsa.cloudfront.net/hue-and-tint-studio/work-list-page/spirit-animal/hero.jpg",
             "page-url": WORK_URL_PREFIX + "/spirit-animal/",
             "work_list_page": listPageData[BRANDS["spirit_animal"]]
