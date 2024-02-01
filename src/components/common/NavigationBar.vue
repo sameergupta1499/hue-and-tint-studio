@@ -37,7 +37,7 @@
 
                 <ul class="navbar-list collapsed">
                     <li class="navbar-item" v-for="(item, index) in navItems" :key="index">
-                        <router-link :to="item.route" @click="menuOpen = false">
+                        <router-link :to="item.route" @click="item.label === 'CONTACT' ? scrollTO('hit-me-up') : null">
                             <h6 class=" yellow-hover">{{ item.label }}</h6>
                         </router-link>
                     </li>
